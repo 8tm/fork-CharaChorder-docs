@@ -51,7 +51,7 @@ source_suffix = ['.rst', '.md']
 master_doc = 'index'
 
 # General information about the project.
-project = 'CharaChorder Docs'
+project = 'Dokumentacje CharaChorder'
 copyright = '2024, CharaChorder'
 author = 'CharaChorder'
 
@@ -69,7 +69,7 @@ release = '0.1'
 #
 # This is also used if you do content translation via gettext catalogs.
 # Usually you set "language" from the command line for these cases.
-language = 'en'
+language = 'pl'
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
@@ -117,7 +117,7 @@ html_sidebars = {
 html_title = f'{project} v{version}'
 
 # Canonical URL
-html_baseurl = 'https://docs.charachorder.com'
+html_baseurl = 'https://cc-docs.miszczyk.dev'
 
 # Logos/icons
 html_logo = 'assets/images/CharaChorder-logo.png'

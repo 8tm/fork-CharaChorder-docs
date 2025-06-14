@@ -1,25 +1,29 @@
 Master Forge
 ===================
 
-Welcome to the Official Master Forge guide. You can select the links
-below to navigate to the topics that you find most relevant.
+Witamy w Oficjalnym przewodniku Master Forge.
+Możesz wybrać poniższe linki, aby przejść do tematów, które uznasz za najbardziej istotne.
 
 .. _M4G:
 .. image:: /assets/images/M4G.webp
   :width: 1200
   :alt: The Master Forge
 
-The Master Forge bundle consists of two :ref:`Forge Digitizers<Digitizers>`, a :ref:`mechanical bridge connector<Master Forge:Mechanical Bridge Connector>` to join the two, and, possibly, depending on which variation you purchased, some additional :doc:`bolt-ons<Bolt-Ons>` and :doc:`add-ons<Add-Ons>`. This section will discuss each of the items included in any of the Master Forge bundles, regardless of the specific configuration.
+Pakiet Master Forge składa się z dwóch :ref:`digitizerów<Digitizers>`,
+:ref:`mechanicznego łącznika mostowego<Master Forge:Mechanical Bridge Connector>`, który łączy oba,
+oraz — w zależności od zakupionej wersji — dodatkowych :doc:`nakładek<Bolt-Ons>`
+i :doc:`rozszerzeń<Add-Ons>`. W tej sekcji omówimy każdy z elementów zawartych w dowolnym z pakietów
+Master Forge, niezależnie od konkretnej konfiguracji.
 
-:ref:`Click here to skip to the Getting Started Guide.<Master Forge:Getting Started>`
+:ref:`Kliknij tutaj, aby przejść do przewodnika dla początkujących.<Master Forge:Getting Started>`
 
-.. contents:: Table of Contents of this Page
+.. contents:: Spis treści tej strony
    :local:
 
-Out of the Box
+Zawartość opakowania
 **************
 
-Parts
+Części
 -----
 
 .. _Case:
@@ -27,549 +31,708 @@ Parts
 .. _M4G Schema:
 .. image:: /assets/images/M4G-Separated.webp
   :width: 1200
-  :alt: M4G parts
+  :alt: Części M4G
 
 
-When you first receive your Master Forge Bundle, it will come in a cardboard
-box. Once you open the box, you’ll find your brand new Master Forge inside its tactical carrying case. You will also find an insert that includes the layout of the device and some functions that the Master Forge has.
+Gdy po raz pierwszy otrzymasz swój pakiet Master Forge, będzie on dostarczony w kartonowym pudełku.
+Po jego otwarciu znajdziesz swojego nowego Master Forge w taktycznej walizce transportowej.
+Znajdziesz tam również wkładkę zawierającą schemat urządzenia i niektóre funkcje, które posiada Master Forge.
 
 .. _M4G Case:
 .. image:: /assets/images/Case.webp
   :width: 1200
-  :alt: Original Backer Case
+  :alt: Oryginalna walizka dla wspierających
 
-Once you open the tactical case, you’ll meet your shiny, new Master Forge. The Master Forge consists of two digitizers with 8, 5-way switches, joined together by a :ref:`mechanical bridge connector<Master Forge:Mechanical Bridge Connector>`.
+Po otwarciu walizki spotkasz swój lśniący, nowy Master Forge. Master Forge składa się z dwóch digitizerów
+z ośmioma pięciokierunkowymi przełącznikami, połączonych za pomocą
+:ref:`mechanicznego łącznika mostowego<Master Forge:Mechanical Bridge Connector>`.
 
-The Digitizers
+.. _Master Forge:The Digitizers:
+
+Digitizery
 ~~~~~~~~~~~~~~~
 
-Your device will come with two Digitizers which, together, comprise the Master Forge. Each digitizer typically corresponds to each hand and is designed for the ergonomics and comfort of each hand. The digitizers are composed of a 3D printed endoskeleton and a machined-aluminum exoskeleton. The exoskeleton of the digitizer is actually two pieces which are the trapezoidal-shaped “shell,” and the flat and partially hollowed out “baseplate”. They are held together by five M2, Philips screws which are
-under the “feet” pads of the device. The feet are round, rubberized and help the device to have a grip on desks and other smooth surfaces.
+Twoje urządzenie będzie zawierać dwa digitizery, które razem tworzą Master Forge. Każdy digitizer odpowiada
+jednej ręce i został zaprojektowany z myślą o ergonomii i komforcie każdej dłoni. Digitizery składają się z
+wydrukowanego w 3D endoszkieletu i obrabianego maszynowo aluminiowego egzoszkieletu. Egzoszkielet digitizera
+składa się faktycznie z dwóch części: trapezoidalnej „powłoki” i płaskiej, częściowo wydrążonej
+„płyty bazowej”. Są one połączone pięcioma śrubami M2 typu Philips, które znajdują się pod gumowymi
+podkładkami ("stopkami") urządzenia. Podkładki te są okrągłe, gumowane i pomagają urządzeniu utrzymywać
+stabilność na biurkach i innych gładkich powierzchniach.
 
-There are two different kinds of digitizers, each of which can be purchased individually; the left digitizer and the right digitizer. Each one contains a :doc:`Platinum CharaChorder Core<CharaChorder Core>` where they store chords, layouts, and settings. 
+Istnieją dwa różne typy digitizerów, z których każdy można zakupić osobno: lewy digitizer i prawy digitizer.
+Każdy z nich zawiera :doc:`Platinum CharaChorder Core<CharaChorder Core>`, w którym przechowywane są
+akordy, układy i ustawienia.
 
-The front of each digitizer has a slotted rail which allows :doc:`bolt-ons<Bolt-Ons>` to be "bolted" onto the digitizer. An example of a :doc:`bolt-on<Bolt-Ons>` is the :ref:`bridge connector<The Bridge Connector>`. Along this slotted rail you'll find two USB-C ports on each digitizer, one at the exterior edge of each "shoulder."
+Na przedniej stronie każdego digitizera znajduje się szyna z rowkami, która umożliwia przykręcanie
+:doc:`nakładek<Bolt-Ons>`. Przykładem takiej nakładki jest :ref:`łącznik mostowy<The Bridge Connector>`.
+Wzdłuż tej szyny na każdym digitizerze znajdują się dwa porty USB-C — po jednym na zewnętrznej krawędzi
+każdego "ramienia".
 
 .. _M4G Frontside:
 .. image:: /assets/images/M4G-Front.webp
   :width: 1200
-  :alt: Picture showing the bridge connector and the ports
+  :alt: Zdjęcie przedstawiające łącznik mostowy i porty
 
-The underside of the each digitizer is partially hollow to allow for cables and connections to happen in a discreet manner underneath the device. Inside the cavity, we can find two additional USB-C ports and downward facing LED clusters. 
+Spód każdego digitizera jest częściowo wydrążony, aby umożliwić dyskretne prowadzenie kabli i połączeń pod
+urządzeniem. Wewnątrz tej wnęki znajdują się dwa dodatkowe porty USB-C oraz skierowane w dół klastry diod LED.
 
 .. _M4G Below:
 .. image:: /assets/images/M4G-Under.webp
   :width: 1200
-  :alt: Bottom side of the Master Forge
+  :alt: Spód Master Forge
 
-On the sides of each digitizer, you'll notice the :ref:`bookend rails<The Bookend Rails>`. Under each rail, on the body of the digitizer, you'll see holes for the screws that hold the bookend rails in place. 
+Na bokach każdego digitizera zauważysz :ref:`szyny końcowe<The Bookend Rails>`. Pod każdą szyną, na korpusie
+digitizera, znajdują się otwory na śruby mocujące szyny końcowe na miejscu.
 
 .. _M4G Side:
 .. image:: /assets/images/M4G-Side.webp
   :width: 1200
-  :alt: Original Backer Case
+  :alt: Oryginalna walizka dla wspierających
 
-The Bridge Connector
+.. _Master Forge:The Bridge Connector:
+
+Łącznik mostowy
 ~~~~~~~~~~~~~~~~~~~~~
 
-Out of the box, your :ref:`digitizers<The Digitizers>` will be connected by a mechanical bridge :doc:`bolt-on<Bolt-Ons>`. This :doc:`bolt-on<Bolt-Ons>` is also machined-aluminum and made from a slotted rail. It's held in place by two, M3 nylon screws. Nylon screws don't "set" into the aluminum like steel screws, which prevents damage to the slotted rails, since the slotted rails at the front of the device don't have any holes for screws to go into. It's more of a friction hold, which is a key concept of :doc:`bolt-ons<Bolt-Ons>`. 
+Po wyjęciu z pudełka, Twoje :ref:`digitizery<The Digitizers>` będą połączone przez mechaniczną nakładkę
+:doc:`bolt-on<Bolt-Ons>`. Ta :doc:`nakładka<Bolt-Ons>` również jest wykonana z obrabianego maszynowo aluminium
+i zbudowana na bazie szyny z rowkami. Jest utrzymywana na miejscu przez dwie nylonowe śruby M3. Śruby nylonowe
+nie "wbijają" się w aluminium tak jak śruby stalowe, co zapobiega uszkodzeniu rowkowanych szyn, ponieważ szyny
+z przodu urządzenia nie mają otworów na śruby. Mocowanie opiera się bardziej na tarciu, co jest kluczową
+zasadą :doc:`nakładek<Bolt-Ons>`.
 
 .. _M4G Bridge Connector:
 .. image:: /assets/images/Bridge.webp
   :width: 1200
-  :alt: The Mechanical and Electrical bridges
+  :alt: Połączenia mechaniczne i elektryczne
 
-Additionally, the two :ref:`digitizers<The Digitizers>` are connected by the electrical bridge connector, also known as the mini-connector. This piece fits inside the cavity of the :ref:`mechanical bridge connector<Mechanical Bridge Connector>` and should be removed BEFORE removing the mechanical bridge connector.
+Dodatkowo, dwa :ref:`digitizery<The Digitizers>` są połączone za pomocą elektrycznego łącznika mostowego, znanego
+również jako mini-connector. Ten element umieszcza się wewnątrz wnęki :ref:`mechanicznego łącznika
+mostowego<Mechanical Bridge Connector>` i należy go wyjąć PRZED demontażem mechanicznego łącznika mostowego.
 
 .. note::
-    When separating the digitizers, the :ref:`electrical bridge connector<Electrical Bridge Connector>` should be removed before the :ref:`mechanical bridge connector<Mechanical Bridge Connector>`. 
+    Podczas rozłączania digitizerów należy najpierw wyjąć :ref:`elektryczny łącznik
+    mostowy<Electrical Bridge Connector>`, a dopiero później :ref:`mechaniczny łącznik
+    mostowy<Mechanical Bridge Connector>`.
 
-    Similarly, when putting the digitizers together again, they should be assembled in reverse order of how they were disassembled; that is, the :ref:`mechanical bridge connector<Mechanical Bridge Connector>` should be secured into place before pressing the :ref:`electrical bridge connector<Electrical Bridge Connector>` into place.
+    Podobnie, podczas ponownego łączenia digitizerów należy wykonywać te czynności w
+    odwrotnej kolejności niż przy rozłączaniu; czyli najpierw zabezpieczyć
+    :ref:`mechaniczny łącznik mostowy<Mechanical Bridge Connector>`, a dopiero potem wpiąć
+    :ref:`elektryczny łącznik mostowy<Electrical Bridge Connector>`.
 
+Elektryczny łącznik mostowy to cienka płytka PCB zakończona wtykami USB-C po obu stronach. Powoduje to, że
+przedni prawy port lewego digitizera łączy się z przednim lewym portem prawego digitizera.
 
-The electrical bridge connector is a thin printed circuit board that ends in a USB-C plug on either side. This makes it so that the front right port of the left digitizer feeds into the front left port of the right digitizer. 
+Gdy urządzenie jest połączone oficjalnym łącznikiem Forge, lewy digitizer powinien być tym, który podłączasz
+bezpośrednio do komputera. Zobacz sekcję :ref:`Pierwsze kroki<tag?>`, aby uzyskać więcej informacji na ten temat.
 
-When connected by the official Forge bridge connector, the left digitizer should be the one connected directly to your computer. See :ref:`Getting Started<tag?>` for more information about this.
+.. _Master Forge:The Bookend Rails:
 
-The Bookend Rails
+Szyny końcowe
 ~~~~~~~~~~~~~~~~~~~
 
-Each :ref:`digitizer<The Digitizers>` of the Master Forge comes with three removable bookend rails. These rails are what allow the digitizers to attach to other :doc:`anchor bodies<Anchor Bodies>` and :ref:`bolt-ons<Bolt-Ons>`. 
+Każdy :ref:`digitizer<The Digitizers>` Master Forge zawiera trzy zdejmowane szyny końcowe. Te szyny umożliwiają
+mocowanie digitizerów do innych :doc:`modułów kotwiczących<Anchor Bodies>` oraz :ref:`nakładek<Bolt-Ons>`.
 
 .. _M4G Rails:
 .. image:: /assets/images/Rails.webp
   :width: 1200
-  :alt: The three Bookend Rails
+  :alt: Trzy szyny końcowe
 
-The bookend rails are made of machined aluminum and are held in place on the body of the :ref:`digitizers<The Digitizers>` by two (size), steel screws. 
+Szyny końcowe są wykonane z obrabianego maszynowo aluminium i mocowane do korpusu
+:ref:`digitizerów<The Digitizers>` za pomocą dwóch stalowych śrub (rozmiar).
 
-The Splitter
+.. _Master Forge:The Splitter:
+
+Rozdzielacz
 ~~~~~~~~~~~~~~
 
-Included with every Master Forge order is a 3D-printed Splitter. This piece serves to prevent anything from falling into the space between the forge :ref:`digitizers<The Digitizers>` whenever these are connected by the :ref:`bridge connector<The Bridge Connector>`.
+W zestawie z każdym zamówieniem Master Forge znajduje się drukowany w 3D Rozdzielacz.
+Ten element zapobiega wpadaniu czegokolwiek w przestrzeń pomiędzy :ref:`digitizerami<The Digitizers>`, gdy
+są one połączone za pomocą :ref:`łącznika mostowego<The Bridge Connector>`.
 
 .. _M4G Splitter:
 .. image:: /assets/images/Splitter.webp
   :width: 1200
-  :alt: The Splitter
+  :alt: Rozdzielacz
 
-The Switches
+.. _Master Forge:The Switches:
+
+Przełączniki
 ~~~~~~~~~~~~
 
-Instead of the one-dimensional buttons that traditional keyboards use,
-Forge :ref:`digitizer<The Digitizers>` levers, which we will call switches, detect motion in three-dimensions so users have access to 64 unique inputs without their fingers breaking contact with the device. The :ref:`digitizer<The Digitizers>` switches produce a digital input, as opposed to analog. All of the switch caps are 3D-printed and measure [measurements]. Under the switch cap, there's a stem that's [measurements] thick and square in shape. The stem is not removable without disassembling the device whereas the caps are hot-swappable.
+Zamiast jednokierunkowych przycisków, które stosują tradycyjne klawiatury, :ref:`digitizer<The Digitizers>` Forge wykorzystują dźwignie, które nazywamy przełącznikami. Wykrywają one ruch w trzech wymiarach, dzięki czemu użytkownicy mają dostęp do 64 unikalnych wejść bez odrywania palców od urządzenia. Przełączniki :ref:`digitizer<The Digitizers>` generują wejście cyfrowe, w przeciwieństwie do analogowego. Wszystkie nasadki przełączników są drukowane w 3D i mają wymiary [wymiary]. Pod nasadką znajduje się trzpień o grubości [wymiary] i kwadratowym kształcie. Trzpień nie może być usunięty bez demontażu urządzenia, natomiast same nasadki są wymienialne na gorąco.
 
-Each :ref:`digitizer<The Digitizers>` has eight 5-way switches. Starting from the outside on each :ref:`digitizer<The Digitizers>` and working inwards, the switches correspond to the following fingers; pinky, ring, middle, and index. The two switches along the "torso," that is, the inner-most side of each :ref:`digitizer<The Digitizers>`, correspond to the thumb. You can see what characters are on each switch by default in :doc:`Layout<Layout>`. Additionally, there are two more switches not on the “home-row” which can be accessed by the ring and middle fingers. The correct positioning of your fingers is for them to follow the arc in which the switches are laid out.
+Każdy :ref:`digitizer<The Digitizers>` ma osiem pięciokierunkowych przełączników. Zaczynając od zewnętrznej strony każdego :ref:`digitizer<The Digitizers>` i przesuwając się do środka, przełączniki przypisane są do następujących palców: mały, serdeczny, środkowy i wskazujący. Dwa przełączniki wzdłuż „tułowia”, czyli najbardziej wewnętrznej strony każdego :ref:`digitizer<The Digitizers>`, przypisane są do kciuka. Domyślne znaki znajdujące się na każdym przełączniku możesz zobaczyć w :doc:`Układ<Layout>`. Dodatkowo, istnieją jeszcze dwa przełączniki poza „rzędem domowym”, do których dostęp mają serdeczny i środkowy palec. Poprawne ustawienie palców polega na podążaniu za łukiem, w jakim ułożone są przełączniki.
 
 .. note::
-   **IMPORTANT**: In this manual, we will refer to switches in the
-   following way, starting from the pinky finger and working inwards:
-   pinky, ring, middle, index, thumb 1, and thumb 2. The
-   switches below the “home-row” will be referred to as the aux 1 and aux 2    
-   switches, where the switch further to the left on the left digitizer
-   is aux 1. Symmetrically, aux 1 is the switch furthest to the right on the 
-   right half.
+   **WAŻNE**: W tym podręczniku będziemy odnosić się do przełączników w następujący
+   sposób, zaczynając od małego palca i przesuwając się do środka: mały, serdeczny,
+   środkowy, wskazujący, kciuk 1 oraz kciuk 2. Przełączniki znajdujące się poniżej
+   „rzędu domowego” będą nazywane przełącznikami pomocniczymi aux 1 i aux 2, gdzie
+   przełącznik najbardziej po lewej stronie lewego digitizera to aux 1.
+   Symetrycznie, aux 1 na prawej części to przełącznik najbardziej po prawej stronie.
 
-Each switch has five press-able directions. Throughout this guide, we
-will use cardinal directions to refer to the directions in which each
-switch can move, with _`north` being forward, away from your body. Switches
-can move north, south, west, east and down, into the device. Note that unlike the CC2, pressing switches into the device on the Master Forge is a chorded input which activates all four directions simultaneously. Please be
-mindful that, as part of the device’s ergonomics, each switch has a
-slightly different angle, so feel free to familiarize yourself with your
-new device.
+Każdy przełącznik posiada pięć kierunków nacisku. W całym przewodniku będziemy używać kierunków
+geograficznych, gdzie _`północ` oznacza do przodu, w stronę od ciała. Przełączniki mogą poruszać
+się: na północ, południe, zachód, wschód oraz w dół — do wnętrza urządzenia. Należy zauważyć, że
+w przeciwieństwie do CC2, naciśnięcie przełączników do środka na Master Forge jest wejściem
+akordowym, które aktywuje jednocześnie wszystkie cztery kierunki. Prosimy pamiętać, że w ramach
+ergonomii urządzenia, każdy przełącznik ma nieco inny kąt nachylenia, dlatego warto zapoznać
+się ze swoim nowym urządzeniem.
 
-Out of all eight switches, the pinky switch is made to be wider than the other seven in order to make using it easier, and also more optimized for held-key press functionality like that used with the shift key or layered keymaps.
+Spośród ośmiu przełączników, przełącznik małego palca został wykonany szerzej niż pozostałe, aby
+ułatwić jego użycie, a także zoptymalizować funkcje przytrzymania klawisza, jak np. dla klawisza
+Shift czy map warstwowych.
 
-Earlier, we mentioned the five directions in which a switch can be
-actuated, or pressed. Aside from the four cardinal directions, each
-switch can be pressed down, into the device. We often refer to this
-press as a 3D press, since it’s not a lateral movement, but rather a
-movement along the Z axis of the switch. This special press requires no
-lateral movement in order to work, just apply force onto the switch
-“into” the device. 
+Jak wspomniano wcześniej, przełącznik może zostać aktywowany w pięciu kierunkach. Poza czterema
+głównymi kierunkami, każdy przełącznik może być wciśnięty w głąb urządzenia. Nazywamy to często
+naciśnięciem 3D, ponieważ nie jest to ruch boczny, lecz ruch w osi Z przełącznika. Ten specjalny
+nacisk nie wymaga ruchu bocznego — wystarczy nacisnąć przełącznik „do środka” urządzenia.
 
-The four cardinal directions on a switch can be mapped
-to a configurable key, which can include letters, numbers, symbols,
-control keys and even function keys. You can see the most current list
-of configurable action codes in the `Device Manager <https://manager.charachorder.com/config/layout/>`__. The 3D press cannot be assigned to an individual character, but, instead, allows you to press all four cardinal directions on a switch simultaneously, as a :doc:`chord<Chording>`. 
+Cztery główne kierunki przełącznika mogą być mapowane na dowolny klawisz — litery, cyfry, symbole,
+klawisze sterujące, a nawet klawisze funkcyjne. Najnowszą listę kodów akcji można znaleźć w
+`Device Manager <https://manager.charachorder.com/config/layout/>`__.
+Naciśnięcie 3D nie może być przypisane do pojedynczego znaku, lecz pozwala na wciśnięcie wszystkich
+czterech kierunków naraz, jako :doc:`akord<Chording>`.
 
-Connections
+.. _Master Forge:Connections:
+
+Połączenia
 -----------
 
-Every Master Forge order will come with the power
-cable that goes out to the computer inside the box. The power cable included with every Master Forge is a standard, braided USB-A to USB-C cable. Some :ref:`configurations<Master Forge Configurations>` may include an additional cord. To know what's included in your order, read the :ref:`configurations<Master Forge:Master Forge Configurations>` section.
+Każde zamówienie Master Forge zawiera przewód zasilający, który podłączany jest do komputera.
+Przewód zasilający dołączony do każdego Master Forge to standardowy, pleciony przewód USB-A do USB-C.
+Niektóre :ref:`konfiguracje<Master Forge Configurations>` mogą zawierać dodatkowy przewód.
+Aby dowiedzieć się, co zawiera Twoje zamówienie, przeczytaj sekcję
+:ref:`konfiguracje<Master Forge:Master Forge Configurations>`.
 
 .. _M4G Power Cable:
 .. image:: /assets/images/Power-Cable.webp
   :width: 1200
-  :alt: The Power cable included with the Master Forge
+  :alt: Przewód zasilający dołączony do Master Forge
 
-Another cable that may be included with your order is a 3.2 gen 2, braided USB-C to USB-C cable. This cord is meant to be used if you choose to separate your :ref:`digitizers<The Digitizers>`.
+Innym przewodem, który może być dołączony do Twojego zamówienia, jest pleciony przewód USB-C do USB-C, standard
+3.2 gen 2. Przewód ten służy do użytku w przypadku, gdy zdecydujesz się rozdzielić swoje
+:ref:`digitizery<The Digitizers>`.
 
-.. dropdown:: Things to remember if you separate your digitizers
+.. dropdown:: O czym należy pamiętać, jeśli rozdzielasz digitizery
     
-    There are two main things to remember if you choose to use your Master Forge separated: 
-        1. The cable that you use to connect the digitizers must be a 3.2 gen 2, C to C cable.
-        2. As pointed out in the :ref:`getting started section<Port Requirement>` of this page, power to an :doc:`anchor body<Anchor Bodies>` or :ref:`bolt-on<Bolt-Ons>` must be received through the front left USB-C port. This means that every anchor body or bolt-on that you add to your system has to be linked to the Master through the port on the front left.   
+    Są dwie główne rzeczy, o których należy pamiętać w przypadku korzystania z rozdzielonych digitizerów Master Forge:
+        1. Przewód łączący digitizery musi być przewodem 3.2 gen 2, USB-C do USB-C.
+        2. Jak wskazano w sekcji :ref:`pierwsze kroki<Port Requirement>`, zasilanie dla
+        :doc:`modułu kotwiczącego<Anchor Bodies>` lub :ref:`nakładki<Bolt-Ons>` musi być
+        dostarczone przez lewy, przedni port USB-C. Oznacza to, że każdy moduł kotwiczący
+        lub nakładka dodana do systemu musi być podłączona do Master poprzez przedni, lewy port.
 
-Getting Started
+.. _Master Forge:Getting Started:
+
+Pierwsze kroki
 *******************
 
-The Master Forge is plug-and-play, so it doesn’t require any
-additional software to work. Before plugging your Forge in for
-the first time, it’s important to make sure that either the :ref:`electrical bridge connector<Master Forge:The Bridge Connector>` or a USB-C cable is correctly plugged into both :ref:`digitizers<Master Forge:The Digitizers>`. 
+Master Forge działa na zasadzie plug-and-play, więc nie wymaga dodatkowego oprogramowania, aby rozpocząć pracę.
+Przed pierwszym podłączeniem Forge’a należy upewnić się, że
+:ref:`elektryczny łącznik mostowy<Master Forge:The Bridge Connector>` lub przewód USB-C jest prawidłowo
+podłączony do obu :ref:`digitizerów<Master Forge:The Digitizers>`.
 
 .. _Port Requirement:
-All Forge :doc:`anchor bodies<Anchor Bodies>`, including the Master Forge Digitizers, should be connected to a power source through their front, left USB-C port. It's important to use that specific port to connect your device to your computer because no other port will permit your Forge to function correctly. As a rule of thumb, all Forge :doc:`anchor bodies<Anchor Bodies>` must receive power through their front, left port. The other three ports are outgoing ports in order to connect other :doc:`anchor bodies<Anchor Bodies>` and :doc:`bolt-ons<Bolt-Ons>`. Each additional :doc:`anchor body<Anchor Bodies>` or :doc:`bolt-on<Bolt-Ons>` will need to "receive" power from the "Master" :doc:`anchor body<Anchor Bodies>`, or from an :doc:`anchor body<Anchor Bodies>` or :doc:`bolt-on<Bolt-Ons>` connected to the Master. A "Master" :doc:`anchor body<Anchor Bodies>` is the one connected directly to your computer. Please note that some :doc:`bolt-ons<Bolt-Ons>` may function as a Master.
+Wszystkie :doc:`moduły kotwiczące<Anchor Bodies>` Forge, w tym digitizery Master Forge, powinny być podłączone
+do źródła zasilania przez przedni, lewy port USB-C. Należy używać tego konkretnego portu do połączenia z
+komputerem, gdyż żaden inny port nie umożliwi poprawnego działania Forge. Zasadą jest, że wszystkie
+:doc:`moduły kotwiczące<Anchor Bodies>` Forge muszą otrzymywać zasilanie przez przedni, lewy port.
+Pozostałe trzy porty służą jako porty wyjściowe do łączenia kolejnych
+:doc:`modułów kotwiczących<Anchor Bodies>` i :doc:`nakładek<Bolt-Ons>`.
+Każdy dodatkowy :doc:`moduł kotwiczący<Anchor Bodies>` lub :doc:`nakładka<Bolt-Ons>` musi „odbierać”
+zasilanie od "Master" :doc:`modułu kotwiczącego<Anchor Bodies>`, albo od podłączonego już
+:doc:`modułu kotwiczącego<Anchor Bodies>` lub :doc:`nakładki<Bolt-Ons>`. "Master"
+:doc:`moduł kotwiczący<Anchor Bodies>` to ten, który podłączony jest bezpośrednio do komputera.
+Należy pamiętać, że niektóre :doc:`nakładki<Bolt-Ons>` mogą działać jako Master.
 
-If you haven't done so, now would be the time to plug the included USB-C to USB-A cable included with your order into the LEFT :doc:`digitizer<Master Forge:The Digitizers>`. If you would rather use an after-market USB-C to USB-C cable instead, due to a personal preference or computer requirement, that is also okay. Regardless of your selection, we'll refer to the cable that connects directly to the computer as the sole Power Cable. If you have any additional :doc:`bolt-ons<Bolt-Ons>`, now would be a good time to plug them into your Master. 
+Jeśli jeszcze tego nie zrobiłeś, teraz jest odpowiedni moment, aby podłączyć do lewego
+:doc:`digitizera<Master Forge:The Digitizers>` przewód USB-C do USB-A, który został dostarczony z zamówieniem.
+Jeśli z powodów preferencji lub wymagań sprzętowych wolisz użyć przewodu USB-C do USB-C innego
+producenta — również jest to możliwe. Bez względu na wybór, przewód podłączony bezpośrednio do komputera
+będziemy nazywać głównym przewodem zasilającym (Power Cable). Jeśli posiadasz dodatkowe
+:doc:`nakładki<Bolt-Ons>`, teraz jest dobry moment, aby je podłączyć do Master Forge.
 
 .. warning::
-   IMPORTANT: During your first time plugging your Forge in,
-   and every time thereafter when you have :doc:`realtime-feedback<GenerativeTextMenu>` enabled, it’s
-   recommended that you have your cursor in a blank typing space. :doc:`CCOS<CharaChorder Operating System (CCOS)>` devices, of which the Master Forge is one, have a welcome message that can send instructions to your 
-   computer that are not intended by the user. This feature can be disabled in
-   the :doc:`GTM<GenerativeTextMenu>`. 
+   WAŻNE: Podczas pierwszego podłączenia Forge oraz za każdym razem, gdy masz włączoną funkcję
+   :doc:`realtime-feedback<GenerativeTextMenu>`, zaleca się, aby kursor znajdował się w pustym polu tekstowym.
+   Urządzenia :doc:`CCOS<CharaChorder Operating System (CCOS)>`, do których należy Master Forge, posiadają
+   wiadomość powitalną, która może wysyłać polecenia do komputera, niezamierzone przez użytkownika.
+   Funkcję tę można wyłączyć w :doc:`GTM<GenerativeTextMenu>`.
 
-Once you have your setup connected, you can plug the Master Cable into your computer. Upon connecting, you may notice the following things: 
-    If your cursor is somewhere where text can be entered… 
-        - You will first see the text “Loading ### Chordmaps” highlighted, and a few moments later, “CCOS is ready.” 
-    Regardless of whether or not your cursor is somewhere where text can be entered… 
-        - The LED lights under your :doc:`digitizers<Digitizers>` will start their rainbow cycle.
+Po podłączeniu systemu możesz podłączyć przewód Master do komputera. Po połączeniu możesz zauważyć następujące
+rzeczy:
+    Jeśli kursor znajduje się w polu tekstowym...
+        - Najpierw pojawi się tekst „Loading ### Chordmaps”, a po chwili „CCOS is ready.”
+    Niezależnie od położenia kursora...
+        - Diody LED pod :doc:`digitizerami<Digitizers>` rozpoczną cykl tęczowy.
 
-If you have :ref:`realtime feedback<GenerativeTextMenu:Realtime feedback>` enabled, once you can see the highlighted text that reads
-“CCOS is ready”, your device is ready to be used.
+Jeśli masz włączoną funkcję :ref:`realtime feedback<GenerativeTextMenu:Realtime feedback>`, gdy zobaczysz
+wyróżniony tekst „CCOS is ready”, Twoje urządzenie jest gotowe do użycia.
 
 .. note::
-   IMPORTANT: :ref:`Realtime feedback<GenerativeTextMenu:Realtime feedback>` is enabled by default on new CharaChorder devices.
+   WAŻNE: :ref:`Realtime feedback<GenerativeTextMenu:Realtime feedback>` jest domyślnie włączone w nowych
+   urządzeniach CharaChorder.
 
-If this is your very first time using a :doc:`CCOS<CharaChorder Operating System (CCOS)>` device, we recommend the following:
-    #. Place your cursor into a place where it's safe to type
-    #. Place your hands on the :doc:`digitizers<Master Forge:The Digitizers>` and nestle your fingers on the switches
-    #. Move your index, middle, and ring fingers southwards, towards your body, one at a time. 
+Jeśli jest to Twój pierwszy raz z urządzeniem :doc:`CCOS<CharaChorder Operating System (CCOS)>`, zalecamy
+następujące kroki:
+    #. Umieść kursor w miejscu bezpiecznym do pisania
+    #. Połóż dłonie na :doc:`digitizerach<Master Forge:The Digitizers>` i ustaw palce na przełącznikach
+    #. Poruszaj palcami wskazującym, środkowym i serdecznym na południe, w kierunku swojego ciała, jeden po drugim.
 
-These directions correspond to the letters U, O, E, T, N, and S. Now, let's try a :doc:`chord<Chording>`. 
+Ruchy te odpowiadają literom U, O, E, T, N i S. Teraz spróbujmy wykonać :doc:`akord<Chording>`.
 
-.. dropdown:: How to perform a Chord? 
+.. dropdown:: Jak wykonać akord?
 
-    A chord is a type of input that allows you to press multiple keys at a time in order to achieve a predetermined :ref:`output<Chords:Chord Output>`. In order to perform a chord, you must press all of the :ref:`input keys<Chords:Chord Input>` at the same time, within the :ref:`press time limit<GenerativeTextMenu:Press Tolerance>`. Additionally, you must release all of the keys at the same time, that is, within the :ref:`release time limit<GenerativeTextMenu:Release Tolerance>`. Once these steps are performed accurately, your CCOS device will, very quickly, type the keys pressed, backspace them, and then output the predetermined chord. 
+    Akord to rodzaj wejścia, który pozwala na jednoczesne naciśnięcie wielu klawiszy w celu uzyskania
+    zaprogramowanego :ref:`wyniku<Chords:Chord Output>`. Aby wykonać akord, należy nacisnąć wszystkie
+    :ref:`klawisze wejściowe<Chords:Chord Input>` w tym samym czasie, w ramach
+    :ref:`limitu czasu naciśnięcia<GenerativeTextMenu:Press Tolerance>`.
+    Dodatkowo, należy zwolnić wszystkie klawisze jednocześnie — w ramach
+    :ref:`limitu czasu zwolnienia<GenerativeTextMenu:Release Tolerance>`.
+    Po poprawnym wykonaniu tych kroków, urządzenie CCOS szybko wpisze wciśnięte klawisze, usunie je, a
+    następnie wprowadzi zaprogramowany akord.
 
-We can test out your preloaded chords, of which there are 500, by :doc:`chording<Chords>` both index fingers South, towards your body. You might need to play around with the timing a bit. Just remember that you have to press both switches together, at the same time, and then release them at the same time. As mentioned before, it might take a bit of playing around with the timing, but, eventually, you should see the word "the" output onto your typing space. Congratulations! You just performed a chord!
+Możemy przetestować fabrycznie wgrane akordy, których jest 500, wykonując :doc:`akord<Chords>`, naciskając
+oba palce wskazujące na południe, w stronę ciała. Być może trzeba będzie poeksperymentować z czasem wciśnięcia.
+Pamiętaj, że należy nacisnąć oba przełączniki jednocześnie, a następnie jednocześnie je zwolnić.
+Jak wcześniej wspomniano, wymaga to pewnej wprawy, ale ostatecznie powinieneś zobaczyć, jak na ekranie
+pojawia się słowo „the”. Gratulacje! Właśnie wykonałeś akord!
 
-.. dropdown:: Some other chords you can try
+.. dropdown:: Inne przykładowe akordy do wypróbowania
     
-    Here are some other preloaded chords that you can try. You can read the section on :ref:`chord notation<Chords:Chord Notation>` for instructions on how to interpret the following chords.
+    Oto inne fabrycznie wgrane akordy, które możesz wypróbować.
+    W sekcji :ref:`notacja akordowa<Chords:Chord Notation>` znajdziesz instrukcje, jak interpretować
+    poniższe akordy.
         - c+b = because
         - m+b = maybe
         - u+o+y = you
 
-Now that you're up and running, and that you know how to perform chords, you can head over to the :doc:`training section<Tools>` for instructions
-on how to get started with learning your device. If you want to just
-jump in without having to read a minute longer, head on over to our
-training website; https://www.iq-eq.io/#/
+Gdy już opanujesz podstawy i nauczysz się wykonywać akordy, możesz przejść do :doc:`sekcji treningowej<Tools>`,
+aby rozpocząć naukę obsługi urządzenia. Jeśli wolisz od razu przejść do ćwiczeń bez dalszego czytania, odwiedź
+naszą stronę treningową: https://www.iq-eq.io/#/
 
 .. _Dot I/O:
 .. image:: /assets/images/DOTIO.png
   :width: 1200
-  :alt: Practicing on DOT I/O
+  :alt: Ćwiczenia na DOT I/O
 
-Setting Up
+.. _Master Forge:Setting Up:
+
+Konfiguracja
 -----------
 
-There are a few steps that you’ll likely want to take if this is your
-first time using your Master Forge. In the following section, we
-will update your device, explain navigation in the :doc:`GTM<GenerativeTextMenu>`, and demonstrate the default layout on your new device.
+Jeśli jest to Twój pierwszy raz z Master Forge, istnieje kilka kroków, które prawdopodobnie będziesz
+chciał wykonać. W poniższej sekcji zaktualizujemy Twoje urządzenie, wyjaśnimy nawigację w
+:doc:`GTM<GenerativeTextMenu>` oraz zaprezentujemy domyślny układ na Twoim nowym urządzeniu.
 
-Updating your Device
+.. _Master Forge:Updating your Device:
+
+Aktualizacja urządzenia
 ~~~~~~~~~~~~~~~~~~~~~
 
 .. _M4G-checking-your-devices-firmware:
 
-Checking your Device’s Firmware
+Sprawdzanie wersji oprogramowania sprzętowego urządzenia
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-You can check your device’s current firmware by following the steps
-below: 
+Możesz sprawdzić aktualną wersję oprogramowania swojego urządzenia, wykonując poniższe kroki:
 
-#. On a chromium based browser, such as Chrome, go to the CharaChorder `Device Manager <https://charachorder.io/config/layout/>`__ 
-#. Click “Connect” at the bottom center of the page
-   
+1. W przeglądarce opartej na Chromium, takiej jak Chrome, przejdź do CharaChorder
+`Device Manager <https://charachorder.io/config/layout/>`__.
+
+2. Kliknij „Connect” na dole ekranu.
+
 .. _Connect Button:
 .. image:: /assets/images/FW-connect-button.JPG
   :width: 600
-  :alt: Connect Button on Device Manager
-3. When the popup box comes up that reads “charachorder.io wants to connect to a serial port,” choose your Master Forge, then click the blue “connect” button
+  :alt: Przycisk Connect w Device Manager
+
+3. Gdy pojawi się okno dialogowe „charachorder.io chce połączyć się z portem szeregowym”, wybierz
+swoje urządzenie Master Forge, a następnie kliknij niebieski przycisk „connect”.
 
 .. _Serial Port Popup:
 .. image:: /assets/images/SerialPort-Message.webp
   :width: 600
-  :alt: Popup to select serial device
+  :alt: Okno wyboru urządzenia szeregowego
 
-After following the above steps, you can find your
-firmware version in the bottom left of your screen. It will read something like this:
+Po wykonaniu powyższych kroków zobaczysz wersję oprogramowania w lewym dolnym rogu ekranu.
+Powinna wyglądać mniej więcej tak:
 ``CCOS 2.0.2``
 
 .. _Firmware Check:
 .. image:: /assets/images/DMFW.png
   :width: 600
-  :alt: Checking the firmware on Device Manager
+  :alt: Sprawdzanie wersji firmware w Device Manager
 
-Updating the Firmware
+.. _Master Forge:Updating the Firmware:
+
+
+Aktualizacja firmware
 ^^^^^^^^^^^^^^^^^^^^^^^
 
-If you find that your device is not running the latest firmware version,
-you can follow the steps below to update your device. You can check
-which is the latest firmware release by visiting `this
-site <https://charachorder.io/ccos/m4g_s3/>`__. 
+Jeśli okaże się, że Twoje urządzenie nie działa na najnowszej wersji firmware, możesz wykonać poniższe
+kroki, aby je zaktualizować. Aktualną wersję firmware możesz sprawdzić odwiedzając
+`tę stronę <https://charachorder.io/ccos/m4g_s3/>`__.
 
 .. warning::
-   IMPORTANT: Before performing the below steps, please make sure that you have a :ref:`backup of your layout<Device Manager:Creating a Backup>` as well as a :ref:`backup of your chord library<Device Manager:Creating a Backup>` and a :ref:`backup of your GTM settings<Device Manager:Creating a Backup>`. The update might reset those, so it's important that you keep backup files handy. For instructions on how to restore backed up files, visit the :ref:`Backups<Device Manager:Restoring from a Backup>`    section.
+   WAŻNE: Przed wykonaniem poniższych kroków upewnij się, że posiadasz
+   :ref:`kopię zapasową swojego układu<Device Manager:Creating a Backup>`,
+   :ref:`kopię biblioteki akordów<Device Manager:Creating a Backup>` oraz
+   :ref:`kopię ustawień GTM<Device Manager:Creating a Backup>`.
+   Aktualizacja może przywrócić ustawienia fabryczne, dlatego ważne jest, aby mieć przygotowane kopie zapasowe.
+   Instrukcje przywracania znajdziesz w sekcji :ref:`Kopie zapasowe<Device Manager:Restoring from a Backup>`.
 
-The Master Forge supports over-the-air (OTA) updates. You can follow the steps below to update your Forge:
-    #. Head to the `CharaChorder Device Manager <https://charachorder.io/ccos/>`__
-    #. If you're not on the Firmware Updates page yet, click ``CCOS Updates`` on the bottom left of the page.
+Master Forge obsługuje aktualizacje OTA (Over-The-Air). Aby zaktualizować urządzenie, wykonaj następujące kroki:
+    #. Przejdź do `CharaChorder Device Manager <https://charachorder.io/ccos/>`__
+    #. Jeżeli nie jesteś jeszcze na stronie aktualizacji firmware, kliknij ``CCOS Updates`` w
+       lewym dolnym rogu strony.
 
         .. _Firmware Updates Page:
         .. image:: /assets/images/DM-CCOS-button.jpg
           :width: 600
-          :alt: CCOS button
-    #. Out of the options at the top, select ``m4g_s3``
+          :alt: Przycisk CCOS w Device Manager
+
+    #. Spośród dostępnych opcji wybierz ``m4g_s3``.
        
         .. _Firmware Selection:
         .. image:: /assets/images/m4g-firmware-selection.JPG
           :width: 600
-          :alt: The correct firmware to select
-    #. You can compare the latest release (the version at the top of the list) with your device's version. Select your desired version.
-    #. If you haven't done so already, Connect your device to the Manager by clicking "Connect" at the bottom of the page
-        
+          :alt: Wybór odpowiedniego firmware
+
+    #. Porównaj najnowszą wersję (widoczną na górze listy) z wersją swojego urządzenia. Wybierz żądaną wersję.
+    #. Jeżeli jeszcze tego nie zrobiłeś, podłącz urządzenie do Device Manager klikając "Connect" na dole strony.
+
         .. _Connect Button:
         .. image:: /assets/images/FW-connect-button.JPG
           :width: 600
-          :alt: Connect Button on Device Manager
-    #. When the popup box comes up that reads “charachorder.io wants to connect to a serial port”, choose your Master Forge, then click the blue “connect” button
-     
+          :alt: Przycisk Connect w Device Manager
+
+    #. Gdy pojawi się okno dialogowe „charachorder.io chce połączyć się z portem szeregowym”, wybierz swoje
+       urządzenie Master Forge i kliknij niebieski przycisk „connect”.
+
         .. _Serial Port Popup:
         .. image:: /assets/images/SerialPort-Message.webp
           :width: 600
-          :alt: Popup to select serial device
-    #. Click the blue "Apply Update" button
+          :alt: Okno wyboru urządzenia szeregowego
+
+    #. Kliknij niebieski przycisk "Apply Update".
         
         .. _Apply Update Button:
         .. image:: /assets/images/DM-applyupdate-button.jpg
           :width: 600
-          :alt: Apply Update Button
+          :alt: Przycisk Apply Update
 
-Your device will reboot on its own and will have the new firmware on it once it starts up again. You can :ref:`check your firmware<M4G-checking-your-devices-firmware>` to make sure that the update has been applied correctly.
+Twoje urządzenie uruchomi się ponownie automatycznie i będzie miało wgraną nową wersję firmware po
+ponownym uruchomieniu. Możesz :ref:`sprawdzić wersję firmware<M4G-checking-your-devices-firmware>`, aby
+upewnić się, że aktualizacja przebiegła pomyślnie.
 
+.. dropdown:: Tylko w sytuacjach awaryjnych
 
-.. Dropdown: Only use in Emergency
-	
-	If, for some reason, you weren't able to complete an OTA update, you can follow the steps below to update your CCOS manually.
+    Jeżeli z jakiegoś powodu nie udało Ci się przeprowadzić aktualizacji OTA, możesz wykonać poniższe kroki, aby ręcznie zaktualizować CCOS.
 
- 	Doing it manually, the Master Forge must be updated one :ref:`digitizer<Master Forge:The Digitizers>` at a time.
- 		#. On a chromium based browser, such as Chrome, go to the CharaChorder `Device Manager <https://charachorder.io/ccos/>`__ 
- 		#. If not auto-connected, click "Connect"
+    W przypadku aktualizacji ręcznej Master Forge musi być aktualizowany pojedynczo — dla każdego
+    :ref:`digitizera<Master Forge:The Digitizers>` oddzielnie.
+        #. W przeglądarce opartej na Chromium, takiej jak Chrome, przejdź do CharaChorder
+           `Device Manager <https://charachorder.io/ccos/>`__
+        #. Jeżeli połączenie nie nastąpiło automatycznie, kliknij „Connect”
 
-       		   .. _Connect Button:
-     		   .. image:: /assets/images/FW-connect-button.jpg
-    		      :width: 600
-    		      :alt: Connect Button on Device Manager
- 		#. When the popup box comes up that reads “manager.charachorder.com wants to connect to a serial port”, choose the CCOS device you wish to update, then click the blue “connect” button
+       	    .. _Connect Button:
+            .. image:: /assets/images/FW-connect-button.jpg
+              :width: 600
+              :alt: Przycisk Connect w Device Manager
 
-        		 .. _Serial Port Popup:
-      		  .. image:: /assets/images/SerialPort-Message.jpg
-       		   :width: 600
-        		  :alt: Popup to select serial device
- 		#. If not already on the Firmware Updates page, click "CCOS Updates" at the bottom left of the page
+        #. Gdy pojawi się okno dialogowe „manager.charachorder.com chce połączyć się z portem szeregowym”,
+        wybierz urządzenie CCOS, które chcesz zaktualizować, a następnie kliknij niebieski przycisk „connect”.
 
-        		 .. _Firmware Updates Page:
-     		   .. image:: /assets/images/DM-CCOS-button.jpg
-     		     :width: 600
-      		    :alt: CCOS button
- 		#. You can compare the latest release (the version at the top of the list) with your device's version. Select your desired version.
- 		#. Use the blue "Bootloader" text to reboot your device into bootloader
+            .. _Serial Port Popup:
+            .. image:: /assets/images/SerialPort-Message.jpg
+              :width: 600
+              :alt: Okno wyboru urządzenia szeregowego
+
+        #. Jeżeli nie jesteś jeszcze na stronie aktualizacji firmware, kliknij "CCOS Updates" w lewym
+           dolnym rogu strony.
+
+               .. _Firmware Updates Page:
+               .. image:: /assets/images/DM-CCOS-button.jpg
+                 :width: 600
+                 :alt: Przycisk CCOS w Device Manager
+
+        #. Porównaj najnowszą wersję (na górze listy) z wersją Twojego urządzenia. Wybierz żądaną wersję.
+        #. Kliknij niebieski napis "Bootloader", aby uruchomić urządzenie w trybie bootloadera.
 
        		  .. _Bootloader button:
-      		  .. image:: /assets/images/DM-Bootloader-button.jpg
-        		  :width: 600
-        		  :alt: Bootloader button
- 		#. Click the blue "CURRENT.UF2" text to download the firmware file
+              .. image:: /assets/images/DM-Bootloader-button.jpg
+                :width: 600
+                :alt: Przycisk Bootloader
+
+        #. Kliknij niebieski napis "CURRENT.UF2", aby pobrać plik firmware.
 
       		   .. _Current.uf2 button:
-      		  .. image:: /assets/images/DM-UF2-button.jpg
-       		   :width: 600
-        		  :alt: CURRENT.UF2 button
+               .. image:: /assets/images/DM-UF2-button.jpg
+                 :width: 600
+                 :alt: Przycisk CURRENT.UF2
 
-			.. warning::
-   				IMPORTANT: Make sure that the file you download is named exactly like this: CURRENT.UF2 . If there are any other characters in the file name, the file will not work. “CURRENT.UF2(1)” will NOT work. Additionally, the file name is case sensitive; all letters must be capitalized.
+            .. warning::
+                WAŻNE: Upewnij się, że pobrany plik nazywa się dokładnie: CURRENT.UF2. Jeżeli w nazwie pliku
+                znajdą się inne znaki, plik nie zadziała. Plik nazwany „CURRENT.UF2(1)” NIE zadziała.
+                Dodatkowo, nazwa pliku jest czuła na wielkość liter — wszystkie litery muszą być pisane
+                wielkimi literami.
 
+        #. Skopiuj właśnie pobrany plik CURRENT.UF2 i wklej go do dysku Forge w eksploratorze plików.
+        #. Gdy system zapyta, jak rozwiązać konflikt nazw plików, wybierz „Zastąp plik”.
 
-    
- 		#. Copy the CURRENT.UF2 file that you just downloaded and paste it into the Forge drive in your file explorer
- 		#. When your computer asks you how you would like to resolve the issue of two files with the same name, select “Replace file”.
+            W tym momencie Forge automatycznie uruchomi się ponownie, a napęd Forge zniknie. Gratulacje!
+            Pomyślnie zaktualizowałeś swoje urządzenie. Możesz sprawdzić wersję firmware, wykonując kroki
+            :ref:`tutaj<m4g-checking-your-devices-firmware>`.
 
-			At this point, your Forge will automatically reboot and the Forge drive will have disappeared. Congratulations! You have successfully updated your device. You can check your device’s firmware version by following the steps :ref:`here<m4g-checking-your-devices-firmware>`.
+        #. Teraz, na stronie `Firmware Updates <https://charachorder.io/ccos/>`__, wybierz ``m4gr_s3``.
+        #. Jeśli jeszcze tego nie zrobiłeś, ponownie połącz urządzenie z Managerem klikając
+           "Connect" na dole strony.
 
- 		#. Now, back in the `Firmware Updates page <https://charachorder.io/ccos/>`__, select ``m4gr_s3``
- 		#. If you haven't done so already, Connect your device to the Manager again by clicking "Connect" at the bottom of the page
+            .. _Connect Button:
+            .. image:: /assets/images/FW-connect-button.jpg
+              :width: 600
+              :alt: Przycisk Connect w Device Manager
 
-      		   .. _Connect Button:
-     		   .. image:: /assets/images/FW-connect-button.jpg
-     		     :width: 600
-     		     :alt: Connect Button on Device Manager
- 		#. When the popup box comes up that reads “charachorder.io wants to connect to a serial port”, choose your Master Forge, then click the blue “connect” button
+        #. Gdy pojawi się okno dialogowe „charachorder.io chce połączyć się z portem szeregowym”, wybierz swoje
+           urządzenie Master Forge, a następnie kliknij niebieski przycisk „connect”.
 
-        		 .. _Serial Port Popup:
-       		 .. image:: /assets/images/SerialPort-Message.jpg
-       		   :width: 600
-      		    :alt: Popup to select serial device
- 		#. Use the blue "Bootloader" text to reboot the right digitizer into bootloader
+            .. _Serial Port Popup:
+            .. image:: /assets/images/SerialPort-Message.jpg
+              :width: 600
+              :alt: Okno wyboru urządzenia szeregowego
 
-     		    .. _Bootloader button:
-    		    .. image:: /assets/images/DM-Bootloader-button.jpg
-     		     :width: 600
-    		      :alt: Bootloader button
- 		#. Click the blue "CURRENT.UF2" text to download the firmware file
+        #. Użyj niebieskiego napisu "Bootloader", aby przełączyć prawy digitizer w tryb bootloadera.
 
-      		   .. _Current.uf2 button:
-       		 .. image:: /assets/images/DM-UF2-button.jpg
-        		  :width: 600
-        		  :alt: CURRENT.UF2 button
+            .. _Bootloader button:
+            .. image:: /assets/images/DM-Bootloader-button.jpg
+              :width: 600
+              :alt: Przycisk Bootloader
 
-			.. warning::
-   				IMPORTANT: Make sure that the file you download is named exactly like this: CURRENT.UF2 . If there are any other characters in the file name, the file will not work. “CURRENT.UF2(1)” will NOT work. Additionally, the file name is case sensitive; all letters must be capitalized.
+        #. Kliknij niebieski napis "CURRENT.UF2", aby pobrać plik firmware.
 
-		 #. Copy the CURRENT.UF2 file that you just downloaded and paste it into the Forge drive in your file explorer
-		 #. When your computer asks you how you would like to resolve the issue of two files with the same name, select “Replace file”.
+            .. _Current.uf2 button:
+            .. image:: /assets/images/DM-UF2-button.jpg
+              :width: 600
+              :alt: Przycisk CURRENT.UF2
 
-		Once again, your Forge will automatically reboot and the
-Forge drive will have disappeared. You can check your device’s firmware
-version by following the steps :ref:`here<m4g-checking-your-devices-firmware>`.
+            .. warning::
+                WAŻNE: Upewnij się, że pobrany plik nazywa się dokładnie: CURRENT.UF2. Jeżeli w nazwie pliku
+                znajdą się inne znaki, plik nie zadziała. Plik nazwany „CURRENT.UF2(1)” NIE zadziała.
+                Dodatkowo, nazwa pliku jest czuła na wielkość liter — wszystkie litery muszą być pisane
+                wielkimi literami.
 
+        #. Skopiuj właśnie pobrany plik CURRENT.UF2 i wklej go do dysku Forge w eksploratorze plików.
+        #. Gdy system zapyta, jak rozwiązać konflikt nazw plików, wybierz „Zastąp plik”.
 
-Understanding the Settings
+Napęd Forge zniknie a urz adzenie automatycznie uruchomi się ponownie.
+Możesz sprawdzić wersję firmware swojego urządzenia, wykonując kroki
+:ref:`tutaj<m4g-checking-your-devices-firmware>`.
+
+.. _Master Forge:Understanding the Settings:
+
+Zrozumienie ustawień
 ----------------------------
 
-The Forge has operational settings that are user-configurable. Since the
-device is plug-and-play, you don’t need any software to edit the
-device’s settings; all you need is a place to type text. We call these
-settings the Generative Text Menu, or GTM for short.
+Forge posiada ustawienia operacyjne, które mogą być konfigurowane przez użytkownika.
+Ponieważ urządzenie działa na zasadzie plug-and-play, nie potrzebujesz żadnego dodatkowego
+oprogramowania, aby edytować ustawienia urządzenia; wystarczy miejsce, w którym możesz wpisać tekst.
+Te ustawienia nazywamy Generative Text Menu, w skrócie GTM.
 
-You can access the :doc:`GTM<GenerativeTextMenu>` by
-:doc:`chording<Chords>` both pinkies `north`_ on any space that
-allows text entry such as a notepad app. For an explanation on chords
-and how to perform them, visit the :doc:`Chords<Chords>` section.
+Możesz uzyskać dostęp do :doc:`GTM<GenerativeTextMenu>`, wykonując :doc:`akord<Chords>` poprzez
+jednoczesne naciśnięcie obu małych palców na `północ`_ w dowolnym miejscu, gdzie możesz wprowadzać
+tekst — na przykład w notatniku. Aby uzyskać wyjaśnienie dotyczące akordów i sposobu ich wykonywania,
+odwiedź sekcję :doc:`Chords<Chords>`.
 
-Once you perform the chord to call up the :doc:`GTM<GenerativeTextMenu>`, your Forge will type out the menu and its options.
-It will look something like this:
-
+Po wykonaniu akordu wywołującego :doc:`GTM<GenerativeTextMenu>`, Forge wpisze na ekranie menu i dostępne opcje.
+Będzie to wyglądać mniej więcej tak:
 
 ``Master Forge GTM [ >K<eyboard || >M<ouse || >C<hording || >D<isplay || >R<esources ]``
 
-Navigation around this menu is based on letter-presses. In the example
-above, you can select the desired submenu by pressing the letter between
-the angle brackets (for example: ``>K<``) in your target submenu on your
-CharaChorder One. In the example above, you would press ``K`` for
-Keyboard, ``M`` for Mouse, ``C`` for Chording, ``D`` for Display, and
-``R`` for Resources.
+Nawigacja po tym menu opiera się na naciskaniu liter.
+W powyższym przykładzie możesz wybrać żądaną podkategorię, naciskając literę umieszczoną między
+nawiasami (na przykład: ``>K<``) odpowiadającą danemu podmenu na Twoim CharaChorder One.
+W powyższym przykładzie naciskasz ``K`` dla Klawiatury, ``M`` dla Myszki, ``C`` dla Chordingu,
+``D`` dla Wyświetlania i ``R`` dla Zasobów.
 
-In some submenus, you will see numeric values. In order to increase or
-decrease these, you can use the arrow keys on your :ref:`digitizers<The Digitizers>`.
+W niektórych podmenu zobaczysz wartości liczbowe. Aby je zwiększać lub zmniejszać, możesz używać klawiszy
+strzałek na :ref:`digitizerach<The Digitizers>`.
 
 ``CharaChorder > Chording > Press Tolerance [ Use up/down arrow keys to adjust: 25ms ]``
 
-You can read an explanation on all of the settings on your CharaChorder device :doc:`here<GenerativeTextMenu>`.
+Możesz przeczytać wyjaśnienia wszystkich ustawień swojego urządzenia CharaChorder :doc:`tutaj<GenerativeTextMenu>`.
 
-Learning the Layout
+.. _Master Forge:Learning the Layout:
+
+Nauka układu
 ---------------------
 
-The default on the Master Forge :ref:`digitizers<The Digitizers>`, which we will refer to as the M4 English layout, has been designed to favor :doc:`bigrams<Logic behind the Layout>` and :doc:`trigrams<Logic behind the Layout>` commonly used in the English language while making the letters accessible for a logical choice of :doc:`lexical<Chords>`. You can find the map below.
+Domyślny układ :ref:`digitizerów<The Digitizers>` Master Forge, który będziemy nazywać układem M4 English,
+został zaprojektowany tak, aby faworyzować :doc:`bigramy<Logic behind the Layout>` i
+:doc:`trigramy<Logic behind the Layout>` powszechnie używane w języku angielskim, zapewniając jednocześnie
+logiczny wybór znaków dla :doc:`leksykalnych<Chords>`. Mapę znajdziesz poniżej.
 
 .. note::
-   General consensus amongst the community is that, while not perfect,
-   the letter arrangement of the default layout is good enough that further modifications would provide very little benefit
-   considering 500+ WPM have been reached in peak conditions.
-   
-   **Most commonly only special character and number placement are changed**, for example to benefit coding.
+   Ogólny konsensus wśród społeczności mówi, że choć układ domyślny nie jest idealny, to rozmieszczenie
+   liter jest na tyle dobre, że dalsze modyfikacje przynoszą niewielką korzyść, biorąc pod uwagę, że
+   osiągnięto już ponad 500 słów na minutę w warunkach szczytowych.
 
-   Some exceptions include optimizing for VIM bindings, though people have successfully used the default layout for VIM as well
-   and benefits of such modifications are debatable.
+   **Najczęściej zmienia się jedynie rozmieszczenie znaków specjalnych i cyfr**, np. dla ułatwienia programowania.
 
+   Istnieją wyjątki polegające na optymalizacji pod VIM, choć wielu użytkowników skutecznie korzystało z
+   domyślnego układu w VIM i korzyści z takich modyfikacji są dyskusyjne.
 
 .. _M4English Layout:
 .. image:: /assets/images/M4-Layout.png
   :width: 1200
-  :alt: M4 English Layout
+  :alt: Układ M4 English
 
-Layers
+.. _Master Forge:Layers:
+
+Warstwy
 ~~~~~~
 
-The Master Forge layout has 3 layers: the base layer called the A1 layer,
-the secondary layer referred to as A2, and the tertiary layer named A3.
-Being as the Master Forge has 8 switches on each :ref:`digitizer<Master Forge:The Digitizers>`, and taking
-into account that each switch can access 4 different individually assignable positions, and
-considering that each layer has access to all of those 8 switches, we
-have over 190 assignable slots between the two :ref:`digitizers<Master Forge:The Digitizers>`.
+Układ Master Forge posiada 3 warstwy: warstwę bazową zwaną warstwą A1, drugorzędną warstwę A2 oraz
+trzeciorzędną warstwę A3.
+Ponieważ Master Forge posiada 8 przełączników na każdym :ref:`digitizerze<Master Forge:The Digitizers>`,
+biorąc pod uwagę, że każdy przełącznik może mieć przypisane 4 różne pozycje indywidualne, oraz
+uwzględniając, że każda warstwa daje dostęp do wszystkich 8 przełączników, mamy ponad 190 dostępnych
+slotów przypisywalnych pomiędzy dwoma :ref:`digitizerami<Master Forge:The Digitizers>`.
 
-In this section, we’ll refer only to the default M4 English layout. If
-you have modified your layout to something different, then the next
-portion might not be accurate for your device. If you have purchased
-your device from CharaChorder, then the following is accurate to your
-device.
+W tej sekcji będziemy odnosić się wyłącznie do domyślnego układu M4 English.
+Jeżeli zmodyfikowałeś swój układ, dalsza część może nie odpowiadać dokładnie Twojemu urządzeniu.
+Jeśli zakupiłeś urządzenie bezpośrednio od CharaChorder, poniższe informacje są zgodne z Twoim urządzeniem.
 
-By default, auxiliary layers are accessible by pressing and holding the "layer access" keys. This creates a "shift" into one of the auxiliary layers, but only momentarily. Currently, there is a "hacky" way to make it so that layers are toggled instead of shifted, but this is not an official feature. Toggleable layers, as they may exist in current CCOS builds, has not been tested extensively and cannot be guaranteed to come issue-free.
+Domyślnie warstwy pomocnicze są dostępne po naciśnięciu i przytrzymaniu klawiszy dostępu do warstw.
+Powoduje to tymczasowe „przesunięcie” do jednej z warstw pomocniczych. Obecnie istnieje „obejściowa”
+metoda ustawienia warstw przełączanych zamiast tymczasowych, jednak nie jest to funkcja oficjalna.
+Przełączane warstwy, o ile istnieją w aktualnych wersjach CCOS, nie zostały gruntownie przetestowane
+i mogą zawierać błędy.
 
 .. _Toggleable Layers:
-.. dropdown:: Toggleable Layers
-   
-    If you have no interest in knowing why this works, you may skip down to the steps described below in order to enable toggleable layers.
-    CCOS devices use a "shifted' layer method that requires a press and hold of a key in order to access keys on auxiliary layers. By default, the layer access keys tell the device to go into that layer. Releasing the switch tells the device to return to the base layer, since the same "location" is mapped to the layer access button on the target layer as well. We can exploit this functionality and force the CCOS device to stay in a certain layer by simply removing the layer access key from the target layer. That way, the device doesn't know that it should return to the base layer when you release the switch. 
+.. dropdown:: Warstwy przełączane
 
-    In order to set your device up to have toggleable layers instead of shifted layers, you'll need to head to the `Device Manager <https://charachorder.io/config/layout/>`__ and remap some keys. We'll describe here how to remap the A2 layer access key, but the same steps apply to the A3 layer. These instructions assume that you have already connected your device to the `Device Manager <https://charachorder.io/config/layout/>`__. 
-    
-    #. Make sure that the A2 layer access key is mapped to the key of your choice on the Alpha layer (A1 layer). This is the key you will use to toggle into the A2 layer
-    #. On the A2 layer, find the same location that you mapped the A2 layer access key and change that key (on the A2 layer) to ``No Key Pressed``. This change is what prevents your device from shifting back into the A1 layer
-    #. On the A2 layer, choose another location and map the A2 layer access key there. This is the key that you will use to return to the Alpha layer.
+    Jeżeli nie interesuje Cię wyjaśnienie dlaczego to działa, możesz przejść od razu do kroków opisanych
+    poniżej w celu włączenia warstw przełączanych.
 
-A1 Layer
+    Urządzenia CCOS używają metody „przesuwanych” warstw, wymagającej przytrzymania klawisza, aby uzyskać
+    dostęp do klawiszy w warstwach pomocniczych. Domyślnie klawisze dostępu do warstw informują urządzenie
+    o wejściu w daną warstwę. Zwolnienie przełącznika powoduje powrót do warstwy bazowej, ponieważ ta sama
+    „lokalizacja” jest przypisana do przycisku dostępu do warstwy w docelowej warstwie. Możemy wykorzystać
+    tę funkcjonalność i zmusić urządzenie CCOS do pozostania w danej warstwie, po prostu usuwając klawisz
+    dostępu do warstwy z docelowej warstwy. W ten sposób urządzenie nie wie, że powinno wrócić do warstwy
+    bazowej po zwolnieniu przełącznika.
+
+    Aby skonfigurować urządzenie na tryb warstw przełączanych zamiast przesuwanych, należy przejść do
+    `Device Manager <https://charachorder.io/config/layout/>`__ i zmodyfikować mapowanie klawiszy.
+    Poniżej opisujemy, jak przemapować klawisz dostępu do warstwy A2, jednak te same kroki obowiązują
+    dla warstwy A3. Instrukcje te zakładają, że urządzenie zostało już podłączone do
+    `Device Managera <https://charachorder.io/config/layout/>`__.
+
+        1. Upewnij się, że klawisz dostępu do warstwy A2 jest przypisany do wybranego miejsca na warstwie Alfa
+           (warstwa A1). To będzie klawisz, którego będziesz używać do przełączania na warstwę A2.
+
+        2. Na warstwie A2 znajdź tę samą lokalizację, gdzie przypisałeś klawisz dostępu A2 i zmień go
+           (na warstwie A2) na ``No Key Pressed``. Ta zmiana zapobiega automatycznemu powrotowi urządzenia do
+           warstwy A1 po zwolnieniu przełącznika.
+
+        3. Na warstwie A2 wybierz inną lokalizację i przypisz tam klawisz dostępu A2. Będzie to klawisz, którym
+           wrócisz do warstwy Alfa.
+
+.. _M4G Alpha Layer:
+
+Warstwa A1
 ^^^^^^^^
 
 .. _M4G Alpha Layer:
 .. image:: /assets/images/AlphaL.JPG
   :width: 1200
-  :alt: The Alpha Layer
+  :alt: Warstwa Alfa
 
-The A1 layer is the main layer that is active by default. The M4 English
-layout has all 26 letters of the English alphabet on the A1 layer so
-that you can access all letters without having to hold or press anything
-else. Your device will always be in the A1 layer upon boot.
+Warstwa A1 to główna warstwa, która jest aktywna domyślnie. Układ M4 English zawiera wszystkie 26 liter
+alfabetu angielskiego na warstwie A1, dzięki czemu masz dostęp do wszystkich liter bez konieczności
+przytrzymywania lub naciskania dodatkowych klawiszy. Urządzenie zawsze uruchamia się domyślnie w warstwie A1.
 
-While the A1 layer is active on the Forge :ref:`digitizers<Master Forge:The Digitizers>` by default, you can map the A1 access key, which bears the name “Primary Keymap (Left)” or “Primary Keymap (Right)”, in the
-`Device Manager <https://charachorder.io/config/layout/>`__.
+Chociaż domyślnie aktywna na :ref:`digitizerach<Master Forge:The Digitizers>` jest warstwa A1, możesz
+przypisać klawisz dostępu do warstwy A1 (o nazwie „Primary Keymap (Left)” lub „Primary Keymap (Right)”)
+w `Device Manager <https://charachorder.io/config/layout/>`__.
 
 .. note::
-    Mapping the A1 layer access key is redundant unless you setup your device to :ref:`toggle between layers<Toggleable Layers>`, instead of shifting between them.
+    Przypisanie klawisza dostępu do warstwy A1 jest zbędne, chyba że skonfigurujesz urządzenie do
+    :ref:`przełączania między warstwami<Toggleable Layers>` zamiast ich przesuwania.
 
+.. _M4G Num Layer:
 
-A2 Layer
+Warstwa A2
 ^^^^^^^^
 
 .. _M4G Num Layer:
 .. image:: /assets/images/NumberL.JPG
   :width: 1200
-  :alt: The Numeric Layer
+  :alt: Warstwa Numeryczna
 
-The A2 layer, sometimes referred to as the “number layer”, is accessible
-with the :doc:`A2 access key<CharaChorder Keys>`. In the above :ref:`graphic<CCEnglish Layout>`, you’ll see this labeled
-as “num-shift.” In the `Device Manager <https://charachorder.io/config/layout/>`__,
-this key has the name “Numeric Layer (Left)” and “Numeric Layer (Right)”, one for each :ref:`digitizer<Master Forge:The Digitizers>`. 
+Warstwa A2, czasami nazywana „warstwą numeryczną”, jest dostępna za pomocą
+:doc:`klawisza dostępu do A2<CharaChorder Keys>`. Na powyższej :ref:`grafice<CCEnglish Layout>`
+oznaczono ją jako „num-shift”. W `Device Manager <https://charachorder.io/config/layout/>`__
+klawisz ten ma nazwę „Numeric Layer (Left)” oraz „Numeric Layer (Right)”, osobno dla każdego
+:ref:`digitizera<Master Forge:The Digitizers>`.
 
-By default, the A2 Layer is accessible by pressing and holding either
-pinky finger outwards, that is, west on the left pinky or east on the
-right pinky. You do not have to hold them both, only one is required.
-Any key that is on the A2 Layer can only be accessed by pressing and
-holding the A2 Layer access key along with the target key. You do not
-need to :doc:`chord<Chords>` the keys together; it’s only required that the
-A2 Layer access key is pressed while the target key is pressed.
+Domyślnie warstwa A2 jest dostępna poprzez naciśnięcie i przytrzymanie dowolnego z małych palców na
+zewnątrz, tj. w lewo (zachód) na lewym małym palcu lub w prawo (wschód) na prawym małym palcu.
+Nie musisz przytrzymywać obu — wystarczy jeden.
+
+Każdy klawisz dostępny na warstwie A2 może być aktywowany poprzez naciśnięcie i przytrzymanie klawisza
+dostępu do warstwy A2 razem z docelowym klawiszem. Nie musisz ich :doc:`akordować<Chords>`; wystarczy, że
+klawisz dostępu do A2 jest wciśnięty w momencie naciśnięcia klawisza docelowego.
 
 .. note::
-   EXAMPLE: On the M4 English layout, you can access the number
-   ``4`` by pressing and holding the right pinky to the east and the
-   left middle finger to the east.
+   PRZYKŁAD: Na układzie M4 English możesz uzyskać cyfrę ``4``, przytrzymując prawy mały palec na wschód
+   oraz lewy środkowy palec na wschód.
 
+.. _M4G Function Layer:
 
-A3 Layer
+Warstwa A3
 ^^^^^^^^
 
 .. _M4G Function Layer:
 .. image:: /assets/images/FunctionL.JPG
   :width: 1200
-  :alt: The Function Layer
+  :alt: Warstwa Funkcyjna
 
-The A3 layer, sometimes referred to as the “function layer”, is
-accessible with the :ref:`A3 access key<CharaChorder Keys>`. This key is not
-in the above :ref:`graphic<CCEnglish Layout>`, and instead
-is accessible by [INFO]. In the `Device Manager <https://charachorder.io/config/layout/>`__,
-this key has the name “Function Layer (Left)” and “Function Layer (Right)”, one for each :ref:`digitizer<Master Forge:The Digitizers>`.
+Warstwa A3, czasami nazywana „warstwą funkcyjną”, jest dostępna za pomocą
+:ref:`klawisza dostępu do A3<CharaChorder Keys>`. Klawisz ten nie jest widoczny na powyższej
+:ref:`grafice<CCEnglish Layout>`, a dostęp do niego uzyskuje się poprzez [INFO].
+W `Device Manager <https://charachorder.io/config/layout/>`__ klawisz ten nosi nazwę
+„Function Layer (Left)” i „Function Layer (Right)”, po jednym dla każdego
+:ref:`digitizera<Master Forge:The Digitizers>`.
 
-By default, the A3 Layer is accessible by [INFO]. You do not have to hold them both in order to access the A3 layer. Any key that is on the A3 Layer can only be accessed by pressing and holding the :doc:`A3 access key<CharaChorder Keys>`, along with the target key. You do not need to :doc:`chord<Chords>` the keys together; it’s only required that the A3 layer access key is pressed while the target key is pressed.
+Domyślnie warstwa A3 jest dostępna poprzez [INFO]. Nie musisz przytrzymywać obu klawiszy jednocześnie,
+aby uzyskać dostęp do warstwy A3. Każdy klawisz na warstwie A3 może być aktywowany poprzez naciśnięcie
+i przytrzymanie :doc:`klawisza dostępu do A3<CharaChorder Keys>` oraz docelowego klawisza.
+Nie trzeba :doc:`akordować<Chords>` tych klawiszy; wystarczy, że klawisz dostępu do A3 jest przytrzymywany
+podczas naciskania klawisza docelowego.
 
 .. note::
-   EXAMPLE: On the M4 English layout, you can access the F1 key by
-   pressing and holding [INFO] and adding the letter ``a`` or ``r`` (location of number 1 on the default layout) to it.
+   PRZYKŁAD: Na układzie M4 English możesz uzyskać klawisz F1, naciskając i przytrzymując [INFO], a następnie
+   dodając literę ``a`` lub ``r`` (miejsce odpowiadające cyfrze 1 w domyślnym układzie).
 
+.. _Shift Modifier:
 
-Shift Modifier
+Modyfikator Shift
 ^^^^^^^^^^^^^^
 
-.. dropdown:: List of shifted key actions
+.. dropdown:: Lista akcji dla klawisza Shift
         
-        .. csv-table:: Shifted Key Actions
+        .. csv-table:: Akcje klawiszy po wciśnięciu Shift
            :header-rows: 1
            :stub-columns: 0
            :widths: auto
 
-           "Alpha key", "Shifted key"
+           "Klawisz alfanumeryczny", "Klawisz po wciśnięciu Shift"
            "`", "~" 
            "1", "\!"
            "2", "\@"
@@ -593,141 +756,164 @@ Shift Modifier
            "/", "?"
    
  
+Ponad trzema wspomnianymi warstwami, klawisz :doc:`Shift<CharaChorder Keys>`, który jest
+:doc:`modyfikatorem<Glossary>`, umożliwia dostęp do dodatkowych znaków. Klawisz Shift działa dokładnie
+tak samo, jak na tradycyjnej klawiaturze. Pozwala na wpisywanie wielkich liter oraz dostęp do symboli
+przypisanych do cyfr. Działa na każdym klawiszu w każdej warstwie, podobnie jak inne modyfikatory
+(takie jak Ctrl i Alt). Wyjście modyfikatora Shift jest obecnie kontrolowane przez system operacyjny,
+do którego podłączony jest Forge, i nie jest możliwe dostosowywanie ich w urządzeniu.
 
-On top of the three aforementioned layers, the :doc:`Shift key<CharaChorder Keys>`, which is a :doc:`modifier<Glossary>`, can be used to access some extra keys. The Shift keypress works just like it
-would on a traditional keyboard. You can capitalize letters and access
-symbols attached to numbers. This works with any key on any layer, just
-like other modifiers (such as Ctrl and Alt). The Shift modifier output
-is currently controlled by the Operating System that your Forge is
-plugged into, and it is not possible to customize their outputs.
+Na powyższej grafice klawisz Shift oznaczono jako „Shift”.
+W `Device Manager <https://charachorder.io/config/layout/>`__ klawisz ten nosi nazwę
+„Shift Keyboard Modifier (Left)” oraz „Shift Keyboard Modifier (Right)” — po jednym dla każdego
+:ref:`digitizera<The Digitizers>`.
 
-In the above graphic, you’ll see
-the Shift key labeled as “Shift”. In the `Device Manager <https://charachorder.io/config/layout/>`__,
-this key has the name “Shift Keyboard Modifier (Left)” and “Shift Keyboard Modifier (Right)”, one for each :ref:`digitizer<The Digitizers>`.
-
-By default, the Shift is accessible by pressing and holding either pinky
-finger inwards, that is, east on the left pinky or west on the right
-pinky. You do not have to hold them both, only one is required. Any key
-that requires the Shift Modifier can only be accessed by pressing and
-holding the Shift key along with the target key. You do not need to
-:doc:`chord<Chords>` the keys together; it’s only required that the Shift
-key is pressed while the target key is pressed.
+Domyślnie dostęp do Shift uzyskuje się poprzez przytrzymanie dowolnego z małych palców do wewnątrz,
+tj. wschód na lewym małym palcu lub zachód na prawym małym palcu. Nie trzeba przytrzymywać obu,
+wystarczy jeden. Każdy klawisz wymagający modyfikatora Shift może być aktywowany poprzez naciśnięcie
+i przytrzymanie klawisza Shift oraz docelowego klawisza. Nie trzeba ich :doc:`akordować<Chords>`;
+wystarczy przytrzymać Shift podczas naciskania klawisza docelowego.
 
 .. note::
-   EXAMPLE: On the M4 English layout, you can access the capital
-   ``A`` by pressing and holding the left pinky to the east and the
-   right index finger to the west.
+   PRZYKŁAD: Na układzie M4 English możesz wpisać wielką literę ``A``, naciskając i przytrzymując
+   lewy mały palec na wschód oraz prawy palec wskazujący na zachód.
 
-   On the M4 English layout, you can access the ``@`` symbol by pressing
-   and holding both pinkies to the east and the left index south.
+   Na układzie M4 English możesz uzyskać symbol ``@``, naciskając i przytrzymując oba małe palce na
+   wschód oraz lewy palec wskazujący na południe.
 
-Configurability
+.. _Configurability:
+
+Konfigurowalność
 ~~~~~~~~~~~~~~~
 
-The Master Forge's layout is configurable, which means that you can
-:doc:`remap<Glossary>` almost all keys. Though the M4 English
-layout has been optimized for writing in English by
-:doc:`chentry<Glossary>` and :doc:`chording<Chords>`, some users may
-choose to :doc:`remap<Glossary>` their device’s layout to better
-suit their personal needs. For a thorough explanation on how remapping
-works and how to remap your device, visit the :ref:`remapping section<Device Manager:Remapping>`
+Układ Master Forge jest konfigurowalny, co oznacza, że możesz :doc:`przypisać na nowo<Glossary>` niemal
+wszystkie klawisze. Chociaż układ M4 English został zoptymalizowany do pisania po angielsku za pomocą
+:doc:`wpisywania akordowego<Glossary>` oraz :doc:`akordowania<Chords>`, niektórzy użytkownicy mogą
+zdecydować się na :doc:`przypisanie<Glossary>` układu urządzenia, aby lepiej dostosować go do własnych potrzeb.
+Szczegółowe wyjaśnienie sposobu działania przypisywania klawiszy oraz jak przypisać je na nowo znajdziesz
+w sekcji :ref:`remapping<Device Manager:Remapping>`.
 
-Master Forge Configurations
+.. _Master Forge Configurations:
+
+Konfiguracje Master Forge
 ****************************
 
-When the Master Forge was `unveiled <https://youtu.be/fux9gU3M25E?si=u4KW7OaUUUNINfKD&t=1025>`__ in Novemeber of 2023, CharaChorder began taking pre-orders offering everyone the same bundle. In September of 2024, CharaChorder ran a `Kickstarter <https://www.kickstarter.com/projects/charachorder/the-master-forge-a-keyboard-built-for-you>`__ campaign for the Master Forge for 5 weeks, offering three different tiers, each with a different configuration. After the Kickstarter campaign finished, the Master Forge went on back-order sale on the `Forge website <https://forgekeyboard.com>`__. The following section identifies what each of these 5 bundles included. 
+Kiedy Master Forge został `zaprezentowany <https://youtu.be/fux9gU3M25E?si=u4KW7OaUUUNINfKD&t=1025>`__ w
+listopadzie 2023 roku, CharaChorder rozpoczęło przyjmowanie zamówień w przedsprzedaży, oferując wszystkim
+ten sam zestaw. We wrześniu 2024 roku CharaChorder przeprowadziło kampanię
+`Kickstarter <https://www.kickstarter.com/projects/charachorder/the-master-forge-a-keyboard-built-for-you>`__
+dla Master Forge, trwającą 5 tygodni, oferując trzy różne pakiety, każdy z inną konfiguracją. Po zakończeniu
+kampanii Kickstarter Master Forge trafił do sprzedaży w systemie zamówień oczekujących na stronie
+`Forge <https://forgekeyboard.com>`__. W poniższej sekcji przedstawiono, co zawierały poszczególne 5 pakietów.
 
-Forge Website Pre-Orders
+.. _Forge Website Pre-Orders:
+
+Zamówienia na stronie Forge
 -------------------------
-The Master Forge was announced at CharaChorder's annual `ChorderCon in 2023 <https://youtu.be/fux9gU3M25E?si=WmNs4bxXJcg0JbKM>`__. It was announced alongside the Forge brand and other Forge products such as the Coder's Forge and the Gamer's Forge. After a surge in Master Forge orders, the Master Forge was given development priority. Every Master Forge order placed between November 2023 and early August 2024 includes:
 
-    - :ref:`One (1) Left Digitizer<Master Forge:The Digitizers>`
-    - :ref:`One (1) Right Digitizer<Master Forge:The Digitizers>`
-    - :ref:`One (1) Electrical Bridge Connector<Master Forge:The Bridge Connector>`
-    - :ref:`One (1) Mechanical Bridge Bolt-On<Master Forge:The Bridge Connector>`
-    - :ref:`One (1) USB-A to USB-C Power Cable<Master Forge:Connections>`
-    - :ref:`One (1) Ergo Bolt-On set<Bolt-Ons:Ergo>`
-    - :ref:`Two (2) Forge Trackball Bolt-Ons<Bolt-Ons:Trackball>`
-    - :ref:`One (1) Tactical Carrying Case<Case>`
-    - :ref:`One (1) Forge Cleat<Add-Ons:Cleat>`
-    - One (1) M3 Allen wrench
-    - :ref:`One (1) Original Backer Deskmat<Add-Ons:Original Backer Deskmat>`
+Master Forge został ogłoszony na dorocznym
+`ChorderCon w 2023 roku <https://youtu.be/fux9gU3M25E?si=WmNs4bxXJcg0JbKM>`__ organizowanym przez CharaChorder.
+Został zaprezentowany razem z marką Forge i innymi produktami Forge, takimi jak Coder's Forge i Gamer's Forge.
+Po gwałtownym wzroście liczby zamówień na Master Forge, nadano mu priorytet rozwojowy.
+Każde zamówienie na Master Forge złożone między listopadem 2023 roku a początkiem sierpnia 2024 roku zawierało:
+
+    - :ref:`Jeden (1) lewy digitizer<Master Forge:The Digitizers>`
+    - :ref:`Jeden (1) prawy digitizer<Master Forge:The Digitizers>`
+    - :ref:`Jeden (1) elektryczny łącznik mostowy<Master Forge:The Bridge Connector>`
+    - :ref:`Jedną (1) mechaniczną nakładkę mostową<Master Forge:The Bridge Connector>`
+    - :ref:`Jeden (1) przewód zasilający USB-A do USB-C<Master Forge:Connections>`
+    - :ref:`Jedną (1) nakładkę Ergo<Bolt-Ons:Ergo>`
+    - :ref:`Dwie (2) nakładki Forge Trackball<Bolt-Ons:Trackball>`
+    - :ref:`Jedną (1) taktyczną walizkę transportową<Case>`
+    - :ref:`Jeden (1) Forge Cleat<Add-Ons:Cleat>`
+    - Jedno (1) narzędzie imbusowe M3
+    - :ref:`Jedną (1) podkładkę biurkową Original Backer<Add-Ons:Original Backer Deskmat>`
 
 .. note::
 
-    As of March of 2025, the Forge Trackball Bolt-On has not finished development. As such, some pre-orders and Kickstarter backers may not receive their trackball bolt-ons with their Master Forge. These will be shipped at a later time.
+    Na dzień marca 2025 roku nakładka Forge Trackball nie zakończyła jeszcze rozwoju.
+    W związku z tym niektóre zamówienia przedsprzedażowe oraz wspierający na Kickstarterze mogą nie
+    otrzymać swoich nakładek trackball wraz z Master Forge. Zostaną one wysłane w późniejszym terminie.
 
+.. _Kickstarter Orders:
 
-Kickstarter Orders
+Zamówienia Kickstarter
 ----------------------
+Kampania Kickstarter dla Master Forge rozpoczęła się 27 sierpnia 2024 roku i zakończyła 7 października 2024 roku.
+Pakiety oferowane na Kickstarterze podzielono na trzy: Basic, Premium i Super.
 
-The Master Forge Kickstarter campaign launched on August 27 of 2024 and closed on October 7 of 2024. The bundles offered on Kickstarter can be separated into three: Basic, Premium, and Super.  
+.. _Basic:
 
 Basic
 ~~~~~~
-The Basic backer tier on Kickstarter includes the following:
+Pakiet Basic na Kickstarterze zawierał następujące elementy:
 
-    - :ref:`One (1) Left Digitizer<Master Forge:The Digitizers>`
-    - :ref:`One (1) Right Digitizer<Master Forge:The Digitizers>`
-    - :ref:`One (1) Electrical Bridge Connector<Master Forge:The Bridge Connector>`
-    - :ref:`One (1) Mechanical Bridge Bolt-On<Master Forge:The Bridge Connector>`
-    - :ref:`One (1) USB-A to USB-C Power Cable<Master Forge:Connections>`
-    - :ref:`One (1) "Originial Backer" Tactical Carrying Case<Case>`
-    - One (1) M3 Allen Wrench
-    - Unlimited Forge CAD Access
+    - :ref:`Jeden (1) lewy digitizer<Master Forge:The Digitizers>`
+    - :ref:`Jeden (1) prawy digitizer<Master Forge:The Digitizers>`
+    - :ref:`Jeden (1) elektryczny łącznik mostowy<Master Forge:The Bridge Connector>`
+    - :ref:`Jedną (1) mechaniczną nakładkę mostową<Master Forge:The Bridge Connector>`
+    - :ref:`Jeden (1) przewód zasilający USB-A do USB-C<Master Forge:Connections>`
+    - :ref:`Jedną (1) „Original Backer” taktyczną walizkę transportową<Case>`
+    - Jedno (1) narzędzie imbusowe M3
+    - Nieograniczony dostęp do Forge CAD
+
+.. _Premium:
 
 Premium
 ~~~~~~~~
-The Premium backer tier on Kickstarter includes the following:
+Pakiet Premium na Kickstarterze zawierał następujące elementy:
 
-    - :ref:`One (1) Left Digitizer<Master Forge:The Digitizers>`
-    - :ref:`One (1) Right Digitizer<Master Forge:The Digitizers>`
-    - :ref:`One (1) Electrical Bridge Connector<Master Forge:The Bridge Connector>`
-    - :ref:`One (1) Mechanical Bridge Bolt-On<Master Forge:The Bridge Connector>`
-    - :ref:`One (1) USB-A to USB-C Power Cable<Master Forge:Connections>`
-    - :ref:`One (1) USB-C to USB-C Cable<Master Forge:Connections>`
-    - :ref:`One (1) Forge Trackball Bolt-On<Bolt-Ons:Trackball>`
-    - :ref:`One (1) "Originial Backer" Tactical Carrying Case<Case>`
-    - :ref:`One (1) "Original Backer" Deskmat<Add-Ons:Original Backer Deskmat>`
-    - One (1) M3 Allen Wrench
-    - :ref:`One (1) Forge Cleat<Add-Ons:Cleat>`
-    - :ref:`Four (4) Ergo Bolt-On sets<Bolt-Ons:Ergo>`
-    - Unlimited Forge CAD Access
-    - 2 Years of VIP Membership
+    - :ref:`Jeden (1) lewy digitizer<Master Forge:The Digitizers>`
+    - :ref:`Jeden (1) prawy digitizer<Master Forge:The Digitizers>`
+    - :ref:`Jeden (1) elektryczny łącznik mostowy<Master Forge:The Bridge Connector>`
+    - :ref:`Jedną (1) mechaniczną nakładkę mostową<Master Forge:The Bridge Connector>`
+    - :ref:`Jeden (1) przewód zasilający USB-A do USB-C<Master Forge:Connections>`
+    - :ref:`Jeden (1) przewód USB-C do USB-C<Master Forge:Connections>`
+    - :ref:`Jedną (1) nakładkę Forge Trackball<Bolt-Ons:Trackball>`
+    - :ref:`Jedną (1) „Original Backer” taktyczną walizkę transportową<Case>`
+    - :ref:`Jedną (1) podkładkę biurkową „Original Backer”<Add-Ons:Original Backer Deskmat>`
+    - Jedno (1) narzędzie imbusowe M3
+    - :ref:`Jedną (1) nakładkę Forge Cleat<Add-Ons:Cleat>`
+    - :ref:`Cztery (4) zestawy nakładek Ergo<Bolt-Ons:Ergo>`
+    - Nieograniczony dostęp do Forge CAD
+    - 2 lata członkostwa VIP
 
+.. _Super:
 
 Super
 ~~~~~~~
 
-    - :ref:`One (1) Left Digitizer<Master Forge:The Digitizers>`
-    - :ref:`One (1) Right Digitizer<Master Forge:The Digitizers>`
-    - :ref:`One (1) Electrical Bridge Connector<Master Forge:The Bridge Connector>`
-    - :ref:`One (1) Mechanical Bridge Bolt-On<Master Forge:The Bridge Connector>`
-    - :ref:`One (1) USB-A to USB-C Power Cable<Master Forge:Connections>`
-    - :ref:`One (1) USB-C to USB-C Cable<Master Forge:Connections>`
-    - :ref:`One (1) Forge Trackball Bolt-On<Bolt-Ons:Trackball>`
-    - :ref:`One (1) "Originial Backer" Tactical Carrying Case<Case>`
-    - :ref:`One (1) "Original Backer" Deskmat<Add-Ons:Original Backer Deskmat>`
-    - One (1) M3 Allen Wrench
-    - :ref:`One (1) Forge Cleat<Add-Ons:Cleat>`
-    - :ref:`Four (4) Ergo Bolt-On sets<Bolt-Ons:Ergo>`
-    - Unlimited Forge CAD Access
-    - Lifetime VIP Membership
-    - GTM Immortalization
-    - Digitizer Exoskeleton signed by Riley Keen, Founder and CEO of CharaChorder
+Pakiet Super na Kickstarterze zawierał następujące elementy:
 
+    - :ref:`Jeden (1) lewy digitizer<Master Forge:The Digitizers>`
+    - :ref:`Jeden (1) prawy digitizer<Master Forge:The Digitizers>`
+    - :ref:`Jeden (1) elektryczny łącznik mostowy<Master Forge:The Bridge Connector>`
+    - :ref:`Jedną (1) mechaniczną nakładkę mostową<Master Forge:The Bridge Connector>`
+    - :ref:`Jeden (1) przewód zasilający USB-A do USB-C<Master Forge:Connections>`
+    - :ref:`Jeden (1) przewód USB-C do USB-C<Master Forge:Connections>`
+    - :ref:`Jedną (1) nakładkę Forge Trackball<Bolt-Ons:Trackball>`
+    - :ref:`Jedną (1) „Original Backer” taktyczną walizkę transportową<Case>`
+    - :ref:`Jedną (1) podkładkę biurkową „Original Backer”<Add-Ons:Original Backer Deskmat>`
+    - Jedno (1) narzędzie imbusowe M3
+    - :ref:`Jedną (1) nakładkę Forge Cleat<Add-Ons:Cleat>`
+    - :ref:`Cztery (4) zestawy nakładek Ergo<Bolt-Ons:Ergo>`
+    - Nieograniczony dostęp do Forge CAD
+    - Członkostwo VIP dożywotnio
+    - Wpisanie do GTM Immortalization
+    - Egzoszkielet digitizera podpisany przez Riley’a Keena, założyciela i CEO CharaChorder
 
-Post-Kickstarter
+.. _Post-Kickstarter:
+
+Po Kickstarterze
 -----------------
 
-Once the Kickstarter campaign ended, the Master Forge was put on sale for pre-orders on the `Forge Website <https://forgekeyboard.com>`__. Orders placed on the Forge website starting October of 2024 include:
+Po zakończeniu kampanii Kickstarter Master Forge został udostępniony do zamówień w przedsprzedaży na stronie
+`Forge <https://forgekeyboard.com>`__. Zamówienia złożone na stronie Forge od października 2024 roku zawierały:
 
-    - :ref:`One (1) Left Digitizer<Master Forge:The Digitizers>`
-    - :ref:`One (1) Right Digitizer<Master Forge:The Digitizers>`
-    - :ref:`One (1) Electrical Bridge Connector<Master Forge:The Bridge Connector>`
-    - :ref:`One (1) Mechanical Bridge Bolt-On<Master Forge:The Bridge Connector>`
-    - :ref:`One (1) USB-A to USB-C Power Cable<Master Forge:Connections>`
-    - :ref:`One (1) Tactical Carrying Case<Case>`
-    - One (1) M3 Allen wrench
-
-
+    - :ref:`Jeden (1) lewy digitizer<Master Forge:The Digitizers>`
+    - :ref:`Jeden (1) prawy digitizer<Master Forge:The Digitizers>`
+    - :ref:`Jeden (1) elektryczny łącznik mostowy<Master Forge:The Bridge Connector>`
+    - :ref:`Jedną (1) mechaniczną nakładkę mostową<Master Forge:The Bridge Connector>`
+    - :ref:`Jeden (1) przewód zasilający USB-A do USB-C<Master Forge:Connections>`
+    - :ref:`Jedną (1) taktyczną walizkę transportową<Case>`
+    - Jedno (1) narzędzie imbusowe M3
