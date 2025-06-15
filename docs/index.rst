@@ -1,23 +1,43 @@
-.. this is a comment, it is not rendered
-   when adding new *.rst or *.md files, reference them here
-   in this index.rst for them to be rendered and added to the
-   table of contents
+.. to jest komentarz, nie jest renderowany
+   przy dodawaniu nowych plików *.rst lub *.md należy odwołać się do nich tutaj
+   w tym index.rst, aby zostały wyrenderowane i dodane do
+   spisu treści
 
-Welcome to the Official CharaChorder Guide!
+Witamy w Oficjalnym Przewodniku CharaChorder!
 ============================================
 
-Welcome to the wonderful world of CharaChorder! If you're here, you are likely seeking guidance for your CharaChorder device or you're simply interested in CharaChorder and came here to read a little about what CharaChorder devices are capable of. Either way, we welcome you and hope that you enjoy reading this guide. If you are setting your CharaChorder device up for the first time, please continue reading below.
+Witamy w cudownym świecie CharaChorder!
+Skoro tu jesteś, prawdopodobnie szukasz wskazówek dotyczących swojego
+urządzenia CharaChorder albo po prostu interesujesz się CharaChorder
+i chcesz dowiedzieć się więcej o możliwościach tych urządzeń.
+Niezależnie od powodu, witamy Cię serdecznie i mamy nadzieję,
+że lektura tego przewodnika sprawi Ci przyjemność.
+Jeżeli konfigurujesz swoje urządzenie CharaChorder
+po raz pierwszy, prosimy kontynuuj czytanie poniżej.
 
 .. _ChangingLanguage:
 
-Before even unboxing your CharaChorder, we encourage you to set up your computer with an English Keyboard Language. We recommend ``US English`` for the best results. If you would like to read instructions on how to change your computer Keyboard Language, feel free to follow the applicable external link for `Windows <https://support.microsoft.com/en-us/office/switch-between-languages-using-the-language-bar-1c2242c0-fe15-4bc3-99bc-535de6f4f258>`__, `Mac <https://support.apple.com/guide/mac-help/write-in-another-language-on-mac-mchlp1406/mac>`__ or `Linux (Ubuntu) <https://help.ubuntu.com/stable/ubuntu-help/keyboard-layouts.html.en>`__. 
+Jeszcze przed rozpakowaniem swojego CharaChorder, zalecamy
+skonfigurowanie na komputerze języka klawiatury angielskiego.
+Dla najlepszych rezultatów rekomendujemy ustawienie ``US English``.
+Jeśli chcesz zapoznać się z instrukcją, jak zmienić język klawiatury
+na swoim komputerze, możesz skorzystać z poniższych zewnętrznych
+linków: `Windows <https://support.microsoft.com/en-us/office/switch-between-languages-using-the-language-bar-1c2242c0-fe15-4bc3-99bc-535de6f4f258>`__, `Mac <https://support.apple.com/guide/mac-help/write-in-another-language-on-mac-mchlp1406/mac>`__ lub `Linux (Ubuntu) <https://help.ubuntu.com/stable/ubuntu-help/keyboard-layouts.html.en>`__.
 
-This guide has been designed to link itself to other sections of itself for quick reference and ease of access. Anything that is highlighted in blue or purple is clickable and will take you to another portion of the guide. Please note that this guide is currently a work in progress and is not final in any way. As such, many of the pages that are linked might be empty. We thank you for your patience as we work arduously to release more pages.
+Ten przewodnik został zaprojektowany w taki sposób, aby samodzielnie
+odwoływać się do innych swoich sekcji w celu szybkiego dostępu i
+łatwego poruszania się. Każdy tekst podświetlony na niebiesko lub
+fioletowo jest klikalny i prowadzi do odpowiedniej części przewodnika.
+Prosimy pamiętać, że przewodnik ten jest nadal w trakcie opracowywania
+i nie jest jeszcze wersją ostateczną. W związku z tym, wiele z
+podlinkowanych stron może być jeszcze pusta. Dziękujemy za cierpliwość,
+gdyż intensywnie pracujemy nad publikacją kolejnych stron.
 
-If you would like to submit a correction to something you've read in this guide, or if you have suggestions for the guide, please email alan@charachorder.com. 
+Jeśli chciałbyś zgłosić poprawkę do treści w tym przewodniku lub masz
+sugestie dotyczące przewodnika, prosimy o kontakt mailowy na adres:
+alan@charachorder.com.
 
-
-Table of Contents
+Spis treści
 =================
 
 .. toctree::
