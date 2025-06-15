@@ -1,82 +1,85 @@
-Chords
-=============================
-One of CharaChorder devices’ greatest features is their
-:doc:`chording<Chords>` ability. Read this section to learn what
-chording is and how you can benefit from it on your own CharaChorder. 
+.. _Chords:
 
-.. contents::  Table of Contents of this Page
+Akordy`
+=============================
+Jedną z największych zalet urządzeń CharaChorder jest ich zdolność do
+:doc:`akordowania<Chords>`. Przeczytaj tę sekcję, aby dowiedzieć się,
+czym jest akordowanie i w jaki sposób możesz z niego skorzystać na
+własnym urządzeniu CharaChorder.
+
+.. contents:: Spis treści tej strony
    :local:
 
-What are Chords?
+.. _Chords:What are Chords:
+
+Czym są akordy?
 -----------------
 
-A chord is a type of input/output action on a keyboard: you press two or
-more keys at the same time and release them at the same time, after
-which a predefined output will replace the originally pressed keys.
+Akord to rodzaj działania wejścia/wyjścia na klawiaturze: naciskasz dwa lub
+więcej klawiszy jednocześnie i zwalniasz je jednocześnie, po czym
+predefiniowane wyjście zastępuje pierwotnie naciśnięte klawisze.
 
-By chording, we are able to type one word at a time instead of one
-letter at a time. It’s even possible to have chords for phrases and
-entire sentences. 
+Dzięki akordowaniu możemy pisać całe słowa na raz, zamiast wprowadzać je literka
+po literce. Możliwe jest nawet tworzenie akordów dla całych fraz czy zdań.
 
-How do I use Chords?
+.. _Chords:How do I use Chords:
+
+Jak używać akordów?
 ----------------------
 
-A chord has an **input** and an **output**. We will describe what each
-of those is and how they affect chords on your CharaChorder device
-below. Throughout this guide, we might use the term “perform” when
-talking about carrying out a chord. 
+Akord posiada **wejście** oraz **wyjście**. Poniżej opiszemy, czym są
+te elementy i jak wpływają na akordy w Twoim urządzeniu CharaChorder.
+W całym przewodniku możemy używać określenia „wykonać”, mówiąc o
+przeprowadzeniu akordu.
 
-.. _Chord Input:
+.. _Chords:Chord Input:
 
-Chord Input
+Wejście akordu
 ~~~~~~~~~~~~~~~~~~
 
-A chord input is the
-combination of keys used in order to get a desired, predetermined
-:ref:`output<Chords:Chord Output>`. For example, we can have a chord that
-requires the simultaneous press and release of the keys ``b`` and ``c``
-to get the output “because”. In :ref:`chord notation<Chords:Chord Notation>`,
-we would write that chord input as ``b+c``. Since chord inputs are
-performed simultaneously, meaning that all of the keys needed for an
-input are pressed and released at the same time, chord inputs are not
-order-specific. ``b+c`` is the same as ``c+b``. 
+Wejście akordu to kombinacja klawiszy używanych w celu uzyskania żądanego,
+wcześniej zdefiniowanego :ref:`wyjścia<Chords:Chord Output>`.
+Na przykład, możemy mieć akord, który wymaga jednoczesnego naciśnięcia
+i zwolnienia klawiszy ``b`` i ``c``, aby uzyskać wynik „because”.
+W :ref:`notacji akordów<Chords:Chord Notation>` zapisalibyśmy taki akord
+jako ``b+c``. Ponieważ wejścia akordów wykonuje się jednocześnie
+(wszystkie klawisze wymagane do wejścia są naciskane i zwalniane
+jednocześnie), kolejność nie ma znaczenia. ``b+c`` jest równoważne z ``c+b``.
 
-Chord Output 
+.. _Chords:Chord Output:
+
+Wyjście akordu
 ~~~~~~~~~~~~~~~~~~
 
-A chord
-output is the predetermined letters, words, phrases and/or actions that
-result after performing a chord. If we use the
-:ref:`chord input<Chords:Chord Input>` of ``b`` and ``c`` and the result is
-the word “because”, then the word “because” would be the output. In
-:ref:`chord notation<Chords:Chord Notation>`, we would write that chord (the
-input and the output) as ``b+c = because``. 
+Wyjście akordu to predefiniowane litery, słowa, frazy i/lub akcje, które
+pojawiają się po wykonaniu akordu. Jeśli użyjemy
+:ref:`wejścia akordu<Chords:Chord Input>` ``b`` i ``c``, a rezultatem
+będzie słowo „because”, wówczas „because” jest wyjściem.
+W :ref:`notacji akordów<Chords:Chord Notation>` zapisalibyśmy taki akord
+(wejście i wyjście) jako ``b+c = because``.
 
-Chord Notation 
+.. _Chords:Chord Notation:
+
+Notacja akordów
 ~~~~~~~~~~~~~~~~~~
 
-Chord
-notation is the way that we write chords for CharaChorder devices. It is
-a writing format that allows us to communicate chords to other users,
-and to the CharaChorder, without using any descriptions. You can find
-the different symbols used in chord notation in the table below.
+Notacja akordów to sposób zapisu akordów dla urządzeń CharaChorder.
+Jest to format zapisu, który pozwala przekazywać akordy innym użytkownikom
+oraz urządzeniu CharaChorder bez konieczności używania opisów słownych.
+Poniżej znajduje się tabela przedstawiająca symbole stosowane w notacji akordów.
 
-+-----------------+---------+------------------------------------------+
-| Character Name  | Symbol  | Usage                                    |
-+=================+=========+==========================================+
-| Plus Operator   |    \+   | Used for separating inputs for chorded   |
-|                 |         | operations                               |
-+-----------------+---------+------------------------------------------+
-| Vertical Bar    |    \|   | Used for separating all sequential       |
-| Operator        |         | operations                               |
-+-----------------+---------+------------------------------------------+
-| Equal Sign      |    =    | Used for separating a chord input from a |
-|                 |         | chord output                             |
-+-----------------+---------+------------------------------------------+
++--------------------------+---------+-----------------------------------------------+
+| Nazwa znaku              | Symbol  | Zastosowanie                                  |
++==========================+=========+===============================================+
+| Operator plusa           |    \+   | Oddzielanie wejść dla operacji akordów        |
++--------------------------+---------+-----------------------------------------------+
+| Operator kreski pionowej |    \|   | Oddzielanie wszystkich operacji sekwencyjnych |
++--------------------------+---------+-----------------------------------------------+
+| Znak równości            |    =    | Oddzielanie wejścia akordu od jego wyjścia    |
++--------------------------+---------+-----------------------------------------------+
 
-
-You can read some examples of chords written in chord notation below.
-You can try these chords on your CharaChorder device! 
+Poniżej przedstawiono kilka przykładów akordów zapisanych w notacji akordów.
+Możesz je wypróbować na swoim urządzeniu CharaChorder!
 
 * ``y+u+o = you``
 * ``k+b+a = back``
@@ -85,146 +88,175 @@ You can try these chords on your CharaChorder device!
 * ``c+b = because`` 
 * ``p+m+i = important``
 
-How do I make Chords? 
+.. _Chords:How do I make Chords:
+
+Jak tworzyć akordy?
 ------------------------
 
-You can make chords for your
-CharaChorder using a few different methods which we will discuss below.
-In order to make a chord, you will have to indicate your desired
-:ref:`chord input<Chords:Chord Input>` as well as your desired
-:ref:`chord output<Chords:Chord Output>`.
+Możesz tworzyć akordy na swoim urządzeniu CharaChorder na kilka różnych
+sposobów, które omówimy poniżej. Aby utworzyć akord, musisz wskazać
+żądane :ref:`wejście akordu<Chords:Chord Input>` oraz żądane
+:ref:`wyjście akordu<Chords:Chord Output>`.
 
-Your CharaChorder device already comes with some chords loaded onto it.
-These cover some of the most common words in the English language. You
-can click on the link to see that list in an external tab: `Starter Chords <https://docs.google.com/spreadsheets/d/1G_A77DsyoM2hod3by2BzM7Wcj3JGJsmNw7dAz98wS3U/edit?usp=sharing>`_.
+Twoje urządzenie CharaChorder już zawiera wstępnie załadowane akordy
+obejmujące najczęściej używane słowa w języku angielskim. Możesz
+kliknąć ten link, aby zobaczyć listę w osobnej karcie:
+`Starter Chords <https://docs.google.com/spreadsheets/d/1G_A77DsyoM2hod3by2BzM7Wcj3JGJsmNw7dAz98wS3U/edit?usp=sharing>`_.
 
+Możesz tworzyć własne akordy w :doc:`Menedżerze urządzeń<Device Manager>`.
+Dodatkowo możesz tworzyć akordy w locie, korzystając z
+:ref:`akordowania impulsowego<Chords:Impulse Chording>`. Czytaj dalej,
+aby uzyskać szczegółowe instrukcje, jak to zrobić.
 
-You can create custom chords on the :doc:`Device Manager<Device Manager>`. Additionally, you, can create chords on the go by using
-:ref:`impulse chording<Chords:Impulse Chording>`. Read on for specific
-instructions on how to do that. 
+.. _Chords:On Device Manager:
 
-On Device Manager
+W Menedżerze urządzeń
 ~~~~~~~~~~~~~~~~~
 
-The CharaChorder Device Manager is our official web based configuration tool designed for CharaChorder devices. On there, you can do a
-variety of things. You can read all about Device Manager in this
-:doc:`section<Device Manager>`.
+CharaChorder Device Manager to nasze oficjalne narzędzie konfiguracyjne oparte na
+przeglądarce internetowej, przeznaczone dla urządzeń CharaChorder. Za jego pomocą
+możesz wykonać różne operacje. Pełny opis Menedżera urządzeń znajdziesz w tej
+:doc:`sekcji<Device Manager>`.
 
-The process for adding chords to your CharaChorder is the same on all of
-our CharaChorder devices. You can
-:ref:`add new chords<Chords:Adding New Chords on Device Manager>`, or
-:ref:`import an existing chord library<Device Manager:Restoring from a Backup>`.
-Read how below. 
+Proces dodawania akordów do Twojego urządzenia CharaChorder jest taki sam na
+wszystkich naszych modelach. Możesz
+:ref:`dodać nowe akordy<Chords:Adding New Chords on Device Manager>` lub
+:ref:`zaimportować istniejącą bibliotekę akordów<Device Manager:Restoring from a Backup>`.
+Poniżej znajdziesz instrukcje.
 
-Adding New Chords on Device Manager
+.. _Chords:Adding New Chords on Device Manager:
+
+Dodawanie nowych akordów w Menedżerze urządzeń
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The steps to do this are :ref:`in the Device Manager documentation<Device Manager:Creating a Chord>`.
+Kroki niezbędne do wykonania znajdziesz w :ref:`dokumentacji Menedżera urządzeń<Device Manager:Creating a Chord>`.
 
-Impulse chording
+.. _Chords:Impulse chording:
+
+Akordowanie impulsowe
 ~~~~~~~~~~~~~~~~~~~
 
-Impulse chording is a method of adding chords that doesn’t require
-anything except your CharaChorder after a space to type in. It allows
-you to create ‘on the fly’, custom chords which can be spontaneously
-created anywhere that you can type via the Impulse menu.
+Akordowanie impulsowe to metoda dodawania akordów, która nie wymaga
+niczego poza Twoim urządzeniem CharaChorder i miejscem do pisania.
+Umożliwia tworzenie niestandardowych akordów „w locie”, które można
+spontanicznie definiować wszędzie tam, gdzie możesz pisać, za pomocą
+menu Impulse.
 
-The idea of impulse chords is that whenever you come across a word that
-you don’t have a chord for, you can instantly create one mid-email,
-mid-discord chat, mid-whatever, without the need to switch windows,
-import, connect, etc. Just punch in your input and output via the
-Impulse Menu and then keep typing without skipping a beat. Read below
-for instructions on how to create an impulse chord on your specific
-device.
+Idea akordów impulsowych polega na tym, że gdy natrafisz na słowo,
+dla którego nie masz jeszcze akordu, możesz natychmiast go
+utworzyć — w trakcie pisania e-maila, na czacie Discorda, czy w
+dowolnej innej sytuacji — bez konieczności przełączania okien,
+importowania, łączenia się itd. Po prostu wprowadzasz swoje
+wejście i wyjście za pomocą menu Impulse i kontynuujesz pisanie
+bez przerywania. Poniżej znajdziesz instrukcje, jak utworzyć akord
+impulsowy na swoim konkretnym urządzeniu.
 
-**Note:** When creating an impulse chord, all keystrokes are recorded
-as part of the output. If you make a mistake when defining the chord
-output, trigger escape and start over instead of deleting the input.
+**Uwaga:** podczas tworzenia akordu impulsowego wszystkie wprowadzone
+znaki są zapisywane jako część wyjścia. Jeśli popełnisz błąd podczas
+definiowania wyjścia akordu, naciśnij escape i rozpocznij od nowa
+zamiast kasowania błędnego wejścia.
 
-Creating an Impulse Chord on the CharaChorder One
+.. _Chords:Creating an Impulse Chord on the CharaChorder One:
+
+Tworzenie akordu impulsowego na CharaChorder One
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Standard process for creating an impulse chord on a CharaChorder One: In
-short: 1. CHORD INPUT, 2. CALL IMPULSE, 3. TYPE OUTPUT, 4. CONFIRM
-OUTPUT 5. CONFIRM INPUT
+Standardowy proces tworzenia akordu impulsowego na CharaChorder One:
+
+W skrócie:
+  1. WEJŚCIE AKORDU
+  2. WYWOŁANIE IMPULSE
+  3. WPISANIE WYJŚCIA
+  4. POTWIERDZENIE WYJŚCIA
+  5. POTWIERDZENIE WEJŚCIA
 
 .. _Impulse chording one:
 .. image:: /assets/images/Impulsegif.gif
   :width: 1200
-  :alt: Impulse chording on the CharaChorder One
+  :alt: Akordowanie impulsowe na CharaChorder One
 
-1. Anywhere that you can see a cursor, chord the input you want
-   (example: ``b+u+r+s+t``). You will either see a jumble of letters
-   (example: “tsubr”) or you will see a chord which is already
-   programmed to that input. If you continue, any conflicts will be
-   overwritten.
-2. Call the impulse command the hard
-   coded chord ``i+DUP``.
-3. Follow the prompt and type your output in character entry mode.
-   (example: >I<mpulse output: burst ).
-4. Press enter to confirm your output.
-5. Verify that the desired input is correct (you will see a confirmation
-   message similar to this: >I<mpulse input: b + r + u + t + s).
-6. If the input is incorrect, perform your desired input at this step.
-   Once the input is the desired input, press enter.
+1. W dowolnym miejscu, gdzie widoczny jest kursor, wykonaj akord
+   wejściowy, który chcesz przypisać (przykład: ``b+u+r+s+t``).
+   Możesz zobaczyć ciąg liter (przykład: „tsubr”) albo akord,
+   który już jest przypisany do tego wejścia. Jeśli kontynuujesz,
+   wszelkie konflikty zostaną nadpisane.
+2. Wywołaj komendę impulsową za pomocą zakodowanego na stałe akordu ``i+DUP``.
+3. Postępuj zgodnie z komunikatem i wpisz swoje wyjście w trybie
+   wprowadzania znaków. (przykład: >I<mpulse output: burst).
+4. Naciśnij Enter, aby potwierdzić wyjście.
+5. Zweryfikuj, czy podane wejście jest poprawne (pojawi się komunikat
+   potwierdzający w stylu: >I<mpulse input: b + r + u + t + s).
+6. Jeśli wejście jest błędne, wprowadź właściwe wejście na tym etapie.
+   Po jego prawidłowym wprowadzeniu naciśnij Enter.
 
-These steps should take 1-3 seconds. 
+Cała procedura powinna zająć od 1 do 3 sekund.
 
-Creating an Impulse Chord on the CharaChorder Lite
+.. _Chords:Creating an Impulse Chord on the CharaChorder Lite:
+
+Tworzenie akordu impulsowego na CharaChorder Lite
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Standard process for creating an impulse chord on a CharaChorder Lite:
-In short: 1. CHORD INPUT, 2. CALL IMPULSE, 3. TYPE OUTPUT, 4. CONFIRM
-OUTPUT, 5. CONFIRM INPUT
+Standardowy proces tworzenia akordu impulsowego na CharaChorder Lite:
+
+W skrócie:
+  1. WEJŚCIE AKORDU
+  2. WYWOŁANIE IMPULSE
+  3. WPISANIE WYJŚCIA
+  4. POTWIERDZENIE WYJŚCIA
+  5. POTWIERDZENIE WEJŚCIA
 
 .. _Impulse chording lite:
 .. image:: /assets/images/Impulsegif.gif
   :width: 1200
-  :alt: Impulse chording on the CharaChorder Lite
+  :alt: Akordowanie impulsowe na CharaChorder Lite
 
-1. Anywhere that you can see a cursor, chord the input you want
-   (example: ``b+u+r+s+t``). You will either see a jumble of letters
-   (example: “tsubr”) or you will see a chord which is already
-   programmed to that input. If you continue, any conflicts will be
-   overwritten.
-2. Call the impulse command with the hard
-   coded chord ``i+DUP``.
-3. Follow the prompt and type your output in character entry mode.
-   (example: >I<mpulse output: burst ).
-4. Press enter to confirm your output.
-5. Verify that the desired input is correct (you will see a confirmation
-   message similar to this: >I<mpulse input: b + r + u + t + s).
-6. If the input is incorrect, perform your desired input at this step.
-   Once the input is the desired input, press enter.
+1. W dowolnym miejscu, gdzie widoczny jest kursor, wykonaj akord
+   wejściowy, który chcesz przypisać (przykład: ``b+u+r+s+t``).
+   Możesz zobaczyć ciąg liter (przykład: „tsubr”) albo akord,
+   który już jest przypisany do tego wejścia. Jeśli kontynuujesz,
+   wszelkie konflikty zostaną nadpisane.
+2. Wywołaj komendę impulsową za pomocą zakodowanego na stałe akordu ``i+DUP``.
+3. Postępuj zgodnie z komunikatem i wpisz swoje wyjście w trybie
+   wprowadzania znaków. (przykład: >I<mpulse output: burst).
+4. Naciśnij Enter, aby potwierdzić wyjście.
+5. Zweryfikuj, czy podane wejście jest poprawne (pojawi się
+   komunikat potwierdzający w stylu: >I<mpulse input: b + r + u + t + s).
+6. Jeśli wejście jest błędne, wprowadź właściwe wejście na tym etapie.
+   Po jego prawidłowym wprowadzeniu naciśnij Enter.
 
-These steps should take 1-3 seconds. 
+Cała procedura powinna zająć od 1 do 3 sekund.
 
-Creating an Impulse Chord on the CharaChorder X
+.. _Chords:Creating an Impulse Chord on the CharaChorder X:
+
+Tworzenie akordu impulsowego na CharaChorder X
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Standard process for creating an impulse chord on a CharaChorder X: In
-short: 1. CHORD INPUT, 2. CALL IMPULSE, 3. TYPE OUTPUT, 4. CONFIRM
-OUTPUT, 5. CONFIRM INPUT
+Standardowy proces tworzenia akordu impulsowego na CharaChorder X:
+
+W skrócie:
+  1. WEJŚCIE AKORDU
+  2. WYWOŁANIE IMPULSE
+  3. WPISANIE WYJŚCIA
+  4. POTWIERDZENIE WYJŚCIA
+  5. POTWIERDZENIE WEJŚCIA
 
 .. _Impulse chording X:
 .. image:: /assets/images/Impulsexgif.gif
   :width: 1200
-  :alt: Impulse chording on the CharaChorder X
-  
-1. Anywhere that you can see a cursor, chord the input you want
-   (example: ``b+u+r+s+t``). You will either see a jumble of letters
-   (example: “tsubr”) or you will see a chord which is already
-   programmed to that input. If you continue, any conflicts will be
-   overwritten.
-2. Call the impulse command with the hard
-   coded chord ``i+ESC``.
-3. Follow the prompt and type your output in character entry mode.
-   (example: >I<mpulse output: burst ).
-4. Press enter to confirm your output.
-5. Verify that the desired output is correct (you will see a
-   confirmation message similar to this: >I<mpulse input: b + u + r +
-   s + t).
-6. If the input is incorrect, perform your desired input at this step.
-   Once the input is the desired input, press enter.
+  :alt: Akordowanie impulsowe na CharaChorder X
 
-These steps should take 1-3 seconds
+1. W dowolnym miejscu, gdzie widoczny jest kursor, wykonaj akord
+   wejściowy, który chcesz przypisać (przykład: ``b+u+r+s+t``).
+   Możesz zobaczyć ciąg liter (przykład: „tsubr”) albo akord,
+   który już jest przypisany do tego wejścia. Jeśli kontynuujesz,
+   wszelkie konflikty zostaną nadpisane.
+2. Wywołaj komendę impulsową za pomocą zakodowanego na stałe akordu ``i+ESC``.
+3. Postępuj zgodnie z komunikatem i wpisz swoje wyjście w trybie
+   wprowadzania znaków. (przykład: >I<mpulse output: burst).
+4. Naciśnij Enter, aby potwierdzić wyjście.
+5. Zweryfikuj, czy podane wejście jest poprawne (pojawi się
+   komunikat potwierdzający w stylu: >I<mpulse input: b + u + r + s + t).
+6. Jeśli wejście jest błędne, wprowadź właściwe wejście na tym etapie.
+   Po jego prawidłowym wprowadzeniu naciśnij Enter.
+
+Cała procedura powinna zająć od 1 do 3 sekund.
