@@ -3,3 +3,14 @@
     font-size: 100em;
     font-family: monospace; 
 }
+
+/* usunięcie maksymalnej szerokości głównego kontenera */
+.wy-nav-content {
+    max-width: none !important;
+    width: auto !important;
+}
+
+/* usunięcie ograniczenia szerokości samej treści rst */
+.rst-content {
+    max-width: none !important;
+}
