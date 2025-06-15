@@ -1,6 +1,6 @@
 .. _Chords:
 
-Akordy`
+Akordy
 =============================
 Jedną z największych zalet urządzeń CharaChorder jest ich zdolność do
 :doc:`akordowania<Chords>`. Przeczytaj tę sekcję, aby dowiedzieć się,
