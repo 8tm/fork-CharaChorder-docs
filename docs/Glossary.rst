@@ -1,72 +1,77 @@
-Glossary
+Słownik
 ========
 
-Below you will find some common "uncommon" words that are used in the CharaChorder 
-community. 
+Poniżej znajdziesz niektóre często używane „nietypowe” słowa stosowane w
+społeczności CharaChorder.
 
 .. glossary::
    :sorted:
 
-   3D Press
-      When a switch is activated by pushing it normal to the surface of the 
-      device (same as an ordinary keyboard switch).
+   Naciśnięcie 3D (3D Press)
+      Gdy przełącznik jest aktywowany przez wciśnięcie go prostopadle do
+      powierzchni urządzenia (tak samo jak zwykły przełącznik klawiatury).
 
-   Active Mode
-      Nudges your mouse one pixel every minute or so to keep your computer 
-      from sleeping.
-    
-   Ambidextrous Throwover (aka Mirror Mode)
-      Entry mode designed for one-handed typing. Characters from the opposite 
-      hand are mirrored to the hand which activates this feature.
+   Tryb aktywny (Active Mode)
+      Przesuwa kursor myszy o jeden piksel co minutę, aby zapobiec usypianiu komputera.
 
-   Arpeggiate
-      A quick, single key press and release to indicate a suffix, prefix, or
-      modifier to be associated with a chord.
-   
-   Chentry
-      Shorthand for 'character entry', or typing on a chording-enabled device
-      letter by letter.
-      
-   Chord Modifiers
-      Inputs which, when included with a chord, change the prefix, suffix,
-      capitalization, conjugation, part of speech, language, or structure of a chord.  Note, these can be used arpeggiately. 
-      
-   Compound Chords
-      Multiple chords which behave differently when used together in context
-      (not yet user programmable). Example: know + ledge = knowledge.
+   Przerzucenie dla obu rąk (Ambidextrous Throwover / Mirror Mode)
+      Tryb wprowadzania zaprojektowany do pisania jedną ręką.
+      Znaki z przeciwnej ręki są odbijane na rękę, która aktywuje tę funkcję.
 
-   Cursor Warping
-      When your cursor or mouse position moves ("warps") based on a chord.
-      Example: Chord " with DUP to create "" and warp your cursor inside "".
+   Arpeggiacja (Arpeggiate)
+      Szybkie, pojedyncze naciśnięcie i zwolnienie klawisza w celu oznaczenia
+      przyrostka, przedrostka lub modyfikatora powiązanego z akordem.
 
-   DUP (duplicate) key
-      In character entry, it repeats your last input. In chorded entry, it is
-      used for words with repeating letters.
+   Wprowadzanie znaków (Chentry)
+      Skrót od 'character entry', czyli wprowadzania znaków na urządzeniu
+      obsługującym akordy — litera po literze.
 
-   Forced Chord Phenomenon
-      The experience of typing a word in character entry feeling unnatural due
-      to the development of muscle memory for chording that word.
+   Modyfikatory akordów (Chord Modifiers)
+      Wejścia, które po dołączeniu do akordu zmieniają prefiks, sufiks,
+      kapitalizację, koniugację, część mowy, język lub strukturę akordu.
+      Uwaga: mogą być używane arpeggiatywnie.
 
-   Fluid Chorded/Character Entry
-      Default text entry mode for CharaChorder. Output characters individually
-      (like a keyboard) OR press and release multiple characters of a chord 
-      simultaneously to output a chord.
+   Akordy złożone (Compound Chords)
+      Wiele akordów, które zachowują się inaczej, gdy są używane razem w
+      kontekście (jeszcze nie programowalne przez użytkownika). Przykład:
+      know + ledge = knowledge.
 
-   GTM (Generative Text Menu)
-      A text-based menu accessible anywhere you type. It allows access to 
-      various device settings and features without software. See :doc:`GenerativeTextMenu`.
+   Przeskok kursora (Cursor Warping)
+      Gdy kursor lub pozycja myszy przesuwa się („przeskakuje”) w oparciu
+      o akord. Przykład: akord " z DUP tworzy "" i przesuwa kursor do środka "".
 
-   Impulse Chord
-      An 'on-the-fly' custom chord that can be spontaneously created anywhere
-      you can type via the GTM. See :ref:`Chords:Impulse chording`.
+   Klawisz powtórzenia (DUP — Duplicate Key)
+      Podczas wprowadzania znaków powtarza ostatni wpis. W trybie akordowym
+      służy do słów z powtarzającymi się literami.
 
-   Macro
-      Sequence of mouse and/or keyboard actions assigned to a chord.
+   Zjawisko wymuszonego akordu (Forced Chord Phenomenon)
+      Doświadczenie polegające na tym, że wpisywanie słowa znak po znaku wydaje
+      się nienaturalne z powodu wyrobionej pamięci mięśniowej dla akordowania
+      tego słowa.
 
-   Spurring
-      A 'chording only' mode which outputs chords on a press rather than a
-      press & release. Enables jumping from one chord to another without 
-      releasing everything. It can provide significant speed gains with chording, 
-      but also takes away the flexibility of character entry. Spurring also 
-      helps new users learn how to chord by eliminating the need to focus on 
-      timing.
+   Płynne wprowadzanie akordów/znaków (Fluid Chorded/Character Entry)
+      Domyślny tryb wprowadzania tekstu w CharaChorder. Wyprowadza znaki
+      pojedynczo (jak klawiatura) LUB pozwala na jednoczesne naciśnięcie
+      i zwolnienie wielu znaków akordu, aby wyprowadzić akord.
+
+   GTM — Menu Tekstu Generowanego (Generative Text Menu)
+      Menu tekstowe dostępne wszędzie tam, gdzie można pisać.
+      Umożliwia dostęp do różnych ustawień i funkcji urządzenia bez
+      użycia oprogramowania. Zobacz: :doc:`GenerativeTextMenu`.
+
+   Akord impulsowy (Impulse Chord)
+      Niestandardowy akord „w locie”, który można spontanicznie utworzyć
+      wszędzie tam, gdzie można pisać, za pomocą GTM.
+      Zobacz: :ref:`Chords:Impulse chording`.
+
+   Makro (Macro)
+      Sekwencja działań myszy i/lub klawiatury przypisana do akordu.
+
+   Akordowanie natychmiastowe (Spurring)
+      Tryb „tylko akordowy”, który wyprowadza akordy przy naciśnięciu,
+      zamiast przy naciśnięciu i zwolnieniu. Umożliwia przechodzenie z
+      jednego akordu do drugiego bez zwalniania wszystkiego.
+      Może zapewniać znaczny wzrost prędkości akordowania, ale odbiera
+      elastyczność wprowadzania znaków. Spurring pomaga również nowym
+      użytkownikom uczyć się akordowania, eliminując konieczność
+      skupiania się na czasie.
