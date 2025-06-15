@@ -1,614 +1,840 @@
 .. _Generative Text Menu (GTM):
 
-Generative Text Menu (GTM)
+Menu Tekstu Generowanego (GTM)
 =============================
 
 ``CharaChorder GTM [ >K<eyboard || >M<ouse || >C<hording || >D<isplay || >R<esources ]``
 
-The Generative Text Menu, known by its abbreviation as GTM, is an onboard, text based menu which can be accessed 
-anywhere you type. Through it, we are able to modify :doc:`CCOS<CCOS>` settings including :ref:`chording tolerances<GenerativeTextMenu:Press Tolerance>`, :ref:`mouse speeds<GenerativeTextMenu:Slow Speed>`, and :ref:`realtime feedback<GenerativeTextMenu:Realtime Feedback>`, among other settings and features, without the need to use a software. It's a core feature of :doc:`CCOS<CCOS>` that you will want to 
-learn how to use to make the device your own.
+Menu Tekstu Generowanego, znane pod skrótem GTM, to wbudowane, tekstowe menu, do którego można
+uzyskać dostęp wszędzie tam, gdzie można pisać. Za jego pomocą możemy modyfikować ustawienia
+:doc:`CCOS<CCOS>`, w tym m.in.: :ref:`tolerancje akordowania<GenerativeTextMenu:Press Tolerance>`,
+:ref:`prędkości myszy<GenerativeTextMenu:Slow Speed>` oraz
+:ref:`informacje zwrotne w czasie rzeczywistym<GenerativeTextMenu:Realtime Feedback>`, a także
+inne ustawienia i funkcje — bez potrzeby używania oprogramowania. Jest to podstawowa funkcja
+:doc:`CCOS<CCOS>`, którą warto opanować, aby dostosować urządzenie do własnych potrzeb.
 
-You will notice that some settings have different press and release values. This is because the switches are read by the :doc:`CCOS<CCOS>` at two different moments in time: when they are pressed, and when they are released. We have designed :doc:`CCOS<CCOS>` to have configurable settings for each of those "events" separately, for maximum adjustability. Intuitively, each **press** setting, such as :ref:`debounce press<GenerativeTextMenu:Debounce Press>`, will affect the way that the :doc:`CCOS<CCOS>` reads the switch at the time that the switch is pressed into any one direction. Conversely, **release** settings, such as :ref:`release debounce<GenerativeTextMenu:Debounce Release>`, will change the way that the :doc:`CCOS<CCOS>` reads the switch at the exact moment that the switch is released, or un-pressed, from any one direction.
+Zauważysz, że niektóre ustawienia mają osobne wartości dla naciśnięcia i zwolnienia. Wynika to z
+faktu, że :doc:`CCOS<CCOS>` odczytuje stan przełączników w dwóch różnych momentach: gdy są naciskane
+oraz gdy są zwalniane. Zaprojektowaliśmy :doc:`CCOS<CCOS>` tak, aby umożliwiał konfigurację ustawień
+dla każdego z tych "zdarzeń" oddzielnie, dla maksymalnej możliwości dostosowania. Intuicyjnie, każde
+ustawienie związane z **naciśnięciem**, takie jak :ref:`debounce press<GenerativeTextMenu:Debounce Press>`,
+wpływa na sposób, w jaki :doc:`CCOS<CCOS>` odczytuje przełącznik w momencie jego naciśnięcia w dowolnym
+kierunku. Analogicznie, ustawienia **zwolnienia**, takie jak
+:ref:`debounce release<GenerativeTextMenu:Debounce Release>`, wpływają na sposób, w jaki
+:doc:`CCOS<CCOS>` odczytuje przełącznik w momencie jego zwolnienia, czyli odpuszczenia naciśnięcia w
+dowolnym kierunku.
 
 .. note::
-	Although you can configure your CCOS settings anywhere that you can type through the GTM, you can also edit them on the :doc:`CharaChorder Device Manager<Device Manager>`.
+    Chociaż możesz konfigurować ustawienia CCOS wszędzie tam, gdzie możesz pisać za pomocą GTM, możesz je
+    również edytować w :doc:`CharaChorder Device Manager<Device Manager>`.
 
 .. warning::
-	Please note that updating your CCOS device might reset your GTM settings to default. Please make sure that you have a :ref:`backup of your GTM settings<Device Manager:Creating a Backup>` before updating your CCOS device. For instructions on how to restore backed up files, visit the :ref:`Restoring from a Backup<Device Manager:Restoring from a Backup>` section.
+    Należy pamiętać, że aktualizacja urządzenia CCOS może zresetować ustawienia GTM do wartości domyślnych.
+    Upewnij się, że posiadasz :ref:`kopię zapasową ustawień GTM<Device Manager:Creating a Backup>` przed
+    aktualizacją urządzenia CCOS. Instrukcje dotyczące przywracania kopii zapasowych znajdują się w sekcji
+    :ref:`Przywracanie z kopii zapasowej<Device Manager:Restoring from a Backup>`.
 
-.. contents:: Table of Contents of this Page
+.. contents:: Spis treści tej strony
    :local:
 
-How to access the GTM
+.. _GenerativeTextMenu:How to access the GTM:
+
+Jak uzyskać dostęp do GTM
 *********************
 
-First, move your cursor into any area where you can type. For best results, you may want to choose a text area that doesn't automatically format text since some of the keys that the GTM uses may trigger unwanted formatting. We recommend using a vanilla (basic) text editor such as Notepad. Please note, however, that Windows Notepad has been known to have issues with how the GTM is displayed on Windows 11 PCs.
+Najpierw przesuń kursor do dowolnego obszaru, w którym możesz pisać. Dla najlepszych rezultatów zalecamy
+wybrać takie pole tekstowe, które nie formatuje automatycznie tekstu, ponieważ niektóre klawisze
+wykorzystywane przez GTM mogą wywoływać niepożądane formatowanie. Zalecamy użycie prostego edytora
+tekstu, takiego jak Notepad. Należy jednak pamiętać, że w Notepadzie systemu Windows mogą występować
+problemy z wyświetlaniem GTM na komputerach z Windows 11.
 
-Use the table below to find out how to trigger the GTM for your CCOS device. Please note that triggering the GTM will require a ":doc:`chorded<Chords>`" action.
+Skorzystaj z poniższej tabeli, aby dowiedzieć się, jak wywołać GTM na swoim urządzeniu CCOS. Należy pamiętać,
+że wywołanie GTM wymaga wykonania akcji ":doc:`akordowania<Chords>`".
 
 .. csv-table::
-    :header: "Device", "How to access"
+    :header: "Urządzenie", "Jak uzyskać dostęp"
 
-    "CharaChorder One", "Chord both pinky keys north (``Alt`` keys)"
-    "CharaChorder Lite", "Chord ``G`` and Middle ``Alt`` key (``Dup`` key)"
-    "CharaChorder X", "Chord ``G`` and ``Esc`` key"
-    "CharaChorder Engine", "Chord ``G`` and ``Esc`` key"
+    "CharaChorder One", "Akorduj oba małe palce na północ (klawisze ``Alt``)"
+    "CharaChorder Lite", "Akorduj ``G`` i środkowy klawisz ``Alt`` (klawisz ``Dup``)"
+    "CharaChorder X", "Akorduj ``G`` i klawisz ``Esc``"
+    "CharaChorder Engine", "Akorduj ``G`` i klawisz ``Esc``"
 
-How to navigate through the GTM
+.. _GenerativeTextMenu:How to navigate through the GTM:
+
+Jak poruszać się po GTM
 *******************************
 
-The GTM has different submenus that we can call "pages". Each "page" of the GTM will have different options which can either adjust a specific setting or take you to another submenu. 
+GTM posiada różne podmenu, które nazywamy „stronami”. Każda „strona” GTM zawiera różne opcje, które mogą
+umożliwiać dostosowanie konkretnego ustawienia lub przenosić do kolejnego podmenu.
 
-Once you perform the chord to call up the menu, :doc:`CCOS<CCOS>` will type out the menu and its options. It will look something like this:
-	
+Po wykonaniu akordu wywołującego menu, :doc:`CCOS<CCOS>` wypisze na ekranie menu i dostępne opcje.
+Będzie to wyglądać w następujący sposób:
+
 ``CharaChorder GTM [ >K<eyboard || >M<ouse || >C<hording || >D<isplay || >R<esources ]``
 
-Navigation around this menu is based on letter-presses. In the example above, you can select the desired submenu by pressing the letter that appears between the angle brackets (for example: ``>K<``) in your target submenu on your :doc:`CCOS<CCOS>` device. In the example above, you would press ``K`` for Keyboard, ``M`` for Mouse, ``C`` for Chording, ``D`` for Display, and ``R`` for Resources. In order to go back to a previous menu, press the left arrow. In order to leave the GTM at any point, press ``ESC``. Leaving the GTM by using ``ESC`` will save your changes. You can also confirm your changes by pressing ``ENTER``. 
+Nawigacja po tym menu opiera się na naciskaniu liter. W powyższym przykładzie, aby wybrać żądane podmenu,
+należy nacisnąć literę znajdującą się w nawiasach kątowych (na przykład: ``>K<``) na swoim urządzeniu
+:doc:`CCOS<CCOS>`. W powyższym przykładzie należy nacisnąć ``K`` dla Klawiatury, ``M`` dla Myszy, ``A``
+dla Akordowania, ``W`` dla Wyświetlania oraz ``Z`` dla Zasobów.
+Aby wrócić do poprzedniego menu, naciśnij strzałkę w lewo. Aby w dowolnym momencie opuścić GTM, naciśnij
+``ESC``. Wyjście z GTM za pomocą ``ESC`` spowoduje zapisanie wprowadzonych zmian. Możesz także potwierdzić
+zmiany, naciskając ``ENTER``.
 
-In some submenus, you will see numeric values. In order to increase or decrease these, you can use the up and down arrow keys on your :doc:`CCOS<CCOS>` device.
+W niektórych podmenu pojawią się wartości liczbowe. Aby je zwiększać lub zmniejszać, możesz używać klawiszy
+strzałek góra/dół na swoim urządzeniu :doc:`CCOS<CCOS>`.
 
 	``CharaChorder > Chording > Press Tolerance [ Use up/down arrow keys to adjust: 25ms ]``
 
+.. _GenerativeTextMenu:Available Menus:
 
-Available Menus
+Dostępne menu
 ***************
 
 .. csv-table::
-    :header: "Menu", "Description"
+    :header: "Menu", "Opis"
 
-    ":ref:`Keyboard<GenerativeTextMenu:Keyboard>`", "Settings related to using your device in character entry"
-    ":ref:`Mouse<GenerativeTextMenu:Mouse>`", "Settings related to using your device as a mouse"
-    ":ref:`Chording<GenerativeTextMenu:Chording>`", "Settings related to chording on your device"
-    ":ref:`Display<GenerativeTextMenu:Display>`","Settings related to your device version and other CCOS texts"
-    ":ref:`Resources<GenerativeTextMenu:Resources>`", "A menu of resources, mostly links"
+    ":ref:`Klawiatura<GenerativeTextMenu:Keyboard>`", "Ustawienia związane z obsługą wprowadzania znaków na urządzeniu"
+    ":ref:`Mysz<GenerativeTextMenu:Mouse>`", "Ustawienia związane z obsługą funkcji myszy na urządzeniu"
+    ":ref:`Akordowanie<GenerativeTextMenu:Chording>`", "Ustawienia związane z akordowaniem na urządzeniu"
+    ":ref:`Wyświetlanie<GenerativeTextMenu:Display>`", "Ustawienia dotyczące wersji urządzenia i innych tekstów CCOS"
+    ":ref:`Zasoby<GenerativeTextMenu:Resources>`", "Menu zasobów, głównie linki"
 
-Keyboard
+.. _GenerativeTextMenu:Keyboard:
+
+Klawiatura
 --------
 
-Under this menu, you will be able to modify settings pertaining to how your CCOS device interacts with your computer.
+W tym menu możesz modyfikować ustawienia dotyczące sposobu, w jaki Twoje urządzenie CCOS współpracuje z komputerem.
 
-Scan Rate
+.. _GenerativeTextMenu:Scan Rate:
+
+Częstotliwość skanowania
 ~~~~~~~~~
 
 ``Path: GTM > Keyboard > Scan Rate``
 
-The scan rate, sometimes known as the "Key scan duration," refers to the frequency at which the device checks the state of the input keys. 
-For reference, 5 ms corresponds to 200 Hz, which means that :doc:`CCOS<CCOS>` checks the position of the keys once every 5 milliseconds, which equals 200 times in a second. Having a lower number is usually better as it makes CCOS more responsive, though the difference at low numbers is usually negligible. In the GTM, this setting is adjustable in millisecond (ms) units.
+Częstotliwość skanowania, czasami nazywana „czasem skanowania klawiszy”, odnosi się do częstotliwości, z
+jaką urządzenie sprawdza stan klawiszy wejściowych.
+Dla odniesienia: 5 ms odpowiada 200 Hz, co oznacza, że :doc:`CCOS<CCOS>` sprawdza pozycję klawiszy co 5
+milisekund, czyli 200 razy na sekundę. Niższa wartość zwykle jest lepsza, ponieważ zwiększa responsywność
+CCOS, choć przy niskich wartościach różnice są zazwyczaj minimalne. W GTM to ustawienie jest regulowane w
+jednostkach milisekund (ms).
 
-You can find the default scan rates of the different CharaChorder devices in the table below.
+Domyślne wartości częstotliwości skanowania dla różnych urządzeń CharaChorder przedstawiono w poniższej tabeli:
 
-+------------------+----------------+------------+------------+---------------+
-| Device           | Default Value  | Min. Value | Max. Value | Increments    |
-+==================+================+============+============+===============+
-| CharaChorder One | 2 ms           | 0 ms       | 20 ms      | 1 ms          |
-+------------------+----------------+------------+------------+---------------+
-| CharaChorder Lite| 2 ms           | 0 ms       | 20 ms      | 1 ms          |
-+------------------+----------------+------------+------------+---------------+
-| CharaChorder X   | 2 ms           | 0 ms       | 20 ms      | 1 ms          |
-+------------------+----------------+------------+------------+---------------+
++------------------+------------------+--------------+--------------+-----------+
+| Urządzenie       | Wartość domyślna | Min. wartość | Max. wartość | Przyrosty |
++==================+==================+==============+==============+===========+
+| CharaChorder One | 2 ms             | 0 ms         | 20 ms        | 1 ms      |
++------------------+------------------+--------------+--------------+-----------+
+| CharaChorder Lite| 2 ms             | 0 ms         | 20 ms        | 1 ms      |
++------------------+------------------+--------------+--------------+-----------+
+| CharaChorder X   | 2 ms             | 0 ms         | 20 ms        | 1 ms      |
++------------------+------------------+--------------+--------------+-----------+
 
+.. _GenerativeTextMenu:Debounce Press:
 
-Debounce Press
+Odbijanie (naciśnięcie)
 ~~~~~~~~~~~~~~
 
 ``Path: GTM > Keyboard > Debounce Press``
 
-The debounce press setting refers to the time frame (measured in milliseconds) in which  :doc:`CCOS<CCOS>` will filter out duplicate key activations on a press event. In other words, any duplicate activations within the given time frame will only be counted as one. 
+Ustawienie odbijania (naciśnięcie) odnosi się do przedziału czasowego (mierzonego w milisekundach), w którym
+:doc:`CCOS<CCOS>` odfiltrowuje powtórne aktywacje klawisza podczas zdarzenia naciśnięcia. Innymi słowy,
+wszelkie powtórne aktywacje w danym przedziale czasu będą liczone jako jedno naciśnięcie.
 
-We should adjust this setting if we are having unintentional duplicate characters while typing. Increasing this value will lower the probability that unwanted duplicate characters will appear because it tells :doc:`CCOS<CCOS>` to wait longer before typing an additional character that's assigned to the same switch-direction. However, having this setting set too high might also cause issues with :doc:`CCOS<CCOS>` not reading intentional double-presses, so it's recommended to try different numbers in small increments. This setting should be used in connection with the :ref:`debounce release<GenerativeTextMenu:Debounce Release>` setting.
+Należy dostosować to ustawienie, jeśli podczas pisania pojawiają się niezamierzone podwójne znaki.
+Zwiększenie tej wartości zmniejszy prawdopodobieństwo pojawienia się niechcianych podwójnych znaków,
+ponieważ nakazuje :doc:`CCOS<CCOS>` poczekać dłużej przed przyjęciem kolejnego naciśnięcia w tym
+samym kierunku przełącznika. Jednak ustawienie tej wartości zbyt wysoko może spowodować problemy
+z odczytywaniem zamierzonych podwójnych naciśnięć, dlatego zaleca się testowanie różnych wartości
+małymi krokami. Ustawienie to powinno być dostosowywane razem z parametrem
+:ref:`odbicia (zwolnienia)<GenerativeTextMenu:Debounce Release>`.
 
-You can find the default debounce press value of the different CharaChorder devices in the table below:
-
-+------------------+----------------+------------+------------+---------------+
-| Device           | Default Value  | Min. Value | Max. Value | Increments    |
-+==================+================+============+============+===============+
-| CharaChorder One | 7 ms           | 0 ms       | 100 ms     | 1 ms          |
-+------------------+----------------+------------+------------+---------------+
-| CharaChorder Lite| 12 ms          | 0 ms       | 100 ms     | 1 ms          |
-+------------------+----------------+------------+------------+---------------+
-| CharaChorder X   | 1 ms           | 0 ms       | 100 ms     | 1 ms          |
-+------------------+----------------+------------+------------+---------------+
+Domyślne wartości odbijania (naciśnięcie) dla różnych urządzeń CharaChorder przedstawiono w tabeli:
 
 
++------------------+------------------+--------------+--------------+---------------+
+| Urządzenie       | Wartość domyślna | Min. wartość | Max. wartość | Przyrosty     |
++==================+==================+==============+==============+===============+
+| CharaChorder One | 7 ms             | 0 ms         | 100 ms       | 1 ms          |
++------------------+------------------+--------------+--------------+---------------+
+| CharaChorder Lite| 12 ms            | 0 ms         | 100 ms       | 1 ms          |
++------------------+------------------+--------------+--------------+---------------+
+| CharaChorder X   | 1 ms             | 0 ms         | 100 ms       | 1 ms          |
++------------------+------------------+--------------+--------------+---------------+
 
-Debounce Release
+.. _GenerativeTextMenu:Debounce Release:
+
+Odbijanie (zwolnienie)
 ~~~~~~~~~~~~~~~~
 
 ``Path: GTM > Keyboard > Debounce Release``
 
-The debounce release setting refers to the time frame (measured in milliseconds) in which :doc:`CCOS<CCOS>` will filter out duplicate key activations on a release event. In other words, any duplicate activations within the given time frame will only be counted as one. 
+Ustawienie odbijania (zwolnienie) odnosi się do przedziału czasowego (mierzonego w milisekundach), w
+którym :doc:`CCOS<CCOS>` odfiltrowuje powtórne aktywacje klawisza podczas zdarzenia zwolnienia.
+Innymi słowy, wszelkie powtórne aktywacje w danym przedziale czasu będą liczone jako jedno zwolnienie.
 
-We should adjust this setting if we are having unintentional duplicate characters while typing. Increasing this value will lower the probability that unwanted duplicate characters will appear because it tells :doc:`CCOS<CCOS>` to wait longer before typing an additional character that's assigned to the same switch-direction. However, having this setting set too high might also cause issues with :doc:`CCOS<CCOS>` not reading intentional double-presses, so it's recommended to try different numbers in small increments. This setting should be used in connection with the :ref:`debounce press <GenerativeTextMenu:Debounce Press>` setting.
+Należy dostosować to ustawienie, jeśli podczas pisania pojawiają się niezamierzone podwójne znaki.
+Zwiększenie tej wartości zmniejszy prawdopodobieństwo pojawienia się niechcianych podwójnych znaków,
+ponieważ nakazuje :doc:`CCOS<CCOS>` poczekać dłużej przed przyjęciem kolejnego zwolnienia w tym samym
+kierunku przełącznika. Jednak ustawienie tej wartości zbyt wysoko może spowodować problemy z
+odczytywaniem zamierzonych podwójnych zwolnień, dlatego zaleca się testowanie różnych wartości
+małymi krokami. Ustawienie to powinno być dostosowywane razem z parametrem
+:ref:`odbicia (naciśnięcia)<GenerativeTextMenu:Debounce Press>`.
 
-You can find the default debounce release value of the different  CharaChorder devices in the table below:
+Domyślne wartości odbijania (zwolnienie) dla różnych urządzeń CharaChorder przedstawiono w tabeli:
 
-+------------------+----------------+------------+------------+---------------+
-| Device           | Default Value  | Min. Value | Max. Value | Increments    |
-+==================+================+============+============+===============+
-| CharaChorder One | 7 ms           | 0 ms       | 100 ms     | 1 ms          |
-+------------------+----------------+------------+------------+---------------+
-| CharaChorder Lite| 12 ms          | 0 ms       | 100 ms     | 1 ms          |
-+------------------+----------------+------------+------------+---------------+
-| CharaChorder X   | 1 ms           | 0 ms       | 100 ms     | 1 ms          |
-+------------------+----------------+------------+------------+---------------+
++------------------+------------------+--------------+--------------+---------------+
+| Urządzenie       | Wartość domyślna | Min. wartość | Max. wartość | Przyrosty     |
++==================+==================+==============+==============+===============+
+| CharaChorder One | 7 ms             | 0 ms         | 100 ms       | 1 ms          |
++------------------+------------------+--------------+--------------+---------------+
+| CharaChorder Lite| 12 ms            | 0 ms         | 100 ms       | 1 ms          |
++------------------+------------------+--------------+--------------+---------------+
+| CharaChorder X   | 1 ms             | 0 ms         | 100 ms       | 1 ms          |
++------------------+------------------+--------------+--------------+---------------+
 
-Keystroke Delay
+.. _GenerativeTextMenu:Keystroke Delay:
+
+Opóźnienie naciśnięcia klawisza
 ~~~~~~~~~~~~~~~
 
 ``Path: GTM > Keyboard > Keystroke Delay``
 
-This setting adds a small delay to keystroke inputs. It is measured in microseconds (μs) and is very small by default. 
+To ustawienie dodaje niewielkie opóźnienie do wprowadzania naciśnięć klawiszy.
+Jest mierzone w mikrosekundach (μs) i domyślnie jest bardzo małe.
 
-You should increase this value if your computer is not accepting all of the characters output by your device, such as when using the GTM. If you are having this issue, your GTM would look weird, with missing chunks or characters. 
+Powinieneś zwiększyć tę wartość, jeśli Twój komputer nie przyjmuje wszystkich znaków wysyłanych przez
+Twoje urządzenie, na przykład podczas korzystania z GTM. Jeśli występuje taki problem, Twoje GTM może
+wyglądać dziwnie, z brakującymi fragmentami lub znakami.
 
-If you have a faster computer, then you can lower this setting to make chording and the GTM feel snappier and more responsive. 
+Jeśli masz szybszy komputer, możesz zmniejszyć tę wartość, aby akordowanie i GTM działały szybciej i
+bardziej responsywnie.
 
-This value is adjusted in 40us increments. You can find the default debounce press of the different  CharaChorder devices in the table below:
+Wartość ta jest regulowana w przyrostach po 40 μs. Domyślne wartości opóźnienia naciśnięcia klawisza
+dla różnych urządzeń CharaChorder przedstawiono w tabeli:
 
-+------------------+----------------+------------+-------------+--------------+
-| Device           | Default Value  | Min. Value | Max. Value  | Increments   |
-+==================+================+============+=============+==============+
-| CharaChorder One | 480 μs         | 0 μs       | 10200 μs    | 40 μs        |
-+------------------+----------------+------------+-------------+--------------+
-| CharaChorder Lite| 480 μs         | 0 μs       | 10200 μs    | 40 μs        |
-+------------------+----------------+------------+-------------+--------------+
-| CharaChorder X   | 480 μs         | 0 μs       | 10200 μs    | 40 μs        |
-+------------------+----------------+------------+-------------+--------------+
- 
++------------------+------------------+--------------+---------------+--------------+
+| Urządzenie       | Wartość domyślna | Min. wartość | Max. wartość  | Przyrosty    |
++==================+==================+==============+===============+==============+
+| CharaChorder One | 480 μs           | 0 μs         | 10200 μs      | 40 μs        |
++------------------+------------------+--------------+---------------+--------------+
+| CharaChorder Lite| 480 μs           | 0 μs         | 10200 μs      | 40 μs        |
++------------------+------------------+--------------+---------------+--------------+
+| CharaChorder X   | 480 μs           | 0 μs         | 10200 μs      | 40 μs        |
++------------------+------------------+--------------+---------------+--------------+
+
+.. _GenerativeTextMenu:Capslock:
+
 Capslock
 ~~~~~~~~
 
 ``Path: GTM > Keyboard > Capslock``
 
-This setting is similar to a computer's Capslock: it toggles the state of the capslock. When on, all 
-letters output by the CCOS device will be capitalized. When off, all letters output by the CCOS device will be lowercase.
+To ustawienie działa podobnie do funkcji Capslock na komputerze: przełącza stan wielkich liter.
+Gdy jest włączone, wszystkie litery wprowadzane przez urządzenie CCOS będą pisane wielkimi literami.
+Gdy jest wyłączone, wszystkie litery będą pisane małymi literami.
 
-Operating System
+.. _GenerativeTextMenu:Operating System:
+
+System operacyjny
 ~~~~~~~~~~~~~~~~
 
 ``Path: GTM > Keyboard > Operating System``
 
-This setting refers to your host computer's operating system. Because the keys on the different computer operating systems may vary, you can set your CCOS device up so that it matches your computer. 
+To ustawienie odnosi się do systemu operacyjnego komputera, do którego podłączone jest Twoje urządzenie.
+Ponieważ układy klawiszy na różnych systemach operacyjnych mogą się różnić, możesz skonfigurować swoje
+urządzenie CCOS tak, aby odpowiadało Twojemu systemowi.
 
-Currently, on CCOS, you can select between Windows, Mac, Linux, iOS, or Android.
+Obecnie w CCOS możesz wybrać pomiędzy Windows, Mac, Linux, iOS lub Android.
 
-The intent of this setting is to provide more accurate key mapping. As such, it is recommendable to set this setting to match whatever computer operating system you're using your CCOS device on.
+Celem tego ustawienia jest zapewnienie dokładniejszego mapowania klawiszy.
+Dlatego zaleca się ustawienie wartości odpowiadającej systemowi operacyjnemu używanemu na komputerze,
+do którego podłączone jest Twoje urządzenie CCOS.
 
 .. csv-table::
-    :header: "Device", "Default"
+    :header: "Urządzenie", "Domyślnie"
 
     "CharaChorder One", "Windows"
     "CharaChorder Lite", "Windows"
     "CharaChorder X", "Windows"
 
 .. Warning::
-	As of December of 2023, this setting doesn't do anything on CCOS devices.
+    Na dzień grudnia 2023 roku to ustawienie nie wpływa na działanie urządzeń CCOS.
 
-GUI-CTRL Soft Swap (CharaChorder Lite only)
+.. _GenerativeTextMenu:GUI-CTRL Soft Swap:
+
+GUI-CTRL Soft Swap (tylko CharaChorder Lite)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ``Path: GTM > Keyboard > GUI-CTRL Soft Swap``
 
-This setting will swap the behavior of the two keys on the bottom-left of the CharaChorder Lite. 
+To ustawienie zamienia funkcje dwóch klawiszy w lewym dolnym rogu urządzenia CharaChorder Lite.
 
-Traditional QWERTY keyboards keep the ``CTRL`` key at the bottom left corner of the keyboard with the ``GUI`` key (Command key on Mac, Windows key on Windows, Super key on Linux, etc.) to the right of the ``CTRL`` key. The CharaChorder Lite has these two keys swapped by default, which some users find odd and difficult to adjust to. A brand new CharaChorder Lite will have the ``GUI`` key at the bottom-left corner with the ``CTRL`` key to the right of the ``GUI`` key.
+Tradycyjne klawiatury QWERTY mają klawisz ``CTRL`` w lewym dolnym rogu, a obok niego klawisz ``GUI``
+(Command na Macu, Windows na Windowsie, Super na Linuksie itd.). Domyślnie CharaChorder Lite ma te
+klawisze zamienione miejscami, co dla niektórych użytkowników jest niewygodne i trudne do przyzwyczajenia.
+Fabrycznie nowe urządzenie CharaChorder Lite ma klawisz ``GUI`` w lewym dolnym rogu, a ``CTRL`` po jego
+prawej stronie.
 
-With this setting, you can effectively swap the two keys' location at the level of the CCOS so that ``CTRL`` is at the bottom-left corner.
+Za pomocą tego ustawienia możesz zamienić te klawisze na poziomie CCOS, tak aby ``CTRL`` znajdował się
+w lewym dolnym rogu.
 
-This setting has two options: GUI-CTRL and CTRL-GUI. This setting is set to GUI-CTRL by default.
+Ustawienie to ma dwie opcje: GUI-CTRL oraz CTRL-GUI. Domyślnie ustawione jest GUI-CTRL.
 
-**Default Key Mapping:**
+**Domyślne mapowanie klawiszy:**
 
 .. _GUI-CTRL:
 .. image:: /assets/images/GUI-CTRL.jpg
   :width: 1200
-  :alt: Default CharaChorder Lite CTRL mapping
+  :alt: Domyślne mapowanie CTRL w CharaChorder Lite
 
-**Key Mapping after swapping:**
+**Mapowanie klawiszy po zamianie:**
 
 .. _CTRL-GUI:
 .. image:: /assets/images/CTRL-GUI.jpg
   :width: 1200
-  :alt: Alternative CharaChorder Lite CTRL mapping
+  :alt: Alternatywne mapowanie CTRL w CharaChorder Lite
 
-Users who are used to traditional keyboard layouts will want to take advantage of this setting so they don't have to relearn the new position of the keys.
+Użytkownicy przyzwyczajeni do tradycyjnego układu klawiatur będą chcieli skorzystać z tego ustawienia,
+aby nie musieć uczyć się nowego położenia tych klawiszy.
 
-Mouse
+.. _GenerativeTextMenu:Mouse:
+
+Mysz
 -----
 
-CCOS allows you to use your device as a mouse including functions like scrolling and cursor movement. This section will cover settings that relate to the mouse function on CCOS devices.
+CCOS umożliwia używanie urządzenia jako myszy, włącznie z funkcjami przewijania i poruszania kursorem.
+W tej sekcji omówione są ustawienia związane z funkcją myszy na urządzeniach CCOS.
 
-Poll Rate
+.. _GenerativeTextMenu:Poll Rate:
+
+Częstotliwość odpytywania
 ~~~~~~~~~
 
 ``Path: GTM > Mouse > Poll Rate``
 
-The polling rate (poll rate) is the frequency at which data from the CharaChorder's mouse functionality is sent to the device it's connected to. In other words, how often it updates the cursor's position to the computer. This is typically expressed in Hz (Hertz), with the average gaming mouse reporting data at 1000 Hz, which means 1000 times every second.
+Częstotliwość odpytywania (poll rate) to częstotliwość, z jaką dane z funkcji myszy w CharaChorder są
+wysyłane do podłączonego urządzenia. Innymi słowy — jak często pozycja kursora jest aktualizowana na
+komputerze. Zazwyczaj wyraża się ją w Hz (hercach); na przykład standardowa mysz gamingowa odświeża
+dane 1000 razy na sekundę (1000 Hz).
 
-However, :doc:`CCOS<CCOS>` uses ms (milliseconds) which is directly inverse to Hz. 1 ms is equal to 1000 Hz, 2 ms is equal to 500 Hz, and 1000 ms is equal to 1 Hz.
+Jednak :doc:`CCOS<CCOS>` używa jednostki ms (milisekundy), która jest odwrotnością Hz. 1 ms odpowiada
+1000 Hz, 2 ms to 500 Hz, a 1000 ms to 1 Hz.
 
- .. dropdown:: An Explanation of Hz to ms conversion
+ .. dropdown:: Wyjaśnienie konwersji Hz na ms
 
-    In the context of frequency and period (time duration), the relationship is inverse. Frequency is the number of cycles per second, measured in Hz. The period is the time it takes for one cycle to complete, measured in seconds (s). The formula is:
+    W kontekście częstotliwości i okresu (czasu trwania cyklu) zależność jest odwrotna.
+    Częstotliwość to liczba cykli na sekundę (Hz). Okres to czas trwania jednego cyklu (s). Wzór to:
 
-	``Frequency (Hz) = 1/Period (s), where s = 1000 ms``
- 
-    If you convert the period to milliseconds (ms), the relationship remains inverse. For instance, if you have a frequency of 1000 Hz, the period is 1 ms (because 1 second = 1000 milliseconds). As the frequency increases, the period (measured in ms) decreases.
+    ``Częstotliwość (Hz) = 1 / Okres (s), gdzie s = 1000 ms``
 
+    Po przeliczeniu na milisekundy (ms) zależność pozostaje odwrotna. Na przykład częstotliwość 1000 Hz
+    oznacza okres 1 ms (bo 1 s = 1000 ms). Im wyższa częstotliwość, tym krótszy okres (w ms).
 
-
-You can find the default settings for each device in the table below:
+Domyślne wartości dla każdego urządzenia przedstawiono w tabeli poniżej:
 
 .. csv-table::
-    :header: "Device", "Default", "Min. Value", "Max. Value", "Increments"
+    :header: "Urządzenie", "Domyślnie", "Min. wartość", "Max. wartość", "Przyrosty"
 
     "CharaChorder One", "20 ms", "0 ms", "100 ms", "1 ms (Hz)"
     "CharaChorder Lite", "20 ms", "0 ms", "100 ms", "1 ms (Hz)"
     "CharaChorder X", "20 ms", "0 ms", "100 ms", "1 ms (Hz)"
 
-This setting is used in conjunction with the :ref:`slow speed <GenerativeTextMenu:Slow Speed>` and :ref:`fast speed <GenerativeTextMenu:Fast Speed>` settings. Both, the :ref:`slow speed <GenerativeTextMenu:Slow Speed>` and the :ref:`fast speed <GenerativeTextMenu:Fast Speed>` rely on the poll rate.
+To ustawienie współpracuje z parametrami :ref:`wolna prędkość<GenerativeTextMenu:Slow Speed>` i
+:ref:`szybka prędkość<GenerativeTextMenu:Fast Speed>`. Oba —
+:ref:`wolna prędkość<GenerativeTextMenu:Slow Speed>` oraz
+:ref:`szybka prędkość<GenerativeTextMenu:Fast Speed>` — zależą od częstotliwości odpytywania.
 
-Slow Speed
+.. _GenerativeTextMenu:Slow Speed:
+
+Wolna prędkość
 ~~~~~~~~~~
 
 ``Path: GTM > Mouse > Slow Speed``
 
-Slow speed is activated when you use only one of the mouse keys in a single direction (as opposed to using 2 keys in the same direction). Increasing this setting will make your CCOS pointer move faster. 
+Wolna prędkość aktywuje się, gdy używasz tylko jednego klawisza myszy w danym kierunku (w przeciwieństwie
+do używania dwóch klawiszy w tym samym kierunku). Zwiększenie tej wartości spowoduje szybsze przesuwanie
+wskaźnika CCOS.
 
-This setting is used in conjunction with :ref:`poll rate <GenerativeTextMenu:Poll Rate>`. See the explanation below.
+To ustawienie współpracuje z parametrem :ref:`częstotliwości odpytywania<GenerativeTextMenu:Poll Rate>`.
+Wyjaśnienie poniżej:
 
-.. dropdown:: Explanation of CCOS mouse speeds
+.. dropdown:: Wyjaśnienie prędkości myszy CCOS
 
-    The mouse speed refers to the speed of the cursor on the CharaChorder's mouse functionality. The cursor will move at the number of pixels (px) indicated by this setting multiplied by the number of Hz indicated by the :ref:`polling rate<GenerativeTextMenu:Poll Rate>`. 
+    Prędkość myszy określa szybkość przesuwania kursora w funkcji myszy CharaChorder. Kursor będzie przesuwał
+    się o liczbę pikseli (px) wskazaną przez to ustawienie, pomnożoną przez częstotliwość odpytywania
+    :ref:`poll rate<GenerativeTextMenu:Poll Rate>` (wyrażoną w Hz).
 
-    In other words, if your speed is set to 2 px, and your :ref:`poll rate<GenerativeTextMenu:Poll Rate>` is set to 20 ms (~50 Hz), your CharaChorder's cursor will move at 100 pixels per second (px/s). The equation comes out to:
-    ``Speed (px) x poll rate (Hz) = Number of pixels that the cursor will move per second``
+    Innymi słowy, jeśli prędkość ustawisz na 2 px, a :ref:`poll rate<GenerativeTextMenu:Poll Rate>` wynosi
+    20 ms (~50 Hz), kursor CharaChorder przesunie się o 100 pikseli na sekundę (px/s). Wzór:
 
+    ``Prędkość (px) x poll rate (Hz) = liczba pikseli przesuwu na sekundę``
 
-You can find the default settings for each device in the table below:
+Domyślne wartości dla każdego urządzenia przedstawiono w tabeli poniżej:
 
 .. csv-table::
-    :header: "Device", "Default", "Min. Value", "Max. Value", "Increments"
+    :header: "Urządzenie", "Domyślnie", "Min. wartość", "Max. wartość", "Przyrosty"
 
     "CharaChorder One", "5 px", "0 px", "250 px", "1 px"
     "CharaChorder Lite", "16 px", "0 px", "250 px", "1 px"
     "CharaChorder X", "16 px", "0 px", "250 px", "1 px"
 
-Fast Speed
+.. _GenerativeTextMenu:Fast Speed:
+
+Szybka prędkość
 ~~~~~~~~~~
 
 ``Path: GTM > Mouse > Fast Speed``
 
-Fast speed is activated when you use two mouse keys in a single direction (as opposed to using only one key in the same direction). Increasing this setting will make your CCOS pointer move faster. 
+Szybka prędkość aktywuje się, gdy używasz dwóch klawiszy myszy w tym samym kierunku (w przeciwieństwie
+do używania tylko jednego klawisza w danym kierunku). Zwiększenie tej wartości spowoduje szybsze
+przesuwanie wskaźnika CCOS.
 
-This setting is used in conjunction with :ref:`poll rate <GenerativeTextMenu:Poll Rate>`. See the explanation below.
+To ustawienie współpracuje z parametrem :ref:`częstotliwości odpytywania<GenerativeTextMenu:Poll Rate>`.
+Wyjaśnienie poniżej:
 
-.. dropdown:: Explanation of CCOS mouse speeds
+.. dropdown:: Wyjaśnienie prędkości myszy CCOS
 
-    The mouse speed refers to the speed of the cursor on the CharaChorder's mouse functionality. The cursor will move at the number of pixels (px) indicated by this setting multiplied by the number of Hz indicated by the :ref:`polling rate<GenerativeTextMenu:Poll Rate>`. 
+    Prędkość myszy określa szybkość przesuwania kursora w funkcji myszy CharaChorder.
+    Kursor będzie przesuwał się o liczbę pikseli (px) wskazaną przez to ustawienie,
+    pomnożoną przez częstotliwość odpytywania :ref:`poll rate<GenerativeTextMenu:Poll Rate>` (wyrażoną w Hz).
 
-    In other words, if your speed is set to 2 px, and your :ref:`poll rate<GenerativeTextMenu:Poll Rate>` is set to 20 ms (~50 Hz), your CharaChorder's cursor will move at 100 pixels per second (px/s). The equation comes out to:
-    ``Speed (px) x poll rate (Hz) = Number of pixels that the cursor will move per second``
+    Innymi słowy, jeśli prędkość ustawisz na 2 px, a :ref:`poll rate<GenerativeTextMenu:Poll Rate>`
+    wynosi 20 ms (~50 Hz), kursor CharaChorder przesunie się o 100 pikseli na sekundę (px/s). Wzór:
 
+    ``Prędkość (px) x poll rate (Hz) = liczba pikseli przesuwu na sekundę``
 
-You can find the default settings for each device in the table below:
+Domyślne wartości dla każdego urządzenia przedstawiono w tabeli poniżej:
 
 .. csv-table::
-    :header: "Device", "Default", "Min. Value", "Max. Value", "Increments"
+    :header: "Urządzenie", "Domyślnie", "Min. wartość", "Max. wartość", "Przyrosty"
 
     "CharaChorder One", "25 px", "0 px", "250 px", "1 px"
     "CharaChorder Lite", "32 px", "0 px", "250 px", "1 px"
     "CharaChorder X", "32 px", "0 px", "250 px", "1 px"
 
-Scroll Speed
+.. _GenerativeTextMenu:Scroll Speed:
+
+Prędkość przewijania
 ~~~~~~~~~~~~
 
 ``Path: GTM > Mouse > Scroll Speed``
 
-Scroll speed refers to the speed at which your CCOS scroll will scroll. 
+Prędkość przewijania odnosi się do szybkości przewijania w urządzeniu CCOS.
 
-Increasing this setting will make your CCOS scrolling scroll faster. This setting is used in conjunction with :ref:`poll rate <GenerativeTextMenu:Poll Rate>`. See the explanation below.
+Zwiększenie tej wartości spowoduje szybsze przewijanie przez urządzenie CCOS.
+To ustawienie współpracuje z parametrem :ref:`częstotliwości odpytywania<GenerativeTextMenu:Poll Rate>`.
+Wyjaśnienie poniżej:
 
-.. dropdown:: Explanation of CCOS mouse speeds
+.. dropdown:: Wyjaśnienie prędkości myszy CCOS
 
-    The scroll speed refers to the speed at which the CharaChorder scrolls at. The CCOS will scroll at the number of pixels (px) indicated by this setting multiplied by the number of Hz indicated by the :ref:`polling rate<GenerativeTextMenu:Poll Rate>`. 
+    Prędkość przewijania określa szybkość przewijania przez urządzenie CharaChorder.
+    CCOS będzie przewijać o liczbę pikseli (px) wskazaną przez to ustawienie, pomnożoną przez
+    częstotliwość odpytywania :ref:`poll rate<GenerativeTextMenu:Poll Rate>` (wyrażoną w Hz).
 
-    In other words, if your speed is set to 2 px, and your :ref:`poll rate<GenerativeTextMenu:Poll Rate>` is set to 20 ms (~50 Hz), your CharaChorder's scroll will move at 100 pixels per second (px/s). The equation comes out to:
-    ``Speed (px) x poll rate (Hz) = Number of pixels that the cursor will move per second``
+    Innymi słowy, jeśli prędkość ustawisz na 2 px, a :ref:`poll rate<GenerativeTextMenu:Poll Rate>`
+    wynosi 20 ms (~50 Hz), przewijanie CharaChorder nastąpi z prędkością 100 pikseli na sekundę (px/s). Wzór:
 
+    ``Prędkość (px) x poll rate (Hz) = liczba pikseli przewiniętych na sekundę``
 
-You can find the default settings for each device in the table below:
+Domyślne wartości dla każdego urządzenia przedstawiono w tabeli poniżej:
 
 .. csv-table::
-    :header: "Device", "Default", "Min. Value", "Max. Value", "Increments"
+    :header: "Urządzenie", "Domyślnie", "Min. wartość", "Max. wartość", "Przyrosty"
 
     "CharaChorder One", "2 px", "0 px", "25 px", "1 px"
     "CharaChorder Lite", "2 px", "0 px", "25 px", "1 px"
     "CharaChorder X", "2 px", "0 px", "25 px", "1 px"
 
+.. _GenerativeTextMenu:Active Mode:
 
-Active Mode
+Tryb aktywny
 ~~~~~~~~~~~
 
 ``Path: GTM > Mouse > Active Mode``
 
-Active mode nudges your mouse cursor one pixel every minute or so (not a specific timing).
-This setting can be used to keep your computer from going to sleep. You might turn this setting off if you notice desktop apps are preventing you from getting mobile notifications (for example on Discord or Microsoft Teams).
+Tryb aktywny przesuwa kursor myszy o jeden piksel mniej więcej co minutę (czas nie jest dokładnie określony).
+Ustawienie to może być użyte do zapobiegania przechodzeniu komputera w tryb uśpienia.
+Możesz wyłączyć to ustawienie, jeśli zauważysz, że aplikacje na komputerze blokują powiadomienia na
+urządzeniach mobilnych (na przykład w Discordzie lub Microsoft Teams).
 
-Chording
+.. _GenerativeTextMenu:Chording:
+
+Akordowanie
 --------
 
-CCOS devices feature the ability to :doc:`chord<Chords>`. The following settings affect the device's chording abilities.
+Urządzenia CCOS oferują możliwość :doc:`akordowania<Chords>`.
+Poniższe ustawienia wpływają na działanie akordowania na urządzeniu.
 
-Character Only Mode
+.. _GenerativeTextMenu:Character Only Mode:
+
+Tryb tylko znaki
 ~~~~~~~~~~~~~~~~~~~
 
 ``Path: GTM > Chording > Character Only Mode``
 
-This setting is a toggle that disables chording capabilities on CCOS devices. It is off by default and can be enabled in case we don't want any chording at all. This setting can be useful in cases where we don't want to accidentally trigger chords unintentionally, such as when gaming.
+To ustawienie jest przełącznikiem, który wyłącza funkcje akordowania na urządzeniach CCOS.
+Domyślnie jest wyłączone, ale można je włączyć w przypadku, gdy nie chcemy w ogóle korzystać z akordowania.
+Ustawienie to może być przydatne w sytuacjach, w których przypadkowe wywołanie akordów mogłoby
+przeszkadzać — na przykład podczas grania w gry.
 
-If your CCOS device suddenly loses its chording ability, it's a good idea to check if this setting is toggled off. 
+Jeżeli Twoje urządzenie CCOS nagle przestanie reagować na akordy, warto sprawdzić, czy to ustawienie
+nie zostało przypadkiem włączone.
 
-Press Tolerance 
+.. _GenerativeTextMenu:Press Tolerance:
+
+Tolerancja naciśnięcia
 ~~~~~~~~~~~~~~~
 
 ``Path: GTM > Chording > Press Tolerance``
 
-The press tolerance refers to a window of time in which a chord can be performed, measured in milliseconds (ms). This timer is initiated upon the first "press" action of the first key in a chord and ends once the last key of the chord is pressed, or until the press tolerance runs out, whichever comes first.
+Tolerancja naciśnięcia określa przedział czasowy, w którym akord może zostać wykonany, mierzony w
+milisekundach (ms). Licznik uruchamia się po pierwszym „naciśnięciu” pierwszego klawisza w akordzie i
+kończy, gdy naciśnięty zostanie ostatni klawisz akordu lub gdy czas tolerancji się skończy — w
+zależności, co nastąpi pierwsze.
 
-.. _Tolerances:
+.. _Tolerancje:
 
 .. image:: /assets/images/Press-and-Release-Tolerances.png
   :width: 1200
-  :alt: Diagram Explaining Tolerances
+  :alt: Diagram wyjaśniający tolerancje
 
-Put simply, increasing the press tolerance (usually, done in conjunction with increasing the :ref:`release tolerance <GenerativeTextMenu:Release Tolerance>`) makes it easier to perform chords.
+Mówiąc prosto: zwiększenie tolerancji naciśnięcia (często wykonywane razem ze zwiększeniem
+:ref:`tolerancji zwolnienia<GenerativeTextMenu:Release Tolerance>`) ułatwia wykonywanie akordów.
 
 .. note::
-    The press tolerance scales (increases) according to the number of keys in a chord. The window of time will be bigger with a 6-key chord than with a 3-key chord. This means that, though you might set the tolerance to a specific timing, it will actually be longer than that depending on how many keys are in your chord.
+    Tolerancja naciśnięcia skaluje się (zwiększa) wraz z liczbą klawiszy w akordzie.
+    Okno czasowe będzie większe przy 6-klawiszowym akordzie niż przy 3-klawiszowym.
+    Oznacza to, że choć ustawisz konkretną wartość, w rzeczywistości będzie ona
+    wydłużona w zależności od liczby klawiszy w akordzie.
 
-You can increase this setting in order to make that window of time longer and make chording easier.
+Możesz zwiększyć to ustawienie, aby wydłużyć okno czasowe i ułatwić wykonywanie akordów.
 
-The downside to having higher values is that you may accidentally trigger chords during normal character entry. Therefore, if you are noticing chords fire unintentionally, it is a good idea to lower this setting along with the :ref:`release tolerance <GenerativeTextMenu:Release Tolerance>`.
+Minusem ustawienia wyższych wartości jest możliwość przypadkowego wyzwalania akordów podczas
+zwykłego wprowadzania znaków. Dlatego, jeśli zauważasz przypadkowe uruchamianie akordów, warto
+obniżyć tę wartość oraz :ref:`tolerancję zwolnienia<GenerativeTextMenu:Release Tolerance>`.
 
-You can find the default settings for each device in the table below:
+Domyślne wartości dla każdego urządzenia przedstawiono w tabeli:
 
 .. csv-table::
-    :header: "Device", "Default", "Min. Value", "Max. Value", "Increments"
+    :header: "Urządzenie", "Domyślnie", "Min. wartość", "Max. wartość", "Przyrosty"
 
     "CharaChorder One", "25 ms", "0 ms", "150 ms", "1 ms"
     "CharaChorder Lite", "25 ms", "0 ms", "150 ms", "1 ms"
     "CharaChorder X", "25 ms", "0 ms", "150 ms", "1 ms"
 
-Release Tolerance
+.. _GenerativeTextMenu:Release Tolerance:
+
+Tolerancja zwolnienia
 ~~~~~~~~~~~~~~~~~
 
 ``Path: GTM > Chording > Release Tolerance``
 
-The release tolerance refers to a window of time in which a chord can be performed, measured in milliseconds (ms). This timer is initiated upon the first "release" action of any key in a chord and ends once the chord is fully performed, or until the release tolerance runs out, whichever comes first.
+Tolerancja zwolnienia odnosi się do przedziału czasowego, w którym akord może zostać wykonany, mierzony
+w milisekundach (ms). Licznik uruchamia się w momencie pierwszego „zwolnienia” któregokolwiek klawisza
+w akordzie i kończy, gdy akord zostanie w pełni wykonany lub gdy czas tolerancji się skończy — w
+zależności co nastąpi pierwsze.
 
 .. image:: /assets/images/Press-and-Release-Tolerances.png
   :width: 1200
-  :alt: Diagram Explaining Tolerances
+  :alt: Diagram wyjaśniający tolerancje
 
-Put simply, increasing the release tolerance (usually, done in conjunction with increasing the :ref:`press tolerance <GenerativeTextMenu:Press Tolerance>`) makes it easier to perform chords.
+Mówiąc prosto: zwiększenie tolerancji zwolnienia (często wykonywane razem ze zwiększeniem
+:ref:`tolerancji naciśnięcia<GenerativeTextMenu:Press Tolerance>`) ułatwia wykonywanie akordów.
 
 .. note::
-    The press tolerance scales (increases) according to the number of keys in a chord. The window of time will be bigger with a 6-key chord than with a 3-key chord. This means that, though you might set the tolerance to a specific timing, it will actually be longer than that depending on how many keys are in your chord.
+    Tolerancja naciśnięcia skaluje się (zwiększa) wraz z liczbą klawiszy w akordzie.
+    Okno czasowe będzie większe przy 6-klawiszowym akordzie niż przy 3-klawiszowym.
+    Oznacza to, że choć ustawisz konkretną wartość, w rzeczywistości będzie ona
+    wydłużona w zależności od liczby klawiszy w akordzie.
 
-You can increase this setting in order to make that window of time longer and make chording easier.
+Możesz zwiększyć to ustawienie, aby wydłużyć okno czasowe i ułatwić wykonywanie akordów.
 
-The downside to having higher values is that you may accidentally trigger chords during normal character entry. Therefore, if you are noticing chords fire unintentionally, it is a good idea to lower this setting along with the :ref:`press tolerance <GenerativeTextMenu:Press Tolerance>`.
+Minusem ustawienia wyższych wartości jest możliwość przypadkowego wyzwalania akordów podczas
+zwykłego wprowadzania znaków. Dlatego, jeśli zauważasz przypadkowe uruchamianie akordów, warto
+obniżyć tę wartość oraz :ref:`tolerancję naciśnięcia<GenerativeTextMenu:Press Tolerance>`.
 
-You can find the default settings for each device in the table below:
+Domyślne wartości dla każdego urządzenia przedstawiono w tabeli:
 
 .. csv-table::
-    :header: "Device", "Default", "Min. Value", "Max. Value", "Increments"
+    :header: "Urządzenie", "Domyślnie", "Min. wartość", "Max. wartość", "Przyrosty"
 
     "CharaChorder One", "18 ms", "0 ms", "150 ms", "1 ms"
     "CharaChorder Lite", "18 ms", "0 ms", "150 ms", "1 ms"
     "CharaChorder X", "18 ms", "0 ms", "150 ms", "1 ms"
 
+.. _GenerativeTextMenu:Timeout:
 
 Timeout
 ~~~~~~~
 
 ``Path: GTM > Chording > Timeout``
 
-This setting will change how long CCOS counts time in order to replace characters that precede a chord.
+To ustawienie określa, jak długo CCOS liczy czas w celu zastąpienia znaków, które poprzedzają akord.
 
-CCOS devices have a running timer that starts after every single character that is entered in traditional chentry (character entry, i.e. one letter at a time). This timer controls whether or not the next chord that you perform deletes the preceding characters.
+Urządzenia CCOS posiadają działający licznik czasu, który uruchamia się po każdym wprowadzeniu
+pojedynczego znaku w trybie klasycznego wprowadzania znaków (chentry — wprowadzanie znak po znaku).
+Ten licznik kontroluje, czy następny wykonany akord usunie poprzedzające znaki.
 
-This feature allows users to misfire chords, yet be able to correct them by quickly performing the chord correctly, without having to backspace manually to erase the misfired chord. The result is that the timeout will automatically backspace all of the preceding characters (up to the last :doc:`breaking character </Breaking Character>`) and replace them with the intended chord.
+Ta funkcja pozwala użytkownikom na poprawienie błędnie wykonanego akordu — wystarczy szybko wykonać
+poprawny akord bez potrzeby ręcznego kasowania błędnych znaków. W efekcie timeout automatycznie
+usuwa wszystkie poprzedzające znaki (aż do ostatniego :doc:`znaku przerywającego </Breaking Character>`)
+i zastępuje je właściwym akordem.
 
-You can set this setting to be as low as 0.0 seconds (s) or as high as 25.0 seconds (s), being able to adapt it to your individual :doc:`chording<Chords>` style.
+Możesz ustawić tę wartość w zakresie od 0,0 sekundy (s) do 25,0 sekund (s), dostosowując ją do własnego stylu
+:doc:`akordowania<Chords>`.
 
 .. warning::
-    Setting this setting to 0.0 s will result in :doc:`chords<Chords>` not working at all. They will fire, but they will not automatically erase the :ref:`chord inputs<Chord Input>`.
+    Ustawienie tej wartości na 0,0 s spowoduje, że :doc:`akordy<Chords>` nie będą działały w ogóle.
+    Będą się aktywować, ale nie usuną automatycznie :ref:`wejść akordu<Chord Input>`.
 
-You can find the default settings for each device in the table below:
+Domyślne wartości dla każdego urządzenia przedstawiono w tabeli:
 
 .. csv-table::
-    :header: "Device", "Default", "Min. Value", "Max. Value", "Increments"
+    :header: "Urządzenie", "Domyślnie", "Min. wartość", "Max. wartość", "Przyrosty"
 
     "CharaChorder One", "4 s", "0 s", "25 s", "0.1 s"
     "CharaChorder Lite", "4 s", "0 s", "25 s", "0.1 s"
     "CharaChorder X", "4 s", "0 s", "25 s", "0.1 s"
 
-Spurring
+.. _GenerativeTextMenu:Spurring:
+
+Akordowanie natychmiastowe
 ~~~~~~~~
 
 ``Path: GTM > Chording > Spurring``
 
-A 'chording only' mode which tells your device to output chords on a press event rather than a press & release and release event. When in spurring mode, you can press the keys of a chord one at a time with a much longer waiting period, which makes it a useful mode for those who want to practice chording without worrying about proper :ref:`timing<GenerativeTextMenu:Press Tolerance>`. 
+Tryb wyłącznie akordowy, w którym urządzenie wyprowadza akordy już w momencie naciśnięcia klawiszy,
+zamiast czekać na naciśnięcie i zwolnienie. W trybie akordowania natychmiastowego możesz naciskać
+klawisze akordu pojedynczo z dużo dłuższym czasem oczekiwania, co czyni go użytecznym dla osób
+chcących ćwiczyć akordowanie bez konieczności przejmowania się
+:ref:`dokładnym czasem<GenerativeTextMenu:Press Tolerance>`.
 
-Spurring mode also enables you to jump from one chord to another without releasing everything. It can provide significant speed gains when chording, but also takes away the flexibility of character entry. Spurring mode can truly maximize speed when chording if a user has chords for all of the words they want to use. 
+Akordowanie natychmiastowe umożliwia także przechodzenie z jednego akordu do następnego bez całkowitego
+zwalniania wszystkich klawiszy. Może to znacząco zwiększyć szybkość akordowania, jednak kosztem
+elastyczności wprowadzania pojedynczych znaków. Przy odpowiednio przygotowanej bibliotece akordów,
+tryb ten pozwala na maksymalne zwiększenie szybkości pisania.
 
-Spurring On/Off
+Akordowanie natychmiastowe — Włącz/Wyłącz
 ^^^^^^^^^^^^^^^
 
 ``Path: GTM > Chording > Character Only Mode > Spurring Timeout``
 
-This setting will toggle spurring mode ON or OFF.
+To ustawienie przełącza tryb akordowania natychmiastowego WŁĄCZONY lub WYŁĄCZONY.
 
-Spurring Timeout
+.. _GenerativeTextMenu:Spurring Timeout:
+
+Limit czasu akordowania natychmiastowego
 ^^^^^^^^^^^^^^^^
 
 ``Path: GTM > Chording > Spurring > Spurring Timeout``
 
-The time of inactivity to default back to fluid chorded/character entry mode (aka spurring off).
+Określa czas bezczynności, po którym urządzenie powróci do standardowego trybu akordowania/znakowego
+(czyli wyłącza tryb akordowania natychmiastowego).
 
-You can find the default settings for each device in the table below:
+Domyślne wartości dla każdego urządzenia przedstawiono w tabeli:
 
 .. csv-table::
-    :header: "Device", "Default", "Min. Value", "Max. Value", "Increments"
+    :header: "Urządzenie", "Domyślnie", "Min. wartość", "Max. wartość", "Przyrosty"
 
     "CharaChorder One", "240 s", "0 s", "250 s", "1 s"
     "CharaChorder Lite", "240 s", "0 s", "250 s", "1 s"
     "CharaChorder X", "240 s", "0 s", "250 s", "1 s"
 
-Arpeggiate
+.. _GenerativeTextMenu:Arpeggiate:
+
+Arpeggiacja
 ~~~~~~~~~~
 
 ``Path: GTM > Chording > Arpeggiate``
 
-Arpeggiate actions are timed actions that can modify a chord after the chord is performed. A quick example of this is the use of chord modifiers after you perform the chord. You can read that section for information on how the :doc:`chord modifiers<Chord Modifiers>` work.
+Arpeggiacje to działania czasowe, które mogą modyfikować akord po jego wykonaniu.
+Prostym przykładem jest zastosowanie modyfikatorów akordów po wykonaniu akordu.
+Możesz przeczytać więcej w sekcji o :doc:`modyfikatorach akordów<Chord Modifiers>`.
 
-With arpeggiates enabled, you can chord the word ``run`` and then, within the :ref:`arpeggiate timeout window<GenerativeTextMenu:Arpeggiate Timeout>`, press the past tense modifier for the word to be "modified" into its past tense variant; in english, ``ran``.
- 
+Gdy arpeggiacje są włączone, możesz np. wykonać akord dla słowa ``run``, a następnie, w ramach
+:ref:`okna czasowego arpeggiacji<GenerativeTextMenu:Arpeggiate Timeout>`, nacisnąć modyfikator
+czasu przeszłego, aby przekształcić słowo w wariant czasu przeszłego — w języku angielskim: ``ran``.
 
-Arpeggiate On/Off
+Arpeggiacja — Włącz/Wyłącz
 ^^^^^^^^^^^^^^^^^
 
 ``Path: GTM > Chording > Arpeggiate > Arpeggiate On/Off``
 
-This setting will let you toggle the arpeggiate capability ON or OFF. 
+To ustawienie pozwala włączyć lub wyłączyć funkcję arpeggiacji.
 
-Some users dislike arpeggiates as, in really fast typing, it may cause unwanted modifications.
+Niektórzy użytkownicy nie przepadają za arpeggiacją, ponieważ przy bardzo szybkiej pracy może
+prowadzić do niezamierzonych modyfikacji.
 
-Arpeggiate Timeout
+.. _GenerativeTextMenu:Arpeggiate Timeout:
+
+Limit czasu arpeggiacji
 ^^^^^^^^^^^^^^^^^^
 
 ``Path: GTM > Chording > Arpeggiate > Arpeggiate Timeout``
 
-The arpeggiate timeout is a window of time after a chord is performed during which CCOS will expect arpeggiates to be performed. After this timer runs out, CCOS will NO LONGER modify the preceding chord. 
+Limit czasu arpeggiacji to okno czasowe po wykonaniu akordu, w którym CCOS oczekuje na wykonanie arpeggiacji.
+Po upływie tego czasu CCOS PRZESTAJE modyfikować wcześniejszy akord.
 
-A common issue that users may run into while having arpeggiates enabled is the shift key modifying the preceding chord instead of the next key. For this reason, some users lower the arpeggiate timeout to a really low amount of time in order to reduce the possibility of this happening unintentionally.
+Typowym problemem, na jaki mogą natrafić użytkownicy przy włączonej arpeggiacji, jest to, że klawisz
+Shift modyfikuje poprzedni akord zamiast wpływać na następny znak. Z tego powodu niektórzy użytkownicy
+zmniejszają limit czasu arpeggiacji do bardzo małych wartości, aby ograniczyć ryzyko takich
+niezamierzonych modyfikacji.
 
-Display
+.. _GenerativeTextMenu:Display:
+
+Wyświetlanie
 -------
 
-Under this section, you'll find settings that deal with how your CharaChorder displays certain things.
+W tej sekcji znajdziesz ustawienia dotyczące sposobu, w jaki CharaChorder wyświetla określone informacje.
 
-Version
+.. _GenerativeTextMenu:Version:
+
+Wersja
 ~~~~~~~
 
 ``Path: GTM > Display > Version``
 
-Though this is not a setting that can be modified, it's a useful piece of text that will show you the CCOS version that your CharaChorder is currently on. You can use this to quickly check what version you are running on the fly, anywhere that you can read GTM
+Chociaż nie jest to ustawienie, które można modyfikować, stanowi przydatną informację tekstową
+pokazującą wersję CCOS, na której aktualnie działa Twoje urządzenie CharaChorder.
+Możesz w ten sposób szybko sprawdzić wersję oprogramowania w dowolnym miejscu, w którym możesz
+odczytać menu GTM.
 
-Realtime Feedback
+.. _GenerativeTextMenu:Realtime Feedback:
+
+Informacje w czasie rzeczywistym
 ~~~~~~~~~~~~~~~~~
 
 ``Path: GTM > Display > Realtime Feedback``
 
-This setting toggles realtime feedback ON or OFF. 
+To ustawienie przełącza wyświetlanie informacji w czasie rzeczywistym WŁĄCZONE lub WYŁĄCZONE.
 
-Realtime feedback refers to the helpful text like ``SPURRING_ON``, ``SPURRING_OFF`` etc, that lets the user know if a certain mode has been activated or deactivated on the CharaChorder device. Since there is no other visual way to know if the chord used to enable or disable certain settings, it is helpful to have these texts pop up as confirmation.
+Informacje w czasie rzeczywistym odnoszą się do pomocniczych komunikatów, takich jak
+``AKORDOWANIE_NATYCHMIASTOWE_WŁĄCZONE`` (SPURRING_ON), ``AKORDOWANIE_NATYCHMIASTOWE_WYŁĄCZONE`` (SPURRING_OFF)
+itd., które informują użytkownika o aktywacji bądź dezaktywacji określonych trybów w urządzeniu CharaChorder.
+Ponieważ nie istnieje inna wizualna informacja o tym, czy dany akord aktywował lub dezaktywował pewne
+ustawienia, pomocne jest wyświetlanie takich komunikatów w formie potwierdzenia.
 
 .. Note::
-	The realtime feedback setting controls the :ref:`startup<GenerativeTextMenu:Startup>` setting. If realtime feedback is OFF, then startup will be OFF, regardless of that setting's individual toggle.
+    Ustawienie informacji w czasie rzeczywistym kontroluje również
+    :ref:`ustawienie uruchamiania<GenerativeTextMenu:Startup>`.
+    Jeżeli informacje w czasie rzeczywistym są WYŁĄCZONE, to uruchamianie również będzie
+    WYŁĄCZONE, bez względu na indywidualny stan tego ustawienia.
 
-Startup
+.. _GenerativeTextMenu:Startup:
+
+Uruchamianie
 ~~~~~~~
 
 ``Path: GTM > Display > Startup``
 
-Having this setting set to "ON" will result in your device displaying the text "CCOS is ready." after you have plugged your device into a computer. The startup text will be displayed wherever your cursor was last typing, if that window is active. This setting is useful so that you know when your CharaChorder device is ready to be used, since startup may take a couple of seconds.
+Włączenie tego ustawienia powoduje, że po podłączeniu urządzenia do komputera zostanie wyświetlony komunikat
+„CCOS is ready.”. Wiadomość ta pojawi się w miejscu, gdzie ostatnio znajdował się kursor, o ile okno z
+możliwością wprowadzania tekstu jest aktywne. Ustawienie to jest przydatne, ponieważ informuje, że
+urządzenie CharaChorder jest gotowe do pracy — ponieważ proces uruchamiania może potrwać kilka sekund.
 
-However, if you have editable text highlighted when you connect your CharaChorder, this setting will replace that highlighted text with the startup message. Additionally, if there is not a selected window where text may be typed, the key codes that the CharaChorder sends to your computer in order to display the startup message may be interpreted by your computer as actions and may result in unwanted behavior.
+Należy jednak pamiętać, że jeśli podczas podłączania CharaChorder masz zaznaczony tekst, komunikat
+uruchamiania zastąpi zaznaczony fragment. Dodatkowo, jeżeli nie ma aktywnego okna do wprowadzania
+tekstu, kody klawiszy wysyłane przez CharaChorder w celu wyświetlenia komunikatu startowego mogą
+zostać przez komputer zinterpretowane jako akcje i skutkować niepożądanym zachowaniem.
 
-If you would rather not have this message display every time that you connect your device, then you can toggle this setting OFF.
+Jeżeli nie chcesz, aby ten komunikat był wyświetlany za każdym razem po podłączeniu urządzenia,
+możesz wyłączyć to ustawienie.
 
 .. Warning::
-	The Startup setting is dependent on the :ref:`realtime feedback setting<GenerativeTextMenu:Realtime Feedback>`. If that setting is set to OFF, then Startup won't display, even if Startup is set to ON.
+    Ustawienie Uruchamiania zależy od
+    :ref:`ustawienia informacji w czasie rzeczywistym<GenerativeTextMenu:Realtime Feedback>`.
+    Jeżeli informacje w czasie rzeczywistym są WYŁĄCZONE, wówczas komunikat startowy nie
+    zostanie wyświetlony, nawet jeśli opcja Uruchamiania jest WŁĄCZONA.
 
-LEDs (CharaChorder Lite only)
+.. _GenerativeTextMenu:LEDs:
+
+Diody LED (tylko CharaChorder Lite)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ``Path: GTM > Display > LEDs``
 
-The :doc:`CharaChorder Lite<CharaChorder_Lite>` comes with RGB LEDs that light up the keys of the keyboard from below with a static light. This section contains settings pertaining to those LED lights.
+:doc:`CharaChorder Lite<CharaChorder_Lite>` posiada diody RGB, które podświetlają klawisze od spodu
+światłem statycznym. W tej sekcji znajdują się ustawienia dotyczące tych diod LED.
 
 .. note::
-	LED settings only exist in the GTM for :doc:`CharaChorder Lite<CharaChorder_Lite>` devices, not on any other CharaChorder devices.
+    Ustawienia LED dostępne są w GTM wyłącznie dla urządzeń :doc:`CharaChorder Lite<CharaChorder_Lite>`,
+    nie dla innych modeli CharaChorder.
 
-On/Off
+Włącz/Wyłącz
 ^^^^^^
 
 ``Path: GTM > Display > LEDs > On/Off``
 
-Quickly toggle the LEDs on or off with this setting.
+Szybkie włączanie lub wyłączanie podświetlenia LED za pomocą tego ustawienia.
 
-Color 
+Kolor
 ^^^^^
 
 ``Path: GTM > Display > LEDs > Color``
 
-Use this setting to change the color of the LED backlights on your CharaChorder Lite. In the GTM, there are 11 colors to choose from which you can see in the table below:
+To ustawienie pozwala zmienić kolor podświetlenia LED w CharaChorder Lite.
+W GTM dostępnych jest 11 kolorów do wyboru, pokazanych w tabeli poniżej:
 
 .. csv-table::
-    :header: "Letter", "Color"
+    :header: "Litera", "Kolor"
 
-	"W", "White"
-	"R", "Red"
-	"O", "Orange"
-	"Y", "Yellow"
-	"L", "Lime"
-	"G", "Green"
-	"C", "Cyan"
-	"B", "Blue"
-	"V", "Violet"
-	"P", "Pink"
-	"M", "Multicolor"
+    "W", "Biały"
+    "R", "Czerwony"
+    "O", "Pomarańczowy"
+    "Y", "Żółty"
+    "L", "Limonkowy"
+    "G", "Zielony"
+    "C", "Cyjan"
+    "B", "Niebieski"
+    "V", "Fioletowy"
+    "P", "Różowy"
+    "M", "Wielokolorowy"
 
-Please note that, as of December of 2023, the LEDs are NOT individually addressable. The color setting changes the color of ALL LEDs at the same time.
+Należy pamiętać, że na grudzień 2023 roku diody NIE są indywidualnie adresowalne.
+Ustawienie koloru zmienia kolor WSZYSTKICH diod jednocześnie.
 
-Brightness
+Jasność
 ^^^^^^^^^^
 
 ``Path: GTM > Display > LEDs > Brightness``
 
-This setting lets you adjust the brightness of the LED backlights on your CharaChorder Lite. You can choose any number between 0 and 50, where 0 means that your LEDs are completely off and 50 means that your LEDs are at max brightness.
+To ustawienie pozwala regulować jasność podświetlenia LED w CharaChorder Lite.
+Możesz ustawić wartość od 0 do 50, gdzie 0 oznacza całkowite wyłączenie diod, a 50 — maksymalną jasność.
 
-Please note that LEDs are NOT individually addressable as of December of 2023. The brightness setting adjusts the brightness for ALL LEDs equally.
+Należy pamiętać, że diody NIE są indywidualnie adresowalne (stan na grudzień 2023).
+Jasność dotyczy wszystkich diod równomiernie.
 
 .. note::
-    If you are using a low power usb bank or port, having a high LED brightness may lead to issues with your CharaChorder Lite's power. If you have issues on your device that seem to keep your CharaChorder Lite from properly powering on or staying on, it may be a good idea to lower this setting.
+    Jeżeli używasz słabego źródła zasilania USB lub portu, wysoka jasność LED może powodować problemy
+    z zasilaniem CharaChorder Lite. Jeżeli zauważysz problemy z uruchamianiem lub stabilnością
+    urządzenia, warto obniżyć to ustawienie.
 
-You can find the default settings for the CharaChorder Lite in the table below:
+Domyślne wartości dla CharaChorder Lite przedstawiono w tabeli:
 
 .. csv-table::
-    :header: "Device", "Default", "Min. Value", "Max. Value", "Increments"
+    :header: "Urządzenie", "Domyślnie", "Min. wartość", "Max. wartość", "Przyrosty"
 
     "CharaChorder Lite", "5", "0", "50", "1"
 
+.. _GenerativeTextMenu:Resources:
 
-Resources
+Zasoby
 ---------
 
 ``Path: GTM > Resources``
 
-This section contains links which may be helpful to you. These links include: 
+Ta sekcja zawiera łącza, które mogą być dla Ciebie pomocne. Łącza te obejmują:
 
 .. csv-table::
-    :header: "Letter", "Item", "Description"
+    :header: "Litera", "Element", "Opis"
 
-	"A", "About", "Opens https://www.charachorder.com/pages/about."
-	"G", "Get started", "Opens https://www.charachorder.com/pages/get-started."
-	"D", "Discord", "Invites you to the CharaChorder Discord"
-	"T", "Training", "Opens https://iq-eq.io, our free tool to help people learn to type at the speed of thought"
-	"M", "Message Riley", "Copies Riley Keen (CharaChorder CEO)'s email address to your clipboard"
-	"L", "Learn chords", "Opens The Starter Chord List"
-	"S", "Check system updates", "Opens the CCOS version updates page"
+    "A", "O nas", "Otwiera https://www.charachorder.com/pages/about."
+    "G", "Rozpocznij", "Otwiera https://www.charachorder.com/pages/get-started."
+    "D", "Discord", "Zaproszenie na serwer Discord CharaChorder"
+    "T", "Trening", "Otwiera https://iq-eq.io — nasze bezpłatne narzędzie do nauki pisania z prędkością myśli"
+    "M", "Wiadomość do Riley’a", "Kopiuje adres e-mail Riley Keen (CEO CharaChorder) do schowka"
+    "L", "Nauka akordów", "Otwiera listę startową akordów"
+    "S", "Sprawdź aktualizacje systemu", "Otwiera stronę z aktualizacjami wersji CCOS"
