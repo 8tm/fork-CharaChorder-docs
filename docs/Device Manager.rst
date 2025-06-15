@@ -1,660 +1,1050 @@
-Device Manager
+.. _Device Manager:
+
+Menedżer Urządzeń
 ======================================
 
-The CharaChorder Device Manager is the one-stop-shop for users with a CCOS-powered device. It boasts high quality graphics, animations and a simple user interface. On the device manager, you can change your device's :ref:`layout<Device Manager:Layout>`, manage your :ref:`chord library<Device Manager:Library>`, and adjust your :ref:`settings<Device Manager:Device>`.
+Menedżer Urządzeń CharaChorder to kompleksowe narzędzie dla użytkowników urządzeń z
+systemem CCOS. Oferuje wysokiej jakości grafikę, animacje i prosty interfejs użytkownika.
+W Menedżerze Urządzeń możesz zmieniać :ref:`układ<Device Manager:Layout>`, zarządzać swoją
+:ref:`biblioteką akordów<Device Manager:Library>`, oraz dostosowywać
+:ref:`ustawienia<Device Manager:Device>` swojego urządzenia.
 
-In this section, we'll talk about the device manager and how you can navigate around it to configure your device to your liking. First, we'll discuss the website and where to find useful buttons on it, then we'll cover the main pages on the device manager and how to use them, and, lastly, we'll touch upon some other features and useful tools on the manager. 
+W tej sekcji omówimy Menedżer Urządzeń i sposoby nawigacji w nim, abyś mógł skonfigurować
+swoje urządzenie według własnych preferencji. Najpierw opiszemy stronę internetową i
+przyciski na niej, potem przejdziemy przez główne sekcje Menedżera Urządzeń i ich
+użycie, a na końcu wspomnimy o dodatkowych funkcjach i narzędziach.
 
-Feel free to use the links below to skip to whatever section you would like to read or scroll to start with the first section.
+Możesz skorzystać z poniższych odnośników, aby przejść do interesującej Cię sekcji, lub
+po prostu przewinąć na początek.
 
-.. contents:: Table of Contents of this Page
+.. contents:: Spis treści tej strony
    :local:
 
+.. _Device Manager:Connecting to the Device Manager:
 
-Connecting to the Device Manager
+Łączenie z Menedżerem Urządzeń
 *********************************
 
-You can follow the steps below to connect to the device manager for the first time. 
+Możesz wykonać poniższe kroki, aby połączyć się z Menedżerem Urządzeń po raz pierwszy.
 
 .. Note::
-	If you have previously selected :ref:`Auto-connect<Autoreconnect>` within that browser for the same device, you may not need to repeat these steps every time that you go to the device manager page.
+    Jeśli wcześniej wybrałeś :ref:`Auto-connect<Autoreconnect>` w tej samej przeglądarce dla
+    tego samego urządzenia, być może nie będziesz musiał powtarzać tych kroków za każdym
+    razem przy wchodzeniu na stronę menedżera.
 
-1. On a chromium based browser, such as Chrome or Edge, go to the `CharaChorder Device Manager <https://charachorder.io>`__ 
-2. Click “Connect” at the bottom center of the screen
-3. When the popup box comes up that reads “charachorder.io wants to connect to a serial port”, choose your CharaChorder device, then click the “Connect” button
+1. W przeglądarce opartej na Chromium, takiej jak Chrome lub Edge, przejdź na stronę
+   `CharaChorder Device Manager <https://charachorder.io>`__.
+2. Kliknij „Connect” na dole ekranu, na środku.
+3. Gdy pojawi się okno z napisem „charachorder.io wants to connect to a serial port”,
+   wybierz swoje urządzenie CharaChorder, a następnie kliknij przycisk „Connect”.
+
 
 .. image:: /assets/images/ManagerSELECTDEVICE.png
   :width: 400
-  :alt: Image showing the dialogue box requesting permission to open a serial connection
+  :alt: Obraz przedstawiający okno dialogowe z prośbą o połączenie przez port szeregowy
 
-If these steps were performed correctly, you can see the connected device name in the bottom bar where "Connect" was previously.  
+Jeżeli wykonasz powyższe kroki poprawnie, zobaczysz nazwę podłączonego urządzenia na dolnym
+pasku tam, gdzie wcześniej widniał napis „Connect”.
 
-.. _serialportaccess:
+.. _Device Manager:serialportaccess:
 
-Linux Serial Port Access
+Dostęp do portu szeregowego w systemie Linux
 --------------------------
 
 .. warning::
-    For **Linux** based users: serial port access is often restricted to specific user groups for security. 
-    To enable serial port access in a browser like Chromium, you'll need to add your user to the appropriate 
-    group based on your Linux distribution.  Follow the steps below to grant access.
+    Dla użytkowników **Linuxa**: dostęp do portu szeregowego często jest ograniczony do
+    określonych grup użytkowników ze względów bezpieczeństwa.
+    Aby umożliwić dostęp do portu szeregowego w przeglądarce (takiej jak Chromium),
+    musisz dodać swojego użytkownika do odpowiedniej grupy w zależności od dystrybucji
+    Linuksa. Wykonaj poniższe kroki, aby przyznać dostęp.
 
-
-For Ubuntu, Debian, Fedora, Linux Mint, openSUSE, CentOS, Elementary OS, Zorin OS:
+Dla Ubuntu, Debian, Fedora, Linux Mint, openSUSE, CentOS, Elementary OS, Zorin OS:
 
 .. code-block:: bash
 
     sudo usermod -aG dialout $USER
 
-For Arch Linux, Manjaro:
+Dla Arch Linux, Manjaro:
 
 .. code-block:: bash
 
-	sudo usermod -aG uucp $USER
+    sudo usermod -aG uucp $USER
 
-Replace ``$USER`` with your username or use ``$USER`` to automatically reference the current user.
-Log out and log back in for the changes to take effect.
+Zastąp ``$USER`` swoją nazwą użytkownika lub pozostaw ``$USER``, aby automatycznie
+odwołać się do bieżącego użytkownika.
+Wyloguj się i zaloguj ponownie, aby zmiany zaczęły obowiązywać.
 
-If the above commands don't work, check the group ownership of the serial device (e.g., ``/dev/ttyUSB0``) using:
-   
+Jeśli powyższe polecenia nie działają, sprawdź właściciela grupowego urządzenia
+szeregowego (np. ``/dev/ttyUSB0``) za pomocą:
+
 .. code-block:: bash
 
     ls -l /dev/ttyUSB0
 
-This command will display the device's group. Replace ``/dev/ttyUSB0`` with the appropriate device file for your system.
-After identifying the group (e.g., ``dialout``, ``uucp``, or another), add your user to that group using:
+To polecenie wyświetli grupę urządzenia. Zamień ``/dev/ttyUSB0`` na odpowiedni plik urządzenia w twoim systemie.
+Po zidentyfikowaniu grupy (np. ``dialout``, ``uucp`` lub innej), dodaj swojego użytkownika do tej grupy, używając:
 
 .. code-block:: bash
 
     sudo usermod -aG <group_name> $USER
 
-Replace ``<group_name>`` with the name of the group displayed in the previous step.
-Log out and log back in to apply the changes. Your user will now have the necessary permissions to access the serial port.
+Zastąp ``<group_name>`` nazwą grupy wyświetloną w poprzednim kroku.
+Wyloguj się i zaloguj ponownie, aby zastosować zmiany.
+Twój użytkownik uzyska teraz niezbędne uprawnienia do dostępu do portu szeregowego.
 
-Device Manager Website
+.. _Device Manager Website:
+
+Strona internetowa Device Managera
 ************************
 
-The device manager comes with a navigation menu on the left hand side of the screen. 
-Otherwise, regardless of what page you are on, there are a few helpful buttons you should know about.
+Device Manager posiada menu nawigacyjne po lewej stronie ekranu.
+Niezależnie jednak od tego, na której stronie się znajdujesz,
+istnieje kilka przydatnych przycisków, które warto znać.
 
-Connect / Device name
+
+Połącz / Nazwa urządzenia
 ---------------------
 
-The bottom center of the screen is where you connect to your device and see which you are connected to, as well as other info such as the site version and your device's CCOS version.
+Na dole, na środku ekranu, znajduje się miejsce, w którym możesz połączyć się
+ze swoim urządzeniem i zobaczyć, z którym urządzeniem jesteś aktualnie
+połączony, a także inne informacje, takie jak wersja strony i wersja CCOS
+twojego urządzenia.
 
-Undo and Redo
+Cofnij i ponów
 ---------------
 
 .. image:: /assets/images/ManagerUndoRedo.png
   :width: 200
-  :alt: The Undo and Redo arrows
+  :alt: Strzałki Cofnij i Ponów
 
-Near the top left corner, the device manager has handy undo and redo buttons which do exactly what their names describe. If you're making changes to your layout, your chords, or your layout, you can step back, one change at a time, all the way back to the very first change that you made during that session. Once you're stepped back, you can step forward to redo the change(s) that was/were undone. 
+W lewym górnym rogu znajdują się wygodne przyciski cofania i ponawiania,
+które działają dokładnie tak, jak sugerują ich nazwy. Podczas wprowadzania
+zmian w układzie, akordach lub innych ustawieniach możesz cofać je
+pojedynczo, aż do pierwszej wprowadzonej zmiany podczas tej sesji.
+Po cofnięciu możesz także ponawiać zmiany, które wcześniej zostały cofnięte.
 
-Color Scheme
+.. _Device Manager:Color Scheme:
+
+Schemat kolorów
 --------------
-On the bottom right of the device manager, you'll see a circle with a solid color. Hovering over this circle will reveal the label "color scheme." You can click this circle to change the color scheme of the device manager. In the color scheme menu, you can choose your preferred color using a color pallette, an RGB color system, or by clicking the dropper icon to choose a color on your screen.
+
+W prawym dolnym rogu Device Managera zobaczysz kółko o jednolitym kolorze.
+Po najechaniu na nie kursorem pojawi się etykieta "color scheme" (schemat kolorów).
+Klikając to kółko, możesz zmienić schemat kolorów Device Managera.
+W menu schematu kolorów możesz wybrać preferowany kolor przy pomocy palety
+kolorów, systemu RGB lub poprzez ikonę pipety, aby wybrać kolor z ekranu.
 
 .. image:: /assets/images/ManagerColorScheme.png
   :width: 300
-  :alt: The Color Scheme Menu
+  :alt: Menu schematu kolorów
 
-Light and Dark Mode
+Tryb jasny i ciemny
 --------------------
-Also in the bottom right-hand corner, you'll find a sun or moon icon where you can toggle between light and dark mode. This toggle can help those who would rather a brighter screen to see better or a darker screen to reduce eye strain.
 
-Save Button
+Również w prawym dolnym rogu znajdziesz ikonę słońca lub księżyca, za pomocą
+której możesz przełączać się między trybem jasnym i ciemnym. Przełącznik ten
+może być pomocny dla osób, które preferują jaśniejszy ekran w celu lepszej
+widoczności lub ciemniejszy, aby zmniejszyć zmęczenie oczu.
+
+.. _Device Manager:Save Button:
+
+Przycisk zapisu
 -------------
 
 .. image:: /assets/images/ManagerSaveButton.png
   :width: 200
-  :alt: The Save Button
+  :alt: Przycisk zapisu
 
-If you make changes in the :ref:`library<Device Manager:Library>`, the :ref:`layout editor<Device Manager:Layout>` or the :ref:`device menu<Device Manager:Settings Menu>`, a colored "save" button will pop up on your screen, towards the top left corner. 
+Jeżeli wprowadzisz zmiany w :ref:`bibliotece<Device Manager:Library>`,
+:ref:`edytorze układu<Device Manager:Layout>` lub
+:ref:`menu ustawień<Device Manager:Settings Menu>`, na górze po lewej
+stronie pojawi się kolorowy przycisk "save" (zapisz).
 
 .. Note::
-	Your changes will not take effect until you click the save button.
+    Zmiany nie zostaną zastosowane dopóki nie klikniesz przycisku zapisu.
 
 
-Device
+.. _Device Manager:Device:
+
+Urządzenie
 ***************
-The Device Tab is the place where you can configure most settings of your :ref:`connected<Device Manager:Connecting to the Device Manager>` CCOS device and create backups.
-Read on to see the different settings you can change. You can find more detailed explanations in the :doc:`GTM<GenerativeTextMenu>` section.
 
-Backup Section
+Zakładka *Device* to miejsce, w którym możesz skonfigurować większość
+ustawień swojego :ref:`podłączonego<Device Manager:Connecting to the Device Manager>`
+urządzenia CCOS i tworzyć kopie zapasowe.
+Poniżej znajdziesz różne ustawienia, które możesz zmieniać.
+Bardziej szczegółowe wyjaśnienia znajdziesz w sekcji
+:doc:`GTM<GenerativeTextMenu>`.
+
+
+.. _Backup Section:
+
+Sekcja kopii zapasowych
 ----------------
 
 .. image:: /assets/images/ManagerHistoryMenu.png
   :width: 400
-  :alt: The Backup Menu
+  :alt: Menu kopii zapasowych
 
-The Backup Menu is home to your backups as well as the place to go to in order to restore your device by using a backup file. There are different kinds of backups that you can create and we'll cover all of them in the :ref:`backups<Device Manager:Backups>` section.
+Menu *Backup* zawiera Twoje kopie zapasowe, a także umożliwia
+przywracanie urządzenia z pliku kopii zapasowej. Istnieje
+kilka rodzajów kopii zapasowych, które możesz
+utworzyć – omówimy je w sekcji
+:ref:`backups<Device Manager:Backups>`.
 
-If you toggle the "Auto-backup" on, then the website will store a copy of your backup on your browser.  The backup is stored in the browser that you're using at that time and remains on your computer, so only YOU can access it.
+Jeśli włączysz opcję "Auto-backup", strona zapisze kopię zapasową
+w Twojej przeglądarce. Kopia ta przechowywana jest lokalnie na
+Twoim komputerze, więc tylko TY masz do niej dostęp.
 
-On the Device Manager, you can create backups of your chords, your layout, and even your settings. Follow the steps below to create a backup and to restore saved backups to your :doc:`CCOS<CCOS>` device.
+W Device Managerze możesz tworzyć kopie zapasowe swoich akordów,
+układu oraz ustawień. Poniżej przedstawiamy kroki jak utworzyć
+i przywrócić kopie zapasowe dla Twojego urządzenia :doc:`CCOS<CCOS>`.
 
-Creating a Backup
+
+.. _Device Manager:Creating a Backup:
+
+Tworzenie kopii zapasowej
 ~~~~~~~~~~~~~~~~~~
+
 .. Note::
-	In order to follow these steps, you must already have your device :ref:`connected<Device Manager:Connecting to the Device Manager>` to the device manager.
+    Aby wykonać poniższe kroki, musisz być już
+    :ref:`połączony<Device Manager:Connecting to the Device Manager>`
+    z Device Managerem.
 
-1. Open the Device tab and locate the "Backup" menu in the top left.
+1. Otwórz zakładkę *Device* i znajdź menu "Backup" w lewym górnym rogu.
 
-2. Choose an "individual backup" to download to your computer, or select "download everything" to download a single file with all three parts. The file(s) will be downloaded in .json format.
+2. Wybierz "individual backup", aby pobrać kopię zapasową na komputer,
+   albo "download everything", aby pobrać pojedynczy plik zawierający
+   wszystkie trzy części. Pliki zostaną zapisane w formacie *.json*.
 
-	.. note::
-		You can make individual backups of just your chords, just your layout, or just your settings. The "download everything" option will download all three of these in a single file instead of three separate files.
+    .. note::
+        Możesz wykonać osobne kopie zapasowe akordów, układu lub ustawień.
+        Opcja "download everything" pobierze wszystkie trzy naraz w jednym pliku.
 
-3. If prompted, select a location to save to on your computer and rename the file to your liking.
+3. W razie potrzeby wybierz lokalizację zapisu na komputerze i nadaj plikowi dowolną nazwę.
 
-Congratulations! Now you have created a backup.
+Gratulacje! Kopia zapasowa została utworzona.
 
-Restoring from a Backup
+
+.. _Restoring from a Backup:
+
+Przywracanie z kopii zapasowej
 ~~~~~~~~~~~~~~~~~~~~~~~~~
-Additionally, you can restore your chords, your layout, and your settings on the Device Manager. Follow the steps below to do so.
+
+Dodatkowo możesz przywracać akordy, układ i ustawienia w Device Managerze. Wykonaj następujące kroki:
 
 .. Note::
-	In order to follow these steps, you must already have your device :ref:`connected<Device Manager:Connecting to the Device Manager>` to the device manager.
+    Aby wykonać te kroki, musisz być już
+    :ref:`połączony<Device Manager:Connecting to the Device Manager>` z Device Managerem.
 
-1. Open the Device tab and locate the "Backup" menu in the top left.
+1. Otwórz zakładkę *Device* i znajdź menu "Backup" w lewym górnym rogu.
 
-2. Click on "Restore".
+2. Kliknij "Restore".
 
-3. Select a file to use to restore from. This file should be in .json format.
+3. Wybierz plik, z którego chcesz przywrócić dane. Plik powinien być w formacie *.json*.
 
-	.. note::
-		Files that you can restore from will have been created ahead of time by following the :ref:`steps to create a backup<Device Manager:Creating a Backup>`. 
+    .. note::
+        Pliki do przywracania tworzone są wcześniej poprzez
+        :ref:`tworzenie kopii zapasowej<Device Manager:Creating a Backup>`.
 
-4. If there are changes, the :ref:`save button<Device Manager:Save Button>` will appear on the top left. Note the changes in the appropriate tab. If you restored chords, check the :ref:`chords tab<Device Manager:Chord Manager>`, if you restored a layout, check the :ref:`layout tab<Device Manager:Layout>`, and if you restored settings, check the :ref:`settings tab<Device Manager:Settings Menu>`.
+4. Jeśli wystąpią zmiany, na górze po lewej stronie pojawi się
+:ref:`przycisk zapisu<Device Manager:Save Button>`. Sprawdź
+zmiany w odpowiedniej zakładce: akordy w
+:ref:`bibliotece<Device Manager:Chord Manager>`, układ w
+:ref:`układzie<Device Manager:Layout>`, a ustawienia w
+:ref:`ustawieniach<Device Manager:Settings Menu>`.
 
-	.. note::
-		The restore feature does NOT erase data from your device. If there is a conflict (such as a changed setting, a different key in the layout, or a chord that has a different :ref:`output<Chords:Chord Output>`), that will be overwritten by the restore file. Settings and layout backups ALWAYS overwrite everything.
+    .. note::
+        Przywracanie nie kasuje danych z urządzenia. W przypadku konfliktów
+        (np. zmiana ustawienia, inny klawisz w układzie czy inny
+        :ref:`output<Chords:Chord Output>` akordu), dane zostaną nadpisane.
+        Ustawienia i układ zawsze nadpisują całość.
 
-5. Once you see the changes that the restore file made, you can click :ref:`save<Device Manager:Save Button>` to apply the changes.
+5. Po sprawdzeniu zmian kliknij :ref:`save<Device Manager:Save Button>`, aby je zatwierdzić.
 
-Device Section
+
+.. _Device Section:
+
+Sekcja urządzenia
 ----------------
 
 .. _Autoreconnect:
 
-Here you'll find a helpful toggle labeled "Auto-connect". By enabling this, the device manager 
-will automatically connect your paired device through a :doc:`serial connection<SerialAPI>` 
-every time that you open it. In doing so, it will also read your chords to detect changes 
-that you may have made since the last time you connected it. If you have this enabled, 
-you won't have to manually connect your device to the manager ever again!
+Tutaj znajdziesz przydatny przełącznik "Auto-connect". Po jego włączeniu
+Device Manager automatycznie połączy się z Twoim urządzeniem poprzez
+:doc:`połączenie szeregowe<SerialAPI>` za każdym razem, gdy otworzysz
+stronę. Podczas połączenia automatycznie odczyta również Twoje akordy,
+aby wykryć ewentualne zmiany od ostatniego połączenia. Dzięki temu
+nie musisz już ręcznie łączyć się z Device Managerem za każdym razem!
 
-
-The :ref:`boot message<GenerativeTextMenu:Startup>` and :ref:`realtime feedback<GenerativeTextMenu:Realtime Feedback>` can be enabled or disabled in this box.
-Additionally, you can reset some parts of your device files such as your chords, your layout, and even return to factory settings.
+W tej sekcji możesz także włączyć lub wyłączyć komunikaty
+:ref:`powitalne<GenerativeTextMenu:Startup>` oraz
+:ref:`informacje w czasie rzeczywistym<GenerativeTextMenu:Realtime Feedback>`.
+Dodatkowo możesz wyczyścić niektóre dane urządzenia: akordy, układ,
+a nawet przywrócić ustawienia fabryczne.
 
 .. image:: /assets/images/ManagerSettingsDevice.png
   :width: 1200
-  :alt: The Device settings box
+  :alt: Okno ustawień urządzenia
 
-Spurring
+.. _Spurring:
+
+Akordowanie natychmiastowe
 ----------
 
-.. dropdown:: What is Spurring?
+.. dropdown:: Czym jest Akordowanie natychmiastowe?
 
-	Spurring is a ‘chording only’ mode which tells your device to output :ref:`chords<Chords:What are Chords?>` on a press event rather than a press and release event. When in spurring mode, you can press the keys of a :ref:`chord<Chords:What are Chords?>` one at a time with a much longer waiting period, which makes it a useful mode for those who want to practice chording without worrying about proper :ref:`timing<GenerativeTextMenu:Press Tolerance>`.
+    *Akordowanie natychmiastowe* to tryb „tylko akordowy”, w którym urządzenie wysyła
+    :ref:`akordy<Chords:What are Chords>` już w momencie wciśnięcia przycisku,
+    a nie dopiero po wciśnięciu i zwolnieniu.
+    W trybie *Akordowania natychmiastowego* możesz wciskać klawisze
+    :ref:`akordu<Chords:What are Chords>` pojedynczo, z dłuższymi
+    odstępami czasowymi, co ułatwia naukę akordowania bez presji dokładnego
+    :ref:`timingu<GenerativeTextMenu:Press Tolerance>`.
 
-	Spurring mode also enables you to jump from one :ref:`chord<Chords:What are Chords?>` to another without releasing everything. It can provide significant speed gains when chording, but also takes away the flexibility of character entry. Spurring mode can truly maximize speed when chording if a user has chords for all of the words they want to use.
+    Akordowanie natychmiastowe umożliwia również przechodzenie z jednego
+    :ref:`akordu<Chords:What are Chords>` do drugiego bez konieczności
+    całkowitego zwalniania wszystkich klawiszy.
+    Dla zaawansowanych użytkowników może to znacznie zwiększyć szybkość pisania,
+    kosztem utraty możliwości klasycznego wprowadzania znaków.
 
 .. image:: /assets/images/ManagerSettingsSpurring.png
   :width: 1200
-  :alt: The Spurring settings box
+  :alt: Okno ustawień Akordowania natychmiastowego
 
-In this box, you can enable or disable spurring mode as well as increase or decrease the :ref:`spurring timeout setting<GenerativeTextMenu:Spurring Timeout>`.
+W tym oknie możesz włączyć lub wyłączyć tryb *Akordowanie natychmiastowe*, a także ustawić czas
+bezczynności za pomocą :ref:`limitu czasu akordowania natychmiastowego<GenerativeTextMenu:Spurring Timeout>`.
 
-Arpeggiates
+Arpeggiacja
 -------------
-.. dropdown:: What are arpeggiates?
+.. dropdown:: Czym są Arpeggiacje?
 
-	Arpeggiate actions are timed actions that can modify a :ref:`chord<Chords:What are Chords?>` after the chord is performed. A quick example of this is the use of :ref:`chord modifiers<Device Manager:Chord Modifiers>` after you perform the chord. You can read that section for information on how the chord modifiers work.
+    *Arpeggiacje* to akcje czasowe, które modyfikują
+    :ref:`akord<Chords:What are Chords>` po jego wykonaniu. Typowym przykładem
+    jest użycie :ref:`modyfikatorów akordów<Device Manager:Chord Modifiers>`
+    tuż po wykonaniu akordu. Możesz przeczytać tą sekcję aby dowiedzieć się
+    jak działają modyfikatory akordów.
 
-	With arpeggiates enabled, you can chord the word run and then, within the :ref:`arpeggiate timeout window<GenerativeTextMenu:Arpeggiate Timeout>`, press the :ref:`past tense modifier<Device Manager:Past Tense>` for the word to be “modified” into its past tense variant; in english, ran.
+    Przykładowo: po zaakordowaniu słowa *run*, możesz w czasie trwania
+    :ref:`limitu czasu arpeggiacji<GenerativeTextMenu:Arpeggiate Timeout>`
+    wcisnąć :ref:`modyfikator czasu przeszłego<Device Manager:Past tense>`, aby zamienić je na *ran*.
 
 .. image:: /assets/images/ManagerSettingsArpeggiates.png
   :width: 1200
-  :alt: The Arpeggiates settings box
+  :alt: Okno ustawień Arpeggiacji
 
-In this box, ou can enable or disable arpeggiates as well as increase or decrease the :ref:`arpeggiate timeout setting<GenerativeTextMenu:Arpeggiate Timeout>`.
+W tym oknie możesz włączyć lub wyłączyć Arpeggiacje oraz dostosować czas
+za pomocą :ref:`Limit czasu arpeggiacji<GenerativeTextMenu:Arpeggiate Timeout>`.
 
-Chord Modifiers
+.. _Device Manager:Chord Modifiers:
+
+Modyfikatory akordów
 -----------------
-.. dropdown:: What are chord modifiers?
 
-	Chord modifiers are actions that change a chord when :ref:`chorded<Chords:What are Chords?>` at the same time as the :ref:`chord input<Chords:Chord Input>`, or when pressed immediately after (arpeggiately) the :ref:`chord<Chords:What are Chords?>`, provided that :ref:`arpeggiates<GenerativeTextMenu:Arpeggiate>` are enabled.
+.. dropdown:: Czym są modyfikatory akordów?
 
-	As of February of 2024, only the CharaChorder One and CharaChorder Lite support the use of chord modifiers. Additionally, as of that same time, chord modifiers only work in English.
+    Modyfikatory akordów to akcje, które zmieniają akord w momencie
+    :ref:`akordowania<Chords:What are Chords>` — mogą być wykonywane
+    razem z :ref:`wejściem akordu<Chords:Chord Input>` lub bezpośrednio
+    po nim (arpeggiacyjnie), o ile włączone są
+    :ref:`arpeggiates<GenerativeTextMenu:Arpeggiate>`.
 
-	.. note::
-		Chord modifiers are NOT the same as keyboard modifiers. Keyboard modifiers affect keys pressed on a keyboard. Those keys include ``CTRL``, ``ALT``, and ``FN``. Chord modifiers affect chords.
+    Na luty 2024 obsługa modyfikatorów akordów dostępna jest wyłącznie
+    na urządzeniach CharaChorder One i CharaChorder Lite oraz tylko w
+    języku angielskim.
+
+    .. note::
+        Modyfikatory akordów nie są tym samym co modyfikatory klawiaturowe
+        (``CTRL``, ``ALT``, ``FN``), które działają na zwykłych klawiszach.
+        Modyfikatory akordów działają na akordach.
 
 .. image:: /assets/images/ManagerSettingsModifiers.png
   :width: 1200
-  :alt: The Chord Modifiers settings box
+  :alt: Okno ustawień modyfikatorów akordów
 
-In this box, you can read a brief explanation of chord modifiers and how to access them.
+W tym oknie znajdziesz krótkie wyjaśnienie modyfikatorów oraz sposób, za pomocą którego możesz się do nich dostać.
 
-Capitalization
+Kapitalizacja
 ~~~~~~~~~~~~~~~
-The capitalization modifier modifies any chord so that the first letter is capitalized on :ref:`output<Chords:Chord Output>`. This :ref:`modifier<Device Manager:Chord Modifiers>` can be performed together with a :ref:`chord<Chords:What are Chords?>` or :ref:`arpeggiately<GenerativeTextMenu:Arpeggiate>`.
 
-The capitalization modifier is located on the ``SHIFT`` key. In the :ref:`layout editor<Device Manager:Layout>`, this key can be either "Shift Keyboard Modifier (Left)" or "Shift Keyboard Modifier (Right)".
+Modyfikator kapitalizacji modyfikuje dowolny akord tak, aby pierwsza litera w
+:ref:`wyniku<Chords:Chord Output>` była zapisana wielką literą.
+Ten :ref:`modyfikator<Device Manager:Chord Modifiers>` można wykonać
+jednocześnie z :ref:`akordem<Chords:What are Chords>` lub
+:ref:`arpeggiate<GenerativeTextMenu:Arpeggiate>`.
+
+Modyfikator kapitalizacji przypisany jest do klawisza ``SHIFT``.
+W :ref:`edytorze układu<Device Manager:Layout>` klawisz ten nosi
+nazwę „Shift Keyboard Modifier (Left)” lub
+„Shift Keyboard Modifier (Right)”.
 
 .. note::
-	If you have ``CAPS LOCK`` active, all letters in a chord will be capitalized except the first one when using this modifier.
+    Jeśli masz aktywny ``CAPS LOCK``, wszystkie litery w akordzie zostaną
+    zapisane wielkimi literami, z wyjątkiem pierwszej litery podczas
+    używania tego modyfikatora.
 
-Present Tense
+Czas teraźniejszy
 ~~~~~~~~~~~~~~
-The present tense modifier modifies supported chords so that they turn into their present tense variants. The word "run" would be modified into "running" and the word "work" would be turned into "working". This :ref:`modifier<Device Manager:Chord Modifiers>` can be performed together with a :ref:`chord<Chords:What are Chords?>` or :ref:`arpeggiately<GenerativeTextMenu:Arpeggiate>`.
 
-The present tense modifier has different locations depending on your device. On the CharaChorder One, this modifier is linked to the "AMBIDEXTROUS THROWOVER (LEFT)" key. On the CharaChorder Lite, it's linked to the "NUMERIC LAYER (LEFT)" key.
+Modyfikator czasu teraźniejszego modyfikuje obsługiwane akordy tak, aby
+przekształcić je w warianty czasu teraźniejszego. Słowo „run” zmieni
+się na „running”, a „work” na „working”. Ten
+:ref:`modyfikator<Device Manager:Chord Modifiers>` można wykonać
+jednocześnie z :ref:`akordem<Chords:What are Chords>` lub
+:ref:`arpeggiate<GenerativeTextMenu:Arpeggiate>`.
 
-Pluralizer
+Lokalizacja modyfikatora zależy od urządzenia. Na CharaChorder One
+modyfikator ten jest przypisany do klawisza
+„AMBIDEXTROUS THROWOVER (LEFT)”. Na CharaChorder Lite — do
+klawisza „NUMERIC LAYER (LEFT)”.
+
+Liczba mnoga
 ~~~~~~~~~~~
-The pluralizer modifier makes supported chords plural. It will add an "s" or "es" to the end of supported chords. "Box" will turn into "boxes" and "dog" will become "dogs". This :ref:`modifier<Device Manager:Chord Modifiers>` can be performed together with a :ref:`chord<Chords:What are Chords?>` or :ref:`arpeggiately<GenerativeTextMenu:Arpeggiate>`.
 
-The pluralizer modifier has different locations depending on your device. On the CharaChorder One, it's linked to the "AMBIDEXTROUS THROWOVER (RIGHT)" key. On the CharaChorder Lite, it's linked to the "RIGHT SPACEBAR" key, not to be confused with the "SPACE" key.
+Modyfikator liczby mnogiej sprawia, że obsługiwane akordy przyjmują formę mnogą.
+Dodaje „s” lub „es” na końcu obsługiwanych akordów. Przykładowo: „Box” zmieni
+się na „boxes”, a „dog” na „dogs”.
+Ten :ref:`modyfikator<Device Manager:Chord Modifiers>` można wykonać jednocześnie z
+:ref:`akordem<Chords:What are Chords>` lub
+:ref:`arpeggiate<GenerativeTextMenu:Arpeggiate>`.
 
-Past Tense
+Lokalizacja modyfikatora zależy od urządzenia. Na CharaChorder One przypisany jest
+do klawisza „AMBIDEXTROUS THROWOVER (RIGHT)”. Na CharaChorder Lite — do klawisza
+„RIGHT SPACEBAR” (nie mylić z klawiszem „SPACE”).
+
+.. _Device Manager:Past tense:
+
+Czas przeszły
 ~~~~~~~~~~~
-The past tense modifier modifies supported chords so that they turn into their past tense variants. The word "run" would be modified into "ran". The word "work" would be turned into "worked". This :ref:`modifier<Device Manager:Chord Modifiers>` can be performed together with a :ref:`chord<Chords:What are Chords?>` or :ref:`arpeggiately<GenerativeTextMenu:Arpeggiate>`.
 
-The past tense modifier has different locations depending on your device. On the CharaChorder One, it's linked to the "NUMERIC LAYER (LEFT)" key. On the CharaChorder Lite, it's linked to the "SPACE" key, not to be confused with the "RIGHT SPACEBAR" key.
+Modyfikator czasu przeszłego modyfikuje obsługiwane akordy tak, aby przekształcić
+je w warianty czasu przeszłego. Słowo „run” zmieni się na „ran”, a „work” na
+„worked”. Ten :ref:`modyfikator<Device Manager:Chord Modifiers>` można wykonać
+jednocześnie z :ref:`akordem<Chords:What are Chords>` lub
+:ref:`arpeggiate<GenerativeTextMenu:Arpeggiate>`.
 
-Comparative
+Lokalizacja modyfikatora zależy od urządzenia. Na CharaChorder One przypisany
+jest do klawisza „NUMERIC LAYER (LEFT)”. Na CharaChorder Lite — do klawisza
+„SPACE” (nie mylić z klawiszem „RIGHT SPACEBAR”).
+
+Stopień wyższy
 ~~~~~~~~~~~~~
-The comparative modifier modifies supported chords so that they turn into their comparative variant. "Big" becomes "bigger" and "small" turns into "smaller". This :ref:`modifier<Device Manager:Chord Modifiers>` can be performed together with a :ref:`chord<Chords:What are Chords?>` or :ref:`arpeggiately<GenerativeTextMenu:Arpeggiate>`.
 
-The comparative modifier is located on the "NUMERIC LAYER (RIGHT)" key on both the CharaChorder One and the CharaChorder Lite.
+Modyfikator stopnia wyższego modyfikuje obsługiwane akordy tak, aby
+przekształcić je w formę porównawczą. „Big” staje się „bigger”, a
+„small” zmienia się na „smaller”.
+Ten :ref:`modyfikator<Device Manager:Chord Modifiers>` można wykonać
+jednocześnie z :ref:`akordem<Chords:What are Chords>` lub
+:ref:`arpeggiate<GenerativeTextMenu:Arpeggiate>`.
 
+Modyfikator ten przypisany jest do klawisza „NUMERIC LAYER (RIGHT)”
+zarówno na CharaChorder One, jak i na CharaChorder Lite.
 
-Character Entry
+Wprowadzanie znaków
 ----------------
-.. dropdown:: What is Character Entry?
 
-	Character entry, known to the CharaChorder community as "chentry," refers to typing one character at time. 
+.. dropdown:: Czym jest wprowadzanie znaków?
+
+    Wprowadzanie znaków, znane w społeczności CharaChorder jako „chentry”,
+    oznacza pisanie pojedynczych znaków jeden po drugim.
 
 .. image:: /assets/images/ManagerSettingsChentry.png
   :width: 1200
-  :alt: The Character Entry settings box
+  :alt: Pole ustawień wprowadzania znaków
 
-In this box, you can change a few settings that relate to using your device for character entry. 
+W tym polu możesz zmieniać ustawienia związane z używaniem urządzenia do wprowadzania pojedynczych znaków.
 
-.. dropdown:: Swap Keymap 0 and 1
+.. dropdown:: Zamiana mapowania klawiszy 0 i 1
 
-	This setting will swap the behavior of the two keys on the bottom-left of the CharaChorder Lite.
+    To ustawienie zamienia funkcje dwóch klawiszy w lewym dolnym rogu CharaChorder Lite.
 
-	Traditional QWERTY keyboards keep the ``CTRL`` key at the bottom left corner of the keyboard with the ``GUI`` key (Command key on Mac, Windows key on Windows, Super key on Linux, etc.) to the right of the ``CTRL`` key. The CharaChorder Lite has these two keys swapped by default, which some users find odd and difficult to adjust to. A brand new CharaChorder Lite will have the ``GUI`` key at the bottom-left corner with the ``CTRL`` key to the right of the ``GUI`` key.
+    Tradycyjne klawiatury QWERTY mają klawisz ``CTRL`` w lewym dolnym rogu, a klawisz
+    ``GUI`` (klawisz Command na Macu, klawisz Windows na Windows, klawisz Super na
+    Linuksie itd.) po prawej stronie od ``CTRL``. W CharaChorder Lite te dwa klawisze
+    są domyślnie zamienione, co dla niektórych użytkowników bywa nieintuicyjne i
+    trudne do przyzwyczajenia. Nowe urządzenie CharaChorder Lite ma klawisz ``GUI``
+    w lewym dolnym rogu, a ``CTRL`` po jego prawej stronie.
 
-	With this setting, you can effectively swap the two keys’ location at the level of the CCOS so that CTRL is at the bottom-left corner.
+    Dzięki temu ustawieniu możesz na poziomie CCOS zamienić te klawisze miejscami, aby
+    ``CTRL`` był w lewym dolnym rogu.
 
-.. dropdown:: Character Entry (chentry)
+.. dropdown:: Wprowadzanie znaków (chentry)
 
-	This setting is a toggle that disables chording capabilities on CCOS devices. It is off by default and can be enabled in case we don’t want any chording at all. This setting can be useful in cases where we don’t want to accidentally trigger chords unintentionally, such as when gaming.
+    To ustawienie jest przełącznikiem, który dezaktywuje funkcje akordowania na
+    urządzeniach CCOS. Domyślnie jest wyłączone, ale można je włączyć, jeśli
+    nie chcemy używać akordów. Ustawienie to bywa przydatne np. podczas grania
+    w gry, gdy nie chcemy przypadkowo aktywować akordów.
 
-	If your CCOS device suddenly loses its chording ability, it’s a good idea to check if this setting is toggled off.
+    Jeśli Twoje urządzenie CCOS nagle utraci zdolność akordowania, warto sprawdzić,
+    czy to ustawienie nie jest aktywne.
 
-.. dropdown:: Key Scan Rate
+.. dropdown:: Częstotliwość skanowania klawiszy
 
-	The scan rate, sometimes known as the “Key scan duration,” refers to the frequency at which the device checks the state of the input keys. For reference, 5 ms corresponds to 200 Hz, which means that :doc:`CCOS<CCOS>` checks the position of the keys once every 5 milliseconds, which equals 200 times in a second. Having a lower number is usually better as it makes CCOS more responsive, though the difference at low numbers is usually negligible. In the GTM, this setting is adjustable in millisecond (ms) units.
+    Częstotliwość skanowania, czasem nazywana „czasem skanowania klawisza”,
+    odnosi się do częstotliwości sprawdzania przez urządzenie stanu klawiszy.
+    Dla odniesienia: 5 ms odpowiada 200 Hz, co oznacza, że :doc:`CCOS<CCOS>`
+    sprawdza pozycję klawiszy co 5 milisekund, czyli 200 razy na sekundę.
+    Niższe wartości zazwyczaj są lepsze, ponieważ zwiększają responsywność
+    CCOS, chociaż przy niskich wartościach różnice są zwykle niewielkie.
+    W GTM to ustawienie można regulować w milisekundach (ms).
 
-.. dropdown:: Key Debounce Press
+.. dropdown:: Odbijanie przy wciśnięciu klawisza
 
-	The debounce press setting refers to the time frame (measured in milliseconds) in which :doc:`CCOS<CCOS>` will filter out duplicate key activations on a press event. In other words, any duplicate activations within the given time frame will only be counted as one.
+    Ustawienie debounce press określa przedział czasowy (w milisekundach),
+    w którym :doc:`CCOS<CCOS>` odfiltrowuje podwójne aktywacje klawisza
+    przy zdarzeniu wciśnięcia. Innymi słowy, wszystkie powtórne aktywacje
+    w tym przedziale będą liczone jako jedno naciśnięcie.
 
-	We should adjust this setting if we are having unintentional duplicate characters while typing. Increasing this value will lower the probability that unwanted duplicate characters will appear because it tells :doc:`CCOS<CCOS>` to wait longer before typing an additional character that’s assigned to the same switch-direction. However, having this setting set too high might also cause issues with :doc:`CCOS<CCOS>` not reading intentional double-presses, so it’s recommended to try different numbers in small increments. This setting should be used in connection with the debounce release setting.
+    Należy dostosować to ustawienie, jeśli pojawiają się niechciane,
+    powtarzające się znaki podczas pisania. Zwiększenie tej wartości
+    zmniejszy prawdopodobieństwo wystąpienia takich błędów, ponieważ
+    :doc:`CCOS<CCOS>` będzie czekać dłużej zanim wprowadzi kolejny znak przypisany
+    do tego samego kierunku przełącznika. Jednak zbyt wysokie ustawienie
+    może spowodować problemy z rozpoznawaniem zamierzonych podwójnych
+    naciśnięć, dlatego zaleca się testowanie różnych wartości w
+    niewielkich krokach. Ustawienie to powinno być używane w połączeniu
+    z ustawieniem debounce release.
 
-.. dropdown:: Key Debounce Release
+.. dropdown:: Odbijanie przy puszczeniu klawisza
 
-	The debounce release setting refers to the time frame (measured in milliseconds) in which :doc:`CCOS<CCOS>` will filter out duplicate key activations on a release event. In other words, any duplicate activations within the given time frame will only be counted as one.
+    Ustawienie "Odbijanie przy puszczeniu klawisza" określa przedział
+    czasowy (w milisekundach), w którym :doc:`CCOS<CCOS>` odfiltrowuje
+    podwójne aktywacje klawisza przy zdarzeniu puszczenia. Innymi
+    słowy, wszystkie powtórne aktywacje w tym przedziale będą liczone
+    jako jedno puszczenie.
 
-	We should adjust this setting if we are having unintentional duplicate characters while typing. Increasing this value will lower the probability that unwanted duplicate characters will appear because it tells :doc:`CCOS<CCOS>` to wait longer before typing an additional character that’s assigned to the same switch-direction. However, having this setting set too high might also cause issues with :doc:`CCOS<CCOS>` not reading intentional double-presses, so it’s recommended to try different numbers in small increments. This setting should be used in connection with the debounce press setting.
+    Należy dostosować to ustawienie, jeśli pojawiają się niechciane,
+    powtarzające się znaki podczas pisania. Zwiększenie tej wartości
+    zmniejszy prawdopodobieństwo wystąpienia takich błędów, ponieważ
+    CCOS będzie czekać dłużej zanim wprowadzi kolejny znak przypisany
+    do tego samego kierunku przełącznika. Jednak zbyt wysokie
+    ustawienie może spowodować problemy z rozpoznawaniem zamierzonych
+    podwójnych naciśnięć, dlatego zaleca się testowanie różnych wartości
+    w niewielkich krokach. Ustawienie to powinno być używane w połączeniu
+    z ustawieniem debounce press.
 
-.. dropdown:: Output Character Delay
+.. dropdown:: Opóźnienie wprowadzania znaków
 
-	This setting adds a small delay to keystroke inputs. It is measured in microseconds (μs) and is very small by default.
+    To ustawienie dodaje niewielkie opóźnienie do wprowadzania znaków.
+    Mierzone jest w mikrosekundach (μs) i domyślnie ma bardzo małą wartość.
 
-	You should increase this value if your computer is not accepting all of the characters output by your device, such as when using the :doc:`GTM<GenerativeTextMenu>`. If you are having this issue, your :doc:`GTM<GenerativeTextMenu>` would look weird, with missing chunks or characters.
+    Należy zwiększyć tę wartość, jeśli komputer nie przyjmuje wszystkich
+    znaków wysyłanych przez urządzenie, np. podczas używania
+    :doc:`GTM<GenerativeTextMenu>`. W przypadku tego problemu
+    :doc:`GTM<GenerativeTextMenu>` może wyglądać dziwnie, z
+    brakującymi fragmentami lub znakami.
 
-	If you have a faster computer, then you can lower this setting to make chording and the :doc:`GTM<GenerativeTextMenu>` feel snappier and more responsive.
+    Jeśli masz szybszy komputer, możesz obniżyć to ustawienie, aby
+    akordowanie i :doc:`GTM<GenerativeTextMenu>` były szybsze i
+    bardziej responsywne.
 
-Mouse
+Mysz
 -------
-.. dropdown:: Mouse???
 
-	:doc:`CCOS<CCOS>` has mouse functionality. This means that your CharaChorder, or CCOS-powered keyboard, has the ability to control your computer's mouse. These settings affect the mouse usage on your CharaChorder.
+.. dropdown:: Mysz ???
+
+    :doc:`CCOS<CCOS>` posiada funkcję myszy. Oznacza to, że Twój CharaChorder
+    lub klawiatura z systemem CCOS może kontrolować mysz Twojego komputera.
+    Te ustawienia wpływają na sposób działania myszy w CharaChorder.
 
 .. image:: /assets/images/ManagerSettingsMouse.png
   :width: 1200
-  :alt: The Mouse settings box
+  :alt: Pole ustawień Myszy
 
-In this box, you can adjust settings relating to :doc:`CCOS'<CCOS>` mouse abilities.
+W tym polu możesz dostosować ustawienia związane z funkcjami myszy w :doc:`CCOS<CCOS>`.
 
-.. dropdown:: Mouse Speed(s)
+.. dropdown:: Prędkość myszy
 
-	:doc:`CCOS<CCOS>` has two mouse speeds, a fast speed and a slow speed. The slow speed is activated when you use only one of the mouse keys in a single direction (as opposed to using 2 keys in the same direction). The fast speed is activated when you use two mouse keys in a single direction (as opposed to using only one key in the same direction).
+    :doc:`CCOS<CCOS>` ma dwie prędkości myszy: szybka (fast speed) i wolna (slow speed).
+    Wolna prędkość jest aktywowana, gdy używasz tylko jednego klawisza myszy w jednym
+    kierunku (w przeciwieństwie do używania dwóch klawiszy w tym samym kierunku).
+    Szybka prędkość jest aktywowana, gdy używasz dwóch klawiszy myszy w jednym
+    kierunku (zamiast tylko jednego).
 
-	You can read a more in-depth explanation of mouse speeds in the :ref:`GTM section<GenerativeTextMenu:Slow Speed>`. 
+    Możesz przeczytać dokładniejsze wyjaśnienie prędkości myszy w sekcji
+    :ref:`GTM<GenerativeTextMenu:Slow Speed>`.
 
-.. dropdown:: Scroll Speed
+.. dropdown:: Prędkość przewijania
 
-	Scroll speed refers to the speed at which your :doc:`CCOS<CCOS>` scroll will scroll.
+    Prędkość przewijania odnosi się do szybkości, z jaką :doc:`CCOS<CCOS>` przewija ekran.
 
-	You can read a more in-depth explanation of the scroll speed in the :ref:`GTM section<GenerativeTextMenu:Scroll Speed>`.
+    Więcej szczegółów o prędkości przewijania znajdziesz w sekcji
+    :ref:`GTM<GenerativeTextMenu:Scroll Speed>`.
 
-.. dropdown:: Active Mouse
+.. dropdown:: Aktywna mysz
 
-	Active mode nudges your mouse cursor one pixel every minute or so (not a specific timing). This setting can be used to keep your computer from going to sleep. You might turn this setting off if you notice desktop apps are preventing you from getting mobile notifications (for example on Discord or Microsoft Teams).
+    Tryb aktywny przesuwa kursor myszy o jeden piksel mniej więcej raz na minutę
+    (czas nie jest dokładnie określony). To ustawienie może być używane, aby
+    zapobiec przechodzeniu komputera w tryb uśpienia. Warto wyłączyć to ustawienie,
+    jeśli zauważysz, że aplikacje na pulpicie blokują powiadomienia mobilne
+    (na przykład w Discord lub Microsoft Teams).
 
-.. dropdown:: Poll Rate
+.. dropdown:: Częstotliwość odpytywania
 
-	The polling rate (poll rate) is the frequency at which data from the CharaChorder’s mouse functionality is sent to the device it’s connected to. In other words, how often it updates the cursor’s position to the computer. 
 
-	You can read a more in-depth explanation of the polling rate in the :ref:`GTM section<GenerativeTextMenu:Poll Rate>`.
+    Częstotliwość odpytywania (poll rate) określa, jak często dane z funkcji myszy
+    CharaChorder są przesyłane do podłączonego urządzenia. Innymi słowy — jak
+    często aktualizowana jest pozycja kursora na komputerze.
 
-Chording
+    Szczegółowe wyjaśnienie znajdziesz w sekcji :ref:`GTM<GenerativeTextMenu:Poll Rate>`.
+
+Akordowanie
 -----------
-.. dropdown:: What is Chording?
 
-	Chording is the beautiful ability of pressing multiple keys at a time to get a predefined output, whether it's a single word, an entire phrase, or important addresses. 
+.. dropdown:: Czym jest Akordowanie?
 
-	A chord is a type of input/output action on a keyboard: you press two or more keys at the same time and release them at the same time, after which a predefined output will replace the originally pressed keys.
+    Akordowanie to piękna funkcja pozwalająca na naciśnięcie wielu klawiszy
+    jednocześnie, aby uzyskać zdefiniowany wcześniej wynik, czy to pojedyncze
+    słowo, całe zdanie, czy ważny adres.
 
-	By chording, we are able to type one word at a time instead of one letter at a time. It’s even possible to have chords for phrases and entire sentences.
+    Akord to typ akcji wejścia/wyjścia na klawiaturze: naciskasz dwa lub więcej
+    klawiszy jednocześnie i zwalniasz je jednocześnie, po czym wcześniej
+    zdefiniowany wynik zastępuje naciśnięte klawisze.
+
+    Dzięki akordowaniu możemy wpisywać całe słowa naraz, zamiast pojedynczych liter.
+    Możliwe jest nawet tworzenie akordów dla całych fraz i zdań.
 
 .. image:: /assets/images/ManagerSettingsChording.png
   :width: 1200
-  :alt: The Chording settings box
+  :alt: Pole ustawień Akordowania
 
-In this box, you can adjust settings relating to :doc:`CCOS'<CCOS>` :doc:`chording<Chords>` abilities as well as turn off :doc:`chording<Chords>` alltogether, should you choose to.
+W tym polu możesz dostosować ustawienia związane z możliwościami
+:doc:`CCOS<CCOS>` dotyczącymi :doc:`akordowania<Chords>`, a także
+całkowicie wyłączyć :doc:`akordowanie<Chords>`, jeśli tak zdecydujesz.
 
-.. dropdown:: Auto-delete Timeout
+.. dropdown:: Limit czasowy auto-usuwania
 
-	This setting will change how long CCOS counts time in order to replace characters that precede a chord.
+    To ustawienie zmienia czas, w którym CCOS liczy czas na zastąpienie
+    znaków poprzedzających akord.
 
-	CCOS devices have a running timer that starts after every single character that is entered in traditional chentry (character entry, i.e. one letter at a time). This timer controls whether or not the next chord that you perform deletes the preceding characters.
+    Urządzenia CCOS posiadają licznik czasu, który uruchamia się po każdym
+    wprowadzeniu znaku w trybie tradycyjnego wpisywania znaków (chentry,
+    czyli wpisywanie litera po literze). Ten licznik decyduje, czy kolejny
+    wykonany akord usunie poprzedzające znaki.
 
-	This feature allows users to misfire chords, yet be able to correct them by quickly performing the chord correctly, without having to backspace manually to erase the misfired chord. The result is that the timeout will automatically backspace all of the preceding characters (up to the last breaking character) and replace them with the intended chord.
+    Funkcja ta pozwala użytkownikom na poprawienie błędnie wykonanych akordów
+    poprzez szybkie ponowne ich wykonanie, bez konieczności ręcznego usuwania
+    błędnych znaków. Po upływie limitu czasu, system automatycznie usuwa
+    wszystkie poprzedzające znaki (do ostatniego znaku łamiącego) i zastępuje
+    je oczekiwanym akordem.
 
-.. dropdown:: Press Tolerance
+.. dropdown:: Tolerancja naciśnięcia
 
-	The press tolerance refers to a window of time in which a chord can be performed, measured in milliseconds (ms). This timer is initiated upon the first “press” action of the first key in a chord and ends once the last key of the chord is pressed, or until the press tolerance runs out, whichever comes first. Read the :ref:`GTM section<GenerativeTextMenu:Press Tolerance>` for a more in-depth explanation.
+    Tolerancja naciśnięcia określa okno czasowe, w którym może zostać wykonany
+    akord, mierzone w milisekundach (ms). Licznik ten uruchamia się przy
+    pierwszym naciśnięciu pierwszego klawisza w akordzie i kończy się po
+    naciśnięciu ostatniego klawisza, lub gdy limit czasu zostanie
+    przekroczony — w zależności od tego, co nastąpi wcześniej.
+    Dokładniejsze wyjaśnienie znajdziesz w sekcji
+    :ref:`GTM<GenerativeTextMenu:Press Tolerance>`.
 
-.. dropdown:: Release Tolerance
+.. dropdown:: Tolerancja zwolnienia
 
-	he release tolerance refers to a window of time in which a chord can be performed, measured in milliseconds (ms). This timer is initiated upon the first “release” action of any key in a chord and ends once the chord is fully performed, or until the release tolerance runs out, whichever comes first. Read the :ref:`GTM section<GenerativeTextMenu:Release Tolerance>` for a more in-depth explanation.
+    Tolerancja zwolnienia określa okno czasowe, w którym może zostać wykonany
+    akord, mierzone w milisekundach (ms). Licznik ten uruchamia się przy
+    pierwszym zwolnieniu dowolnego klawisza w akordzie i kończy po pełnym
+    wykonaniu akordu lub po upływie limitu czasu — w zależności co nastąpi
+    wcześniej. Dokładniejsze wyjaśnienie znajdziesz w sekcji
+    :ref:`GTM<GenerativeTextMenu:Release Tolerance>`.
 
-.. dropdown:: Compound Chording
+.. dropdown:: Akordowanie złożone
 
-	This toggle allows you to enable or disable :ref:`compound chords<Chords:Compound Chords>`.
+    Ta opcja pozwala na włączenie lub wyłączenie :ref:`akordów złożonych<Chords:Compound Chords>`.
 
 RGB
 ------
-The RGB settings ONLY affect the CharaChorder Lite as of February of 2024. 
 
-These settings adjust the color and brightness of your CharaChorder Lite.
+Ustawienia RGB mają zastosowanie TYLKO dla CharaChorder Lite (stan na luty 2024).
 
+Te ustawienia pozwalają dostosować kolor i jasność twojego CharaChorder Lite.
 
 .. image:: /assets/images/ManagerSettingsRGB.png
   :width: 1200
-  :alt: The RGB settings box
+  :alt: Pole ustawień RGB
 
-Library
+.. _Device Manager:Library:
+
+Biblioteka
 ***************
+
 .. image:: /assets/images/ChordManager.png
   :width: 1200
-  :alt: A picture of the Library
+  :alt: Obraz przedstawiający Bibliotekę
 
-The Library is a powerful tool that lets you add, delete and edit chords stored in your chord library. It's easy to use and quick to load. We'll go over how to use it below.
+Biblioteka to potężne narzędzie, które pozwala na dodawanie, usuwanie
+i edytowanie akordów zapisanych w twojej bibliotece akordów. Jest łatwa
+w obsłudze i szybko się ładuje. Poniżej omówimy jak z niej korzystać.
 
-When you :ref:`connect<Device Manager:Connecting to the Device Manager>` your device to the device manager, the webpage will start reading the chords on your device. It may take a couple of seconds — or even over a minute for very large libraries — to load the first time. If you have :ref:`auto-reconnect<Autoreconnect>` enabled, the loading times are much shorter.
+Kiedy :ref:`połączysz<Device Manager:Connecting to the Device Manager>`
+swoje urządzenie z menedżerem urządzenia, strona zacznie odczytywać
+akordy z twojego urządzenia. Może to zająć kilka sekund — a nawet
+ponad minutę w przypadku bardzo dużych bibliotek — podczas pierwszego
+ładowania. Jeżeli masz włączoną opcję :ref:`auto-połączenia<Autoreconnect>`,
+czas ładowania będzie znacznie krótszy.
 
-Chords displayed here are shown in alphabetical order, using the list of :ref:`chord outputs<Chords:Chord Output>`. The number of chords shown on the library depends on your screen size and browser zoom settings. Above the chords list, you'll see the search bar which will display the number of chords on your CCOS device until something is typed there.
+Wyświetlane akordy są posortowane alfabetycznie według listy
+:ref:`wyjść akordów<Chords:Chord Output>`. Liczba wyświetlanych akordów
+zależy od rozmiaru ekranu i ustawień powiększenia przeglądarki.
+Nad listą akordów znajduje się pasek wyszukiwania, który pokazuje liczbę
+akordów na twoim urządzeniu CCOS, dopóki nic nie wpiszesz.
 
 .. _search bar:
 
-You can search through your chords by searching :ref:`chord outputs<Chords:Chord Output>` (the word that displays once you've performed a chord). This textbox is not case sensitive, so you can type in capital or lowercase letters regardless of whether or not the chord has a capital letter in it. This search bar is also intuitive enough that you are also able to search partial words/phrases.
+Możesz przeszukiwać akordy według :ref:`wyjść akordów<Chords:Chord Output>`
+(słów pojawiających się po wykonaniu akordu). Pasek wyszukiwania nie
+rozróżnia wielkości liter, możesz wpisywać litery małe lub wielkie
+niezależnie od zapisu akordu. Wyszukiwanie jest również intuicyjne — możesz
+wyszukiwać fragmenty słów lub fraz.
 
-To the right of the search bar, you'll find two numbers separated by a forward slash (``/``). These numbers indicate the page number that you're on out of the total number of pages that compose your chord library. Using the angle brackets to the right of those numbers will allow you to flip through the different pages of your chord library which is sorted in alphabetical order.
+Po prawej stronie paska wyszukiwania znajdują się dwie liczby oddzielone
+ukośnikiem (``/``). Liczby te wskazują numer aktualnej strony oraz łączną
+liczbę stron, na które podzielona jest twoja biblioteka akordów.
+Używając nawiasów kątowych znajdujących się po prawej stronie tych
+liczb możesz przełączać się między stronami biblioteki, która jest
+posortowana alfabetycznie.
 
-Under the page-turning brackets, you'll see a tall box with the text "Try typing here". You can use this text box to test your new chords as you edit them in the manager. 
+Pod przyciskami przewijania stron zobaczysz wysokie pole tekstowe z napisem
+"Try typing here". Możesz użyć tego pola do testowania nowych akordów
+podczas ich edycji w menedżerze.
 
-Under the text box if your device supports it you can find some shortcuts to help you clear your chord library, add back in the starter chords that came on your device, add functional utility chords, and download a text file with all of your chord outputs separated by a pipe character for importing into practice tools.
+Pod polem tekstowym, jeśli twoje urządzenie to obsługuje, znajdziesz
+kilka skrótów pozwalających na:
 
-Finally, at the bottom of the page, if you hover over the Device name you'll notice that you can hold Shift and click on it to "Sync".  If you do this, it will have the device manager read your device's chord library again. This process can take a few seconds.
+- wyczyszczenie biblioteki akordów,
+- przywrócenie domyślnych akordów startowych,
+- dodanie funkcjonalnych akordów użytkowych,
+- pobranie pliku tekstowego ze wszystkimi wyjściami akordów oddzielonymi znakiem
+  pionowej kreski (|), do użycia w narzędziach treningowych.
 
-Creating a Chord
+Na samym dole strony, jeżeli najedziesz kursorem na nazwę urządzenia, zauważysz,
+że możesz przytrzymać klawisz **Shift** i kliknąć na nią, aby wykonać operację
+"Sync". Powoduje to ponowne odczytanie biblioteki akordów z twojego urządzenia
+przez menedżer urządzenia. Proces ten może zająć kilka sekund.
+
+Tworzenie akordu
 -----------------
-You can follow the steps below to create a new chord on the device manager.
+
+Możesz wykonać poniższe kroki, aby utworzyć nowy akord w menedżerze urządzenia.
 
 .. Note::
-	In order to follow these steps, you must already have your device :ref:`connected<Device Manager:Connecting to the Device Manager>` to the device manager.
+    Aby wykonać te kroki, musisz już mieć swoje urządzenie
+    :ref:`połączone<Device Manager:Connecting to the Device Manager>`
+    z menedżerem urządzenia.
 
-1. Find the "New chord" text under the :ref:`search bar<search bar>` and click it.
+1. Znajdź napis "New chord" (Nowy akord) pod :ref:`paskiem wyszukiwania<search bar>` i kliknij go.
 
+2. Gdy pojawi się napis "Hold chord" (Przytrzymaj akord), naciśnij i przytrzymaj wszystkie klawisze,
+   które chcesz wykorzystać jako swoje :ref:`wejście akordu<Chords:Chord Input>`.
+   Po naciśnięciu wszystkich klawiszy zwolnij je.
 
-2. When the text displays "Hold chord," press and hold all of the keys that you want to use as your :ref:`chord input<Chords:Chord Input>`. Once you have pressed all of the keys, release the keys.
+   Teraz zobaczysz :ref:`wejście akordu<Chords:Chord Input>` w lewej kolumnie,
+   przedstawione jako litery w indywidualnych polach. Te litery będą podświetlone
+   kolorem (zamiast czarnego lub białego). Kolor zależy od wybranego
+   :ref:`schematu kolorów<Device Manager:Color Scheme>`.
+   Zauważysz również pojedynczą, unoszącą się kropkę w tym samym kolorze po
+   prawej stronie pól z literami.
 
-    You will now see the :ref:`chord input<Chords:Chord Input>` in the left column as letters inside individual boxes. These boxed-letters will be highlighted in a color (as opposed to black or white). The color depends on your selected :ref:`color scheme<Device Manager:Color Scheme>`. You will also notice a single, floating dot highlighted in the same color off to the right of the boxed-letters.
+    .. Note::
+        Możesz dodać dowolną liczbę akordów jednocześnie, nie definiując od razu
+        :ref:`wyjścia akordu<Chords:Chord Output>`.
 
-	.. Note::
-		You can add any number of chords at a time without defining the desired :ref:`chord output<Chords:Chord Output>`. 
-
-	.. Warning::
-		If you click :ref:`save<Device Manager:Save Button>`, before defining a :ref:`chord output<Chords:Chord Output>` as described in :ref:`step three<Step 3>`, any chords that you've created will save to your device with a blank output and will lead to strange behavior.
+    .. Warning::
+        Jeżeli klikniesz :ref:`zapisz<Device Manager:Save Button>` zanim zdefiniujesz
+        :ref:`wyjście akordu<Chords:Chord Output>` zgodnie z :ref:`krokiem trzecim<Step 3>`,
+        wszystkie utworzone akordy zostaną zapisane bez wyjścia, co może prowadzić do
+        nieprawidłowego działania urządzenia.
 
 .. _Step 3:
 
-3. Click into the text box to the right of the :ref:`chord input<Chords:Chord Input>` that you created in the previous step and type your desired :ref:`chord output<Chords:Chord Output>`. 
+3. Kliknij w pole tekstowe po prawej stronie :ref:`wejścia akordu<Chords:Chord Input>`
+utworzonego w poprzednim kroku i wpisz swoje docelowe
+:ref:`wyjście akordu<Chords:Chord Output>`.
 
-	.. dropdown:: Using Action Codes
-		
-		As you type your :ref:`chord output<Chords:Chord Output>`, you'll notice that your cursor will have a bubble with a ``+`` above it. You can click this to open the :ref:`action codes menu<Device Manager:Using Action Codes>` where you can search for specific action codes or browse through the action codes available to assign into a :ref:`chord output<Chords:Chord Output>`. Read the :ref:`action codes section<Device Manager:Using Action Codes>` for information on the different kinds of action codes.
+    .. dropdown:: Używanie kodów akcji
 
-	As you type, you'll notice that your text has changed color to match your :ref:`color scheme<Device Manager:Color Scheme>` and that the end of your text has a floating dot immediately to the right.
+        Podczas wpisywania :ref:`wyjścia akordu<Chords:Chord Output>`, zauważysz,
+        że nad kursorem pojawia się bańka z symbolem ``+``.
+        Kliknij ją, aby otworzyć :ref:`menu kodów akcji<Device Manager:Using Action Codes>`,
+        w którym możesz wyszukiwać konkretne kody akcji lub przeglądać dostępne kody do
+        przypisania do :ref:`wyjścia akordu<Chords:Chord Output>`. Więcej o kodach akcji
+        przeczytasz w sekcji :ref:`kody akcji<Device Manager:Using Action Codes>`.
 
-4. Once you are satisfied with your :ref:`output<Chords:Chord Output>`, you can proceed to modify another chord or click :ref:`save<Device Manager:Save Button>`. 
+    Podczas wpisywania tekst zmieni kolor na zgodny z wybranym
+    :ref:`schematem kolorów<Device Manager:Color Scheme>`, a na końcu tekstu
+    pojawi się unosząca się kropka.
 
+4. Gdy będziesz zadowolony z :ref:`wyjścia<Chords:Chord Output>`, możesz przejść do edycji
+kolejnego akordu lub kliknąć :ref:`zapisz<Device Manager:Save Button>`.
 
-Deleting a Chord
+Usuwanie akordu
 -----------------
-You can follow the steps below to delete a chord in the device manager.
+Możesz wykonać poniższe kroki, aby usunąć akord w menedżerze urządzenia.
 
 .. Note::
-	In order to follow these steps, you must already have your device :ref:`connected<Device Manager:Connecting to the Device Manager>` to the device manager.
+    Aby wykonać te kroki, musisz już mieć swoje urządzenie
+    :ref:`połączone<Device Manager:Connecting to the Device Manager>` z menedżerem urządzenia.
 
-1. Locate the chord that you would like to delete.
+1. Znajdź akord, który chcesz usunąć.
 
-2. When you hover over the chord that you would like to delete, you will notice a small trash icon appear in line with that chord map. Click the trash icon in order to mark it for deletion.
+2. Gdy najedziesz kursorem na wybrany akord, zobaczysz małą ikonę kosza znajdującą się w
+   linii z tym akordem. Kliknij ikonę kosza, aby oznaczyć akord do usunięcia.
 
-	When you click the trash icon, the boxed-letters in the left column will have a line through them and they will turn red. You can unmark chords for deletion by clicking the "undo" arrow next to the trash icon. The chord will return to its original color and the line will disappear.
+    Po kliknięciu ikony kosza litery w lewej kolumnie zostaną przekreślone i zmienią kolor na czerwony.
+    Możesz cofnąć oznaczenie akordu do usunięcia, klikając strzałkę „cofnij” obok ikony kosza.
+    Litery powrócą wtedy do pierwotnego koloru i linia przekreślenia zniknie.
 
-	.. Tip::
-		You can mark multiple chords for deletion at a time. Flipping through the pages in your chord library will not unmark the chords that you have marked for deletion.
+    .. tip::
+        Możesz oznaczyć wiele akordów do usunięcia jednocześnie.
+        Przechodzenie między stronami w bibliotece akordów nie anuluje oznaczeń.
 
-3. Once you have marked the undesired chords for deletion and are ready to delete them, click the :ref:`save button<Device Manager:Save Button>`. 
+3. Po oznaczeniu wszystkich akordów do usunięcia i gotowości do ich usunięcia, kliknij
+   :ref:`przycisk zapisz<Device Manager:Save Button>`.
 
-	Once you click save, the marked chord maps will disappear from the list.
+    Po kliknięciu „zapisz” oznaczone mapy akordów znikną z listy.
 
-
-Editing a Chord
+Edycja akordu
 -----------------
-You can follow the steps below to edit an existing chord in the device manager.
+Możesz wykonać poniższe kroki, aby edytować istniejący akord w menedżerze urządzenia.
 
 .. Note::
-	In order to follow these steps, you must already have your device :ref:`connected<Device Manager:Connecting to the Device Manager>` to the device manager.
+    Aby wykonać te kroki, musisz już mieć swoje urządzenie
+    :ref:`połączone<Device Manager:Connecting to the Device Manager>` z menedżerem urządzenia.
 
-1. Locate the chord that you would like to edit.
+1. Znajdź akord, który chcesz edytować.
 
-2. Click the textbox in the right column where the :ref:`chord output<Chords:Chord Output>` is displayed.
+2. Kliknij pole tekstowe w prawej kolumnie, w którym wyświetla się
+   :ref:`wyjście akordu<Chords:Chord Output>`.
 
-3. Edit the :ref:`chord output<Chords:Chord Output>` to be whatever you would like. As you type, you will notice that the text changes color to match your :ref:`color scheme<Device Manager:Color Scheme>` and that the end of your text has a floating dot immediately to the right.
-	
-	.. dropdown:: Using Action Codes
-		
-		As you type your :ref:`chord output<Chords:Chord Output>`, you'll notice that your cursor will have a bubble with a ``+`` above it. You can click this to open the :ref:`action codes menu<Device Manager:Using Action Codes>` where you can search for specific action codes or browse through the action codes available to assign into a :ref:`chord output<Chords:Chord Output>`. Read the :ref:`action codes section<Device Manager:Using Action Codes>` for information on the different kinds of action codes.
+3. Edytuj :ref:`wyjście akordu<Chords:Chord Output>` według własnych potrzeb.
+   Podczas wpisywania tekst zmieni kolor, aby dopasować się do Twojego
+   :ref:`schematu kolorów<Device Manager:Color Scheme>`, a na końcu
+   tekstu pojawi się pływająca kropka.
 
-	.. Tip::
-		You can edit multiple chords before :ref:`saving<Device Manager:Save Button>` your changes. Flipping through the pages in your chord library will not undo the changes that you have made to your existing chords.
+    .. dropdown:: Korzystanie z kodów akcji
 
-4. Once you are ready to :ref:`save<Device Manager:Save Button>` your changes, click :ref:`save<Device Manager:Save Button>`.
+        Podczas wpisywania :ref:`wyjścia akordu<Chords:Chord Output>`, zauważysz,
+        że nad kursorem pojawia się bąbel z ``+``. Możesz kliknąć ten przycisk,
+        aby otworzyć :ref:`menu kodów akcji<Device Manager:Action Code Menu>`,
+        w którym możesz wyszukiwać konkretne kody akcji lub przeglądać dostępne
+        kody akcji do przypisania jako :ref:`wyjście akordu<Chords:Chord Output>`.
+        Przeczytaj sekcję :ref:`kody akcji<Device Manager:Using Action Codes>`,
+        aby uzyskać więcej informacji o różnych rodzajach kodów akcji.
 
-	Once you click :ref:`save<Device Manager:Save Button>`, the chord(s) that you've modified will change color to match the rest of the list and the floating dot will disappear.
+    .. Tip::
+        Możesz edytować wiele akordów przed :ref:`zapisaniem<Device Manager:Save Button>`
+        zmian. Przechodzenie między stronami biblioteki akordów nie anuluje zmian
+        wprowadzonych w istniejących akordach.
 
-Share button
+4. Po zakończeniu edycji kliknij :ref:`przycisk zapisz<Device Manager:Save Button>`, aby zapisać zmiany.
+
+    Po kliknięciu :ref:`zapisz<Device Manager:Save Button>`, zmodyfikowane akordy
+    zmienią kolor na taki sam jak reszta listy, a pływająca kropka zniknie.
+
+Przycisk udostępniania
 -------------
-Next to every chord, you will see a share icon. You can share individual chord maps with others by pressing this button. When you do, your computer's clipboard will copy a URL that you can share with anyone who can then add that exact chord map to their own CharaChorder through the Device Manager. 
 
-When you follow a chord map link, you'll be taken to the Library where you'll see the new chord map ready to be :ref:`saved<Device Manager:Save Button>`.
+Obok każdego akordu zobaczysz ikonę udostępniania. Możesz udostępnić pojedyncze
+mapowania akordów innym, naciskając ten przycisk. Gdy to zrobisz, adres URL
+zostanie skopiowany do schowka Twojego komputera. Możesz go następnie udostępnić
+innym, którzy dzięki temu będą mogli dodać dokładnie to samo mapowanie akordu do
+swojego CharaChorder za pośrednictwem Menedżera Urządzenia.
 
+Po kliknięciu odnośnika mapowania akordu zostaniesz przeniesiony do zakładki
+Biblioteka, gdzie zobaczysz nowe mapowanie akordu gotowe do
+:ref:`zapisania<Device Manager:Save Button>`.
 
-Layout
+.. _Device Manager:Layout:
+
+Układ
 **************
-The Device Manager has a very intuitive layer editor. It's the third option in the main navigation bar at the left of the page. When you go to this tab, you'll see a diagram of your device, with each key filled in with the corresponding :ref:`action code<Device Manager:Using Action Codes>`.
 
+Menedżer Urządzenia posiada bardzo intuicyjny edytor warstw. Jest to trzecia opcja
+w głównym pasku nawigacyjnym po lewej stronie strony. Po przejściu do tej zakładki
+zobaczysz diagram swojego urządzenia, z każdą klawiszem wypełnionym odpowiednim
+:ref:`kodem akcji<Device Manager:Using Action Codes>`.
 
-Layer Selector
+.. _Device Manager:Layer Selector:
+
+Selektor warstw
 ----------------
 
-.. dropdown:: Explanation of Layers on CCOS Devices
+.. dropdown:: Wyjaśnienie warstw na urządzeniach CCOS
 
-	As of February of 2024, :doc:`CCOS<CCOS>` devices come with three (3) layers that you can make use of: the base layer, called the A1 (Alpha) layer, the secondary layer, referred to as A2 (Numeric), and the tertiary layer, named A3 (Function).
+    Na dzień luty 2024 roku urządzenia :doc:`CCOS<CCOS>` posiadają trzy (3) warstwy,
+    które możesz wykorzystać: warstwę podstawową, zwaną warstwą A1 (Alfa), warstwę
+    drugorzędną, nazywaną A2 (Numeryczna), oraz warstwę trzeciorzędną, zwaną A3 (Funkcyjna).
 
-	In order to access layers, you need to press and hold a "layer access" button. You MUST hold the button in order to use keys mapped to layers other than the alpha layer. The alpha layer is active by default.
+    Aby uzyskać dostęp do warstw, należy nacisnąć i przytrzymać przycisk „dostępu do warstwy”.
+    MUSISZ przytrzymać przycisk, aby użyć klawiszy przypisanych do innych warstw niż warstwa
+    alfa. Warstwa alfa jest aktywna domyślnie.
 
-	.. note::
-		In this section, we’ll refer only to the default layouts on CCOS devices. If you have modified your layout to something different, then the next portion might not be accurate for your device. If you have purchased your device from CharaChorder, then the following is accurate to your device.
+    .. note::
+        W tej sekcji odwołujemy się wyłącznie do domyślnych układów na urządzeniach CCOS.
+        Jeżeli zmodyfikowałeś swój układ, poniższy opis może nie być dokładny dla Twojego
+        urządzenia. Jeśli zakupiłeś urządzenie od CharaChorder, poniższe informacje są prawidłowe.
 
-	**A1 Layer**
+    **Warstwa A1**
 
-	The A1 layer, also known as the alpha layer, is the main layer that is active by default. Your device will always be in the A1 layer upon boot.
+    Warstwa A1, znana również jako warstwa alfa, jest główną warstwą aktywną domyślnie.
+    Twoje urządzenie zawsze uruchamia się w warstwie A1.
 
-	**A2 Layer**
+    **Warstwa A2**
 
-	The A2 layer, sometimes referred to as the numeric layer, is accessible with the :doc:`A2 access key<CharaChorder Keys>`. In the Device Manager, this key has the name “Numeric Layer (Left)” and “Numeric Layer (Right)”, one for each hand.
+    Warstwa A2, czasami nazywana warstwą numeryczną, jest dostępna po naciśnięciu
+    przycisku dostępu do warstwy :doc:`A2<CharaChorder Keys>`. W Menedżerze
+    Urządzenia ten przycisk nosi nazwę „Numeric Layer (Left)” oraz
+    „Numeric Layer (Right)”, osobno dla każdej ręki.
 
-	The A2 Layer is accessible by pressing and holding one layer access button. Any key that is mapped to the A2 Layer can only be accessed by pressing and holding the A2 Layer access key along with the target key. You do not need to :doc:`chord<Chords>` the keys together; it’s only required that the A2 Layer access key is pressed while the target key is pressed.
+    Warstwa A2 jest dostępna przez naciśnięcie i przytrzymanie jednego z przycisków
+    dostępu do warstwy. Każdy klawisz przypisany do warstwy A2 może zostać użyty
+    tylko wtedy, gdy wciśnięty jest równocześnie przycisk dostępu do warstwy A2
+    wraz z docelowym klawiszem. Nie musisz :doc:`akordować<Chords>` tych klawiszy
+    razem; wymagane jest jedynie, by przycisk dostępu do warstwy A2 był wciśnięty
+    w momencie naciskania klawisza docelowego.
 
-	**A3 Layer**
+    **Warstwa A3**
 
-	The A3 layer, sometimes referred to as the “function layer”, is accessible with the :ref:`A3 access key<CharaChorder Keys>`. In the Device Manager, this key is assignable by the names “Function Layer (Left)” and “Function Layer (Right)”.
+    Warstwa A3, czasami nazywana „warstwą funkcyjną”, jest dostępna po naciśnięciu
+    przycisku dostępu do warstwy :ref:`A3<CharaChorder Keys>`. W Menedżerze
+    Urządzenia ten przycisk jest przypisany jako „Function Layer (Left)” oraz
+    „Function Layer (Right)”.
 
-	Once you've mapped the A3 layer access buttons, the A3 Layer is accessible by pressing and holding either one of them. You do not have to hold them both in order to access the A3 layer. Any key that is on the A3 Layer can only be accessed by pressing and holding the :doc:`A3 access key<CharaChorder Keys>`, along with the target key. You do not need to :doc:`chord<Chords>` the keys together; it’s only required that the A3 layer access key is pressed while the target key is pressed.
+    Po przypisaniu przycisków dostępu do warstwy A3, dostęp do tej warstwy uzyskujemy
+    przez naciśnięcie i przytrzymanie dowolnego z tych dwóch przycisków. Nie musisz
+    przytrzymywać ich obu, by uzyskać dostęp do warstwy A3. Każdy klawisz przypisany
+    do warstwy A3 może być aktywowany przez wciśnięcie i przytrzymanie przycisku
+    dostępu do warstwy A3 razem z docelowym klawiszem. Nie musisz
+    :doc:`akordować<Chords>` tych klawiszy razem; wymagane jest jedynie, by przycisk
+    dostępu do warstwy A3 był wciśnięty w momencie naciskania klawisza docelowego.
 
 .. Note::
-	The following section assumes that you have already :ref:`connected<Device Manager:Connecting to the Device Manager>` your device to the device manager.
+    Poniższa sekcja zakłada, że Twoje urządzenie jest już
+    :ref:`połączone<Device Manager:Connecting to the Device Manager>` z Menedżerem Urządzenia.
 
 .. image:: /assets/images/ManagerLayoutSelector.png
   :width: 300
-  :alt: Image of the Layer Selector bar
+  :alt: Obraz selektora warstw
 
-Above the diagram of your device, you'll see a circle with the letters "ABC" in the middle. The circle, together with the "wings" on either side (one on the left with the numbers "123" inscribed and one on the right with "fx" stylized within), make up the layer selector. You can select any one of these to view the keys that are mapped to each location, on each layer.
+Nad diagramem urządzenia zobaczysz okrąg z literami „ABC” w środku.
+Okrąg, wraz ze „skrzydłami” po lewej („123”) i prawej stronie („fx”),
+tworzy selektor warstw. Możesz wybrać dowolny z nich, aby zobaczyć
+klawisze przypisane do poszczególnych warstw.
 
-Remapping
+.. _Device Manager:Remapping:
+
+Przypisywanie na nowo
 ------------
-On the layer editor, you can remap your layout by using :ref:`action codes<Device Manager:Using Action Codes>`. Follow the instructions below to remap your device one key at a time.
 
-How to Remap Your Keys
+W edytorze warstw możesz przypisać na nowo swój układ, używając
+:ref:`kodów akcji<Device Manager:Using Action Codes>`.
+Poniżej znajdziesz instrukcje, jak przypisać klawisze pojedynczo.
+
+Jak przypisać klawisze na nowo
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 .. Note::
-	In order to follow these steps, you must already have your device :ref:`connected<Device Manager:Connecting to the Device Manager>` to the device manager.
+    Aby wykonać te kroki, Twoje urządzenie musi być już
+    :ref:`połączone<Device Manager:Connecting to the Device Manager>` z Menedżerem Urządzenia.
 
-1. Choose the :ref:`layer<Device Manager:Layer Selector>` where you want to change the key.
+1. Wybierz :ref:`warstwę<Device Manager:Layer Selector>`, na której chcesz zmienić przypisanie klawisza.
 
-2. Click on the key that you would like to change. This will bring up the :ref:`action codes menu<Device Manager:Using Action Codes>`.
+2. Kliknij klawisz, który chcesz zmienić. Otworzy się wówczas
+   :ref:`menu kodów akcji<Device Manager:Action Code Menu>`.
 
-3. Use the search feature in the :ref:`action codes menu<Device Manager:Using Action Codes>` or scroll through available :ref:`action codes<Device Manager:What are Action Codes>`. Once you've found the desired :ref:`action code<Device Manager:Using Action Codes>`, click on it.
+3. Skorzystaj z wyszukiwarki w :ref:`menu kodów akcji<Device Manager:Action Code Menu>`
+   lub przeglądaj dostępne :ref:`kody akcji<Device Manager:What are Action Codes>`.
+   Po znalezieniu odpowiedniego :ref:`kodu akcji<Device Manager:Using Action Codes>`, kliknij go.
 
-	Once you select the :ref:`action code<Device Manager:Using Action Codes>`, you will notice that the layout diagram now reflects the selected :ref:`action code<Device Manager:Using Action Codes>` highlighted according to your :ref:`color scheme<Device Manager:Color Scheme>` and it will be accompanied by a floating dot.
+    Po wybraniu :ref:`kodu akcji<Device Manager:Using Action Codes>`, zobaczysz, że
+    diagram układu odzwierciedla teraz wybrany
+    :ref:`kod akcji<Device Manager:Using Action Codes>` podświetlony zgodnie z Twoim
+    :ref:`schematem kolorów<Device Manager:Color Scheme>`, a obok pojawi się
+    unosząca się kropka.
 
-	.. Tip::
-		You can edit multiple keys before :ref:`saving<Device Manager:Save Button>` your changes. Flipping through the :ref:`layers<Device Manager:Layer Selector>` will not undo the changes that you have made to the layout so far.
+    .. Tip::
+        Możesz edytować wiele klawiszy przed :ref:`zapisaniem<Device Manager:Save Button>` zmian.
+        Przełączanie się między :ref:`warstwami<Device Manager:Layer Selector>` nie anuluje zmian
+        dokonanych w układzie.
 
-4. Once you have changed the desired key(s), click the :ref:`save button<Device Manager:Save Button>`.
+4. Gdy skończysz przypisywanie klawiszy, kliknij :ref:`przycisk zapisu<Device Manager:Save Button>`.
 
-	.. note::
-		Your changes will not take effect until you click :ref:`save<Device Manager:Save Button>`.
-	
-	Once you click :ref:`save<Device Manager:Save Button>`, the highlighted key(s) will lose their highlight and the floating dot will disappear. Your layout diagram will be black and white.
+    .. note::
+        Twoje zmiany nie zostaną zastosowane, dopóki nie klikniesz :ref:`zapisz<Device Manager:Save Button>`.
 
-Using Action Codes
+    Po kliknięciu :ref:`zapisz<Device Manager:Save Button>`, podświetlenie klawiszy zniknie,
+    a unosząca się kropka zostanie usunięta. Diagram układu stanie się ponownie czarno-biały.
+
+.. _Device Manager:Using Action Codes:
+
+Używanie kodów akcji
 ~~~~~~~~~~~~~~~~~~~
-You can use action codes in chord outputs as well as while :ref:`remapping<Device Manager:Remapping>` keys.
 
-What are Action Codes
+Możesz używać kodów akcji zarówno w :ref:`wyjściach akordów<Chords:Chord Output>`, jak i podczas
+:ref:`przypisywania<Device Manager:Remapping>` klawiszy.
+
+.. _Device Manager:What are Action Codes:
+
+Czym są kody akcji
 ^^^^^^^^^^^^^^^^^^^^^^^
-Action codes are data that :doc:`CCOS<CCOS>` interprets as characters. **Put simply, they are the characters that we see while typing.** These include letters, numbers, special characters, function keys, and others. 
 
-Action Code Menu
+Kody akcji to dane, które :doc:`CCOS<CCOS>` interpretuje jako znaki.
+**Mówiąc prosto, są to znaki, które widzimy podczas pisania.**
+Obejmują one litery, cyfry, znaki specjalne, klawisze funkcyjne i inne.
+
+.. _Device Manager:Action Code Menu:
+
+Menu kodów akcji
 ^^^^^^^^^^^^^^^^^^^^^^^
-You can open the action codes menu one of two ways:
 
-1. While typing a chord :ref:`chord output<Chords:Chord Output>` in the :ref:`library<Device Manager:Library>`, you’ll notice that your cursor will have a bubble with a + above it. You can click this to open the action codes menu.
+Menu kodów akcji możesz otworzyć na dwa sposoby:
 
-2. While editing your layout in the :ref:`layout editor<Device Manager:Layout>`, click on a key to bring up the action codes menu.
+1. Podczas wpisywania :ref:`wyjścia akordu<Chords:Chord Output>` w
+   :ref:`bibliotece<Device Manager:Library>`, zauważysz nad kursorem
+   bańkę z ``+``. Kliknij ją, aby otworzyć menu kodów akcji.
 
-In this menu, you can scroll through :ref:`available action codes<Device Manager:Available Action Codes>` by :ref:`category<Device Manager:Action Code Categories>`, or simply search specific actions. 
+2. Podczas edycji układu w :ref:`edytorze układu<Device Manager:Layout>`,
+   kliknij dowolny klawisz, aby wywołać menu kodów akcji.
 
-If you ever need to leave the action codes menu, simply click the X at the top right of the menu. This will close out the box and not make any changes.
+W menu możesz przeglądać :ref:`dostępne kody akcji<Device Manager:Available Action Codes>`
+według :ref:`kategorii<Device Manager:Action Code Categories>`, lub wyszukiwać konkretne akcje.
 
-Action Code Categories
+Jeżeli chcesz zamknąć menu kodów akcji, kliknij ikonę X w prawym górnym rogu menu.
+Spowoduje to zamknięcie okna bez wprowadzania zmian.
+
+.. _Device Manager:Action Code Categories:
+
+Kategorie kodów akcji
 ..........................
-There are eight different categories in the action code menu. These are: ASCII Macros, ASCII, CharaChorder One, CharaChorder, CP-1252, Keyboard, Mouse, and Key Codes.
 
+Istnieje osiem kategorii w menu kodów akcji:
 
+- Makra ASCII
+- ASCII
+- CharaChorder One
+- CharaChorder
+- CP-1252
+- Klawiatura
+- Mysz
+- Kody klawiszy
 
-.. ASCII Macros
-   ,,,,,,,,,,,,,,
-
-   ASCII
-   ,,,,,,,,,,,
-
-   CharaChorder One
-   ,,,,,,,,,,,,,,,,,,,,,,,,,
-
-   CharaChorder
-   ,,,,,,,,,,,,,,,,,,,,,,,,,
-
-   CP-1252
-   ,,,,,,,,,,,,,,,,,,,,,,,,,
-
-   Keyboard
-   ,,,,,,,,,,,,,,,,,,,,,,,,,
-
-   Mouse
-   ,,,,,,,,,,,,,,,,,,,,,,,,,
-
-   Key Codes
-   ,,,,,,,,,,,,,,,,,,,,,,,,,
-
-Remove Button
+Przycisk Usuń
 ................
-You can use the "Remove" button on the top right of the action codes menu to remove the currently assigned action code from the selected key in the :ref:`layout editor<Device Manager:Layout>`. 
 
-If you select the "Remove" button while typing a :ref:`chord output<Chords:Chord Output>` in the :ref:`library<Device Manager:Library>`, it will NOT remove any action. Instead, it will add a "blank" action that will be labeled ``0x0``. 
+Możesz skorzystać z przycisku "Usuń" w prawym górnym rogu menu kodów akcji, aby usunąć aktualnie
+przypisany kod akcji dla wybranego klawisza w :ref:`edytorze układu<Device Manager:Layout>`.
 
+Jeżeli wybierzesz "Usuń" podczas wpisywania :ref:`wyjścia akordu<Chords:Chord Output>` w
+:ref:`bibliotece<Device Manager:Library>`, nie usunie to akcji, lecz doda "pustą" akcję
+oznaczoną jako ``0x0``.
 
+.. _Device Manager:Available Action Codes:
 
-Available Action Codes
+Dostępne kody akcji
 ^^^^^^^^^^^^^^^^^^^^^^^
-You can see the action codes below, or view them externally `here. <https://docs.google.com/spreadsheets/d/1--T9bXshCIC-OVly-CY3rK87fgb7AHgJl3IySh7cmHc/edit#gid=0>`__
+
+Poniżej możesz zobaczyć dostępne kody akcji, albo przejrzeć je zewnętrznie
+`tutaj <https://docs.google.com/spreadsheets/d/1--T9bXshCIC-OVly-CY3rK87fgb7AHgJl3IySh7cmHc/edit#gid=0>`__.
 
 .. raw:: html
 
     <iframe src="https://docs.google.com/spreadsheets/d/1--T9bXshCIC-OVly-CY3rK87fgb7AHgJl3IySh7cmHc/edit#gid=0" width="600" height="600"></iframe>
-
-
-
-
-
-
-
-
-
-
-
